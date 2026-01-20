@@ -27,7 +27,7 @@
             overflow-x: hidden;
         }
 
-        /* PREMIUM GRADIENT HERO (No External Image Needed) */
+        /* LUXURY GRADIENT HERO */
         .hero {
             height: 100vh;
             display: flex;
@@ -47,10 +47,14 @@
             padding: 2px;
             background: linear-gradient(to bottom, var(--accent), transparent);
             margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .profile-container img {
-            width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+            width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
         }
 
         h1 {
@@ -122,6 +126,8 @@
             font-size: 0.7rem;
             letter-spacing: 3px;
             font-weight: 700;
+            flex-wrap: wrap;
+            gap: 20px;
         }
     </style>
 </head>
@@ -129,7 +135,7 @@
 
     <section class="hero">
         <div class="profile-container">
-            <img src="profile.jpg" alt="V. Akshintala">
+            <img src="profile.jpg" alt="V. Akshintala" onerror="this.src='https://ui-avatars.com/api/?name=Vishal+Akshintala&background=0D8ABC&color=fff'">
         </div>
         <h1>Governing the Orbit<br>& The Algorithm.</h1>
         <p class="hero-sub">Strategic Risk Architecture for Founders building the Future. Protecting high-stakes missions in Space-Tech and AI-driven Global Enterprises.</p>
@@ -158,9 +164,9 @@
                 <h3>AI Governance</h3>
                 <p>Strategic alignment with the EU AI Act and ISO 42001. Ensuring your model is an investable asset, not a regulatory anchor.</p>
             </div>
-            <div class="card :hover">
+            <div class="card">
                 <h3>Global Privacy</h3>
-                <p>Operationalizing India's DPDPA and the GDPR for seamless cross-border data flows. Protecting equity through compliance.</p>
+                <p>Operationalizing India's DPDPA and the GDPR for seamless cross-border data flows. Protecting founder equity through compliance.</p>
             </div>
         </div>
     </section>
