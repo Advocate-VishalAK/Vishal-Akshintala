@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://advocate-vishalak.github.io/Vishal-Akshintala/sitemap.xml
