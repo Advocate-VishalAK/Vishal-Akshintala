@@ -2,159 +2,90 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="pKMlwVDS9wYp-5QsCfiYI0kXu9hv7VhxFQsIZAfaYBw" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Akshintala | Strategic Risk Architect | Space & AI Law</title>
+    <title>Vishal Akshintala | Strategic Risk Architect | AI Governance & Privacy</title>
     
-    <meta name="description" content="Certified Strategic Risk Architect (AIGP, CIPP/E). Specialized in NewSpace Jurisprudence, AI Governance (ISO 42001), and Global Privacy Strategy.">
-    <meta name="keywords" content="Vishal Akshintala, Space Law, AI Governance, ISO 42001, AIGP, CIPP/E, Privacy Architect, India DPDPA, EU AI Act">
-    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Vishal Akshintala",
+      "jobTitle": "Strategic Risk Architect",
+      "description": "Expert AI Governance (ISO 42001) and Data Privacy (DPDPA/GDPR) specialist for global tech enterprises.",
+      "url": "https://advocate-vishalak.github.io/Vishal-Akshintala/",
+      "knowsAbout": ["AI Law", "ISO 42001", "GDPR", "DPDPA India", "Space Law"],
+      "image": "https://advocate-vishalak.github.io/Vishal-Akshintala/profile.jpg"
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg: #030303;
             --accent: #3b82f6;
-            --glass: rgba(255, 255, 255, 0.02);
-            --border: rgba(255, 255, 255, 0.08);
             --text: #ffffff;
             --dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; }
 
+        /* HERO SECTION */
         .hero {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 100px 10%;
-            background: radial-gradient(circle at 80% 20%, #111827 0%, #030303 50%),
-                        radial-gradient(circle at 20% 80%, #020617 0%, #030303 50%);
+            padding: 0 10%;
+            background: radial-gradient(circle at center, #111827 0%, #030303 70%);
         }
 
         .profile-container {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            padding: 2px;
-            background: linear-gradient(to bottom, var(--accent), transparent);
-            margin-bottom: 35px;
-            position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            width: 140px; height: 140px; border-radius: 50%; padding: 3px;
+            background: linear-gradient(45deg, var(--accent), #60a5fa);
+            margin-bottom: 30px; overflow: hidden;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
         }
 
-        .profile-container img {
-            width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
-        }
+        .profile-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            letter-spacing: -3px;
-            line-height: 0.9;
-            margin-bottom: 25px;
-            background: linear-gradient(to bottom, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 800; line-height: 1; margin-bottom: 20px; letter-spacing: -3px; }
+        .hero-sub { font-size: 1.4rem; color: var(--dim); max-width: 800px; margin-bottom: 40px; font-weight: 300; }
 
-        .hero-sub {
-            font-size: 1.25rem;
-            color: var(--dim);
-            max-width: 680px;
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
-
+        /* TRUST BAR - THE MONEY CERTIFICATIONS */
         .trust-bar {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 40px 10%;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            opacity: 0.8; 
-            font-size: 0.75rem;
-            letter-spacing: 4px;
-            font-weight: 800;
-            flex-wrap: wrap;
+            width: 100%; display: flex; justify-content: center; gap: 40px;
+            padding: 25px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            font-size: 0.75rem; font-weight: 800; letter-spacing: 3px; color: var(--accent); flex-wrap: wrap;
         }
 
-        .section { padding: 120px 10%; }
-
-        .label {
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            margin-bottom: 25px;
-            display: block;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 70px;
-        }
-
+        /* CARDS */
+        .section { padding: 100px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .card {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            padding: 60px 45px;
-            border-radius: 2px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            padding: 60px 40px; transition: 0.4s; position: relative;
         }
+        .card:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.05); transform: translateY(-10px); }
+        .card h3 { font-size: 1.8rem; margin-bottom: 20px; color: #fff; }
+        .card p { color: var(--dim); line-height: 1.7; font-size: 1.05rem; }
 
-        .card:hover {
-            border-color: var(--accent);
-            background: rgba(59, 130, 246, 0.02);
-            transform: translateY(-8px);
-        }
-
-        .card h3 { font-size: 1.6rem; margin-bottom: 20px; letter-spacing: -1px; }
-        .card p { color: var(--dim); font-size: 1rem; line-height: 1.8; }
-
+        /* CONTACT BUTTONS */
+        .cta-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
         .btn {
-            background: #fff;
-            color: #000;
-            padding: 22px 55px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            transition: 0.3s;
-            border-radius: 1px;
+            background: #fff; color: #000; padding: 22px 50px; text-decoration: none;
+            font-weight: 800; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
         }
+        .btn:hover { background: var(--accent); color: #fff; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
+        
+        .btn-alt { background: transparent; border: 1px solid var(--text); color: var(--text); }
 
-        .btn:hover { background: var(--accent); color: #fff; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3); }
-
-        footer {
-            padding: 80px 10%;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            color: rgba(255,255,255,0.1);
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-        }
+        footer { padding: 60px 10%; border-top: 1px solid var(--border); text-align: center; color: var(--dim); font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -163,42 +94,41 @@
         <div class="profile-container">
             <img src="profile.jpg" alt="Vishal Akshintala" onerror="this.src='https://ui-avatars.com/api/?name=Vishal+Akshintala&background=111&color=3b82f6'">
         </div>
-        <h1>Governing the Orbit<br>& The Algorithm.</h1>
-        <p class="hero-sub">Strategic Risk Architecture for founders navigating the frontiers of Space-Tech, AI Governance, and Global Privacy.</p>
-        <a href="mailto:vishalak.adv@gmail.com" class="btn">Initiate Briefing</a>
+        <h1>Architecting <br>AI Sovereignty.</h1>
+        <p class="hero-sub">Global Strategic Risk Architect. Specialized in ISO 42001 AI Governance, GDPR/DPDPA Engineering, and NewSpace Jurisprudence.</p>
+        
+        <div class="cta-group">
+            <a href="mailto:vishalak.adv@gmail.com" class="btn">Schedule Briefing</a>
+            <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" class="btn btn-alt">LinkedIn Profile</a>
+        </div>
     </section>
 
     <div class="trust-bar">
-        <span>NALSAR UNIVERSITY</span>
         <span>AIGP | AI GOVERNANCE</span>
         <span>CIPP/E | GDPR</span>
-        <span>ISO 42001</span>
+        <span>ISO 42001 LEAD</span>
+        <span>NALSAR LAW</span>
     </div>
 
     <section class="section">
-        <span class="label">The Methodology</span>
-        <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); max-width: 900px; letter-spacing: -2px; line-height: 1.1;">
-            Architecture over Advocacy. Deconstructing technical risks before they become legal liabilities.
-        </h2>
-        
         <div class="grid">
             <div class="card">
+                <h3>AI Enterprise Audit</h3>
+                <p>Ensuring your model stack meets the EU AI Act and ISO 42001 standards. I protect your valuation from regulatory anchors.</p>
+            </div>
+            <div class="card">
+                <h3>Global Data Flows</h3>
+                <p>Architecting compliant data architecture for DPDPA and GDPR. I turn compliance into a competitive moat for founders.</p>
+            </div>
+            <div class="card">
                 <h3>Space Jurisprudence</h3>
-                <p>Solving the Lunar Jurisdictional Trap and orbital liability for autonomous mission founders. IN-SPACe licensing and frequency coordination.</p>
-            </div>
-            <div class="card">
-                <h3>AI Governance</h3>
-                <p>Strategic alignment with the EU AI Act and ISO 42001. Ensuring your model is an investable asset, not a regulatory anchor.</p>
-            </div>
-            <div class="card">
-                <h3>Global Privacy</h3>
-                <p>Operationalizing India's DPDPA and the GDPR for seamless cross-border data flows. Protecting founder equity through precision compliance.</p>
+                <p>High-stakes advisory for orbital liability and frequency licensing for autonomous NewSpace missions.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 VISHAL AKSHINTALA | STRATEGIC RISK ARCHITECT | PRAJATANTRA LEGAL
+        &copy; 2026 VISHAL AKSHINTALA | STRATEGIC RISK ARCHITECT | PRIVACY & AI SPECIALIST
     </footer>
 
 </body>
