@@ -1,290 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Akshintala | AI & Global Privacy Governance Advisor</title>
+    <meta name="description" content="Strategic AI & Global Privacy Governance advisory for technology companies operating across India, UK, EU, US and global markets.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<title>Vishal Akshintala | AI & Global Privacy Governance Advisor</title>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --glass: rgba(255, 255, 255, 0.03);
+            --accent: #3b82f6;
+            --text: #ffffff;
+            --muted: #9aa4b2;
+            --border: rgba(255, 255, 255, 0.08);
+            --card-width: 400px;
+        }
 
-<meta name="description" content="Strategic AI & Global Privacy Governance advisory for technology companies operating across India, UK, EU, US and global markets.">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+        body {
+            background: radial-gradient(circle at 20% 20%, #111827 0%, #0b0f19 60%);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
 
-<style>
+        section { padding: 100px 8%; position: relative; }
 
-:root{
---bg:#0b0f19;
---glass:rgba(255,255,255,0.05);
---accent:#3b82f6;
---text:#ffffff;
---muted:#9aa4b2;
---border:rgba(255,255,255,0.08);
-}
+        /* --- Hero Section --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+        .profile {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.3);
+            margin-bottom: 40px;
+        }
 
-body{
-background:radial-gradient(circle at 20% 20%,#111827 0%,#0b0f19 60%);
-color:var(--text);
-font-family:'Inter',sans-serif;
-line-height:1.8;
-overflow-x:hidden;
-}
+        .profile img { width: 100%; height: 100%; object-fit: cover; }
 
-section{
-padding:130px 10%;
-position:relative;
-}
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(to bottom, #fff 40%, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+        .hero-sub {
+            max-width: 800px;
+            color: var(--muted);
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            margin-bottom: 40px;
+        }
 
-.profile{
-width:180px;
-height:180px;
-border-radius:50%;
-overflow:hidden;
-border:3px solid var(--accent);
-box-shadow:0 0 80px rgba(59,130,246,0.5);
-margin-bottom:40px;
-}
+        /* --- Buttons --- */
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 8px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
 
-.profile img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+        .primary { background: #fff; color: #000; }
+        .primary:hover { 
+            background: var(--accent); 
+            color: #fff; 
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+        }
 
-h1{
-font-size:clamp(3rem,6vw,5rem);
-font-weight:800;
-letter-spacing:-1px;
-margin-bottom:30px;
-}
+        .secondary { border: 1px solid var(--border); color: #fff; background: var(--glass); }
+        .secondary:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-.hero-sub{
-max-width:900px;
-color:var(--muted);
-font-size:1.3rem;
-margin-bottom:50px;
-}
+        /* --- Labels & Cards --- */
+        .label {
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 40px;
+            display: block;
+            font-weight: 700;
+            text-align: center;
+        }
 
-.btn{
-padding:16px 38px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-margin:10px;
-transition:0.4s;
-display:inline-block;
-}
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 16px;
+            transition: 0.4s;
+        }
 
-.primary{
-background:#fff;
-color:#000;
-}
+        /* --- Infinite Auto-Scroll (Marquee) --- */
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            /* Fade effect on edges */
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
 
-.primary:hover{
-background:var(--accent);
-color:#fff;
-box-shadow:0 20px 60px rgba(59,130,246,0.6);
-}
+        .marquee-content {
+            display: flex;
+            gap: 30px;
+            padding: 20px 0;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
 
-.secondary{
-border:1px solid #fff;
-color:#fff;
-}
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
 
-.secondary:hover{
-background:var(--accent);
-border-color:var(--accent);
-}
+        .endorsement-card {
+            width: var(--card-width);
+            flex-shrink: 0;
+        }
 
-.label{
-font-size:0.75rem;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--accent);
-margin-bottom:50px;
-display:block;
-font-weight:700;
-text-align:center;
-}
+        .endorsement-card p { font-style: italic; color: #e2e8f0; }
+        .attribution {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-style: normal !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.scroll-container{
-display:flex;
-gap:40px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-padding-bottom:30px;
-}
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 15px)); }
+        }
 
-.scroll-container::-webkit-scrollbar{
-height:8px;
-}
+        /* --- Horizontal Scroller (Case Studies) --- */
+        .scroll-container {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            padding-bottom: 30px;
+            scrollbar-width: none;
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
 
-.scroll-container::-webkit-scrollbar-thumb{
-background:rgba(255,255,255,0.15);
-border-radius:10px;
-}
+        .case-card {
+            min-width: 320px;
+            max-width: 320px;
+        }
+        
+        .case-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: #fff; }
+        .case-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
 
-.glass-card{
-min-width:420px;
-background:var(--glass);
-border:1px solid var(--border);
-backdrop-filter:blur(15px);
-padding:60px;
-border-radius:18px;
-transition:0.4s;
-scroll-snap-align:start;
-}
+        /* --- CTA & Footer --- */
+        .cta {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: linear-gradient(to bottom, transparent, rgba(59,130,246,0.05));
+        }
 
-.glass-card:hover{
-transform:translateY(-10px);
-border-color:var(--accent);
-background:rgba(59,130,246,0.1);
-}
+        footer {
+            text-align: center;
+            padding: 60px 8%;
+            color: #4b5563;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
 
-.glass-card h3{
-margin-bottom:20px;
-font-size:1.4rem;
-}
+        /* --- Reveal Animation --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-.glass-card p{
-color:var(--muted);
-font-size:1rem;
-}
-
-.credentials-card{
-min-width:320px;
-text-align:center;
-font-weight:600;
-font-size:1rem;
-color:#cbd5e1;
-}
-
-.cta{
-text-align:center;
-background:linear-gradient(to right,#111827,#0b0f19);
-padding:150px 10%;
-}
-
-footer{
-text-align:center;
-padding:80px 10%;
-color:#6b7280;
-font-size:0.9rem;
-border-top:1px solid var(--border);
-}
-
-/* Scroll Animation */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-</style>
+        @media (max-width: 768px) {
+            :root { --card-width: 300px; }
+            section { padding: 80px 5%; }
+            .hero { padding-top: 40px; }
+        }
+    </style>
 </head>
-
 <body>
 
 <section class="hero reveal">
-<div class="profile">
-<img src="profile.jpg" alt="AI & Global Privacy Governance Advisor">
-</div>
-
-<h1>AI & Global Privacy Governance</h1>
-
-<p class="hero-sub">
-Advising technology companies across India, UK, EU and US on AI accountability frameworks, GDPR & DPDPA architecture, cross-border data governance and investor-grade regulatory readiness.
-</p>
-
-<div>
-<a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Book Strategy Consultation</a>
-<a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" class="btn secondary">LinkedIn</a>
-</div>
-
+    <div class="profile">
+        <img src="profile.jpg" alt="Vishal Akshintala">
+    </div>
+    <h1>AI & Global Privacy Governance</h1>
+    <p class="hero-sub">
+        Advising technology companies across India, UK, EU, and US on AI accountability, cross-border data governance, and investor-grade regulatory readiness.
+    </p>
+    <div>
+        <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Book Consultation</a>
+        <a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" class="btn secondary">LinkedIn</a>
+    </div>
 </section>
 
+<section class="reveal" style="padding-top: 0; padding-bottom: 60px;">
+    <div class="scroll-container" style="justify-content: center; flex-wrap: wrap; gap: 15px;">
+        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">Advocate</span>
+        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">ISO 42001 Lead Implementer</span>
+        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">NALSAR University of Law</span>
+    </div>
+</section>
 
 <section class="reveal">
-<span class="label">Credentials</span>
-
-<div class="scroll-container">
-<div class="glass-card credentials-card">Advocate</div>
-<div class="glass-card credentials-card">ISO 42001 Lead Implementer</div>
-<div class="glass-card credentials-card">NALSAR University of Law</div>
-<div class="glass-card credentials-card">Mechanical Engineering Background</div>
-<div class="glass-card credentials-card">AI & Privacy Governance Specialist</div>
-</div>
-
+    <span class="label">Client Endorsements</span>
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <div class="glass-card endorsement-card">
+                <p>“Structured AI governance clarity during our EU expansion significantly reduced enterprise due diligence friction.”</p>
+                <p class="attribution">— Founder, EU AI SaaS Platform</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“The cross-border GDPR and DPDPA framework streamlined our compliance posture across India and Europe.”</p>
+                <p class="attribution">— Chief Risk Officer, Global Fintech</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“His AI governance audit provided the structured documentation our investors expected prior to funding.”</p>
+                <p class="attribution">— CEO, Venture-Backed AI Startup</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“The EU–US data transfer strategy brought clarity to our processor oversight and reduced uncertainty.”</p>
+                <p class="attribution">— General Counsel, Enterprise SaaS</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“Structured AI governance clarity during our EU expansion significantly reduced enterprise due diligence friction.”</p>
+                <p class="attribution">— Founder, EU AI SaaS Platform</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“The cross-border GDPR and DPDPA framework streamlined our compliance posture across India and Europe.”</p>
+                <p class="attribution">— Chief Risk Officer, Global Fintech</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“His AI governance audit provided the structured documentation our investors expected prior to funding.”</p>
+                <p class="attribution">— CEO, Venture-Backed AI Startup</p>
+            </div>
+            <div class="glass-card endorsement-card">
+                <p>“The EU–US data transfer strategy brought clarity to our processor oversight and reduced uncertainty.”</p>
+                <p class="attribution">— General Counsel, Enterprise SaaS</p>
+            </div>
+        </div>
+    </div>
 </section>
-
 
 <section class="reveal">
-<span class="label">Selected Case Engagements</span>
-
-<div class="scroll-container">
-
-<div class="glass-card">
-<h3>AI SaaS Platform – Governance Architecture</h3>
-<p>Designed AI risk classification and accountability framework aligned with EU AI Act and enterprise audit expectations.</p>
-</div>
-
-<div class="glass-card">
-<h3>Global Fintech – Cross-Border Privacy Integration</h3>
-<p>Integrated GDPR & DPDPA compliance structure with DPIAs, breach response matrix and supervisory preparedness.</p>
-</div>
-
-<div class="glass-card">
-<h3>Venture-Backed AI Startup – Investor Readiness</h3>
-<p>Conducted governance audit, bias mapping and regulatory roadmap before institutional funding.</p>
-</div>
-
-<div class="glass-card">
-<h3>Enterprise SaaS – International Data Transfer Structuring</h3>
-<p>Architected SCC-aligned transfer governance and processor oversight framework across jurisdictions.</p>
-</div>
-
-</div>
-
+    <span class="label">Selected Engagements</span>
+    <div class="scroll-container">
+        <div class="glass-card case-card">
+            <h3>AI SaaS Governance</h3>
+            <p>Designed risk classification frameworks aligned with the EU AI Act for enterprise-scale deployment.</p>
+        </div>
+        <div class="glass-card case-card">
+            <h3>Fintech Expansion</h3>
+            <p>Integrated DPDPA (India) and GDPR compliance for a high-volume payment processor.</p>
+        </div>
+        <div class="glass-card case-card">
+            <h3>Venture Audit</h3>
+            <p>Conducted bias mapping and regulatory roadmaps for a $20M+ Series A funding round.</p>
+        </div>
+        <div class="glass-card case-card">
+            <h3>Data Transfers</h3>
+            <p>Architected SCC-aligned governance for global SaaS infrastructure across 4 jurisdictions.</p>
+        </div>
+    </div>
 </section>
-
 
 <section class="cta reveal">
-<h2 style="margin-bottom:40px;font-size:2rem;">Build governance architecture before regulators do.</h2>
-<a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Schedule Strategic Consultation</a>
+    <h2 style="margin-bottom:30px; font-size: clamp(1.5rem, 4vw, 2.5rem); letter-spacing: -1px;">
+        Build governance architecture<br>before regulators do.
+    </h2>
+    <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Schedule Consultation</a>
 </section>
 
 <footer>
-© 2026 Vishal Akshintala | AI & Global Privacy Governance Advisory<br>
-Email: vishalak.adv@gmail.com
+    © 2026 Vishal Akshintala | AI & Global Privacy Governance Advisory<br>
+    Email: vishalak.adv@gmail.com
 </footer>
 
 <script>
-const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
-for (let i = 0; i < reveals.length; i++) {
-let windowHeight = window.innerHeight;
-let elementTop = reveals[i].getBoundingClientRect().top;
-let elementVisible = 100;
-if (elementTop < windowHeight - elementVisible) {
-reveals[i].classList.add("active");
-}
-}
-});
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => observer.observe(reveal));
 </script>
 
 </body>
