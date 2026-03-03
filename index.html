@@ -4,11 +4,11 @@
     <meta name="google-site-verification" content="pKMlwVDS9wYp-5QsCfiYI0kXu9hv7VhxFQsIZAfaYBw" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Akshintala | Strategic Risk Architect | AI, Privacy & Space Law</title>
-    
-    <meta name="keywords" content="Vishal Akshintala, Strategic Risk Architect, ISO 42001, AI Governance, Space Law, Lunar Jurisdictional Trap, DPDPA, GDPR, Privacy Engineering, AI Auditor, NewSpace Law, Deep-Tech Consultant, Legal Architecture">
-    <meta name="description" content="Strategic Risk Architect and Advocate specializing in ISO 42001 AI Governance, Global Privacy Engineering (DPDPA/GDPR), and Space Jurisprudence.">
-    
+    <title>Vishal Akshintala | AI Governance & Regulatory Risk Advisor</title>
+
+    <meta name="keywords" content="Vishal Akshintala, AI Governance Advisor, EU AI Act Consultant, GDPR Compliance, ISO 42001, AI Risk Audit, Data Privacy Counsel">
+    <meta name="description" content="AI Governance & Regulatory Risk Advisor helping high-growth tech companies navigate EU AI Act, GDPR and cross-border compliance.">
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -16,96 +16,89 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; }
 
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; background: radial-gradient(circle at 70% 30%, #1e293b 0%, #030303 60%); }
-        .profile-container { width: 140px; height: 140px; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, var(--accent), #60a5fa); margin-bottom: 30px; overflow: hidden; box-shadow: 0 0 50px rgba(59, 130, 246, 0.2); }
-        .profile-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; background: radial-gradient(circle at 70% 30%, #1e293b 0%, #030303 60%); }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px; }
+        .hero-sub { font-size: 1.2rem; color: var(--dim); max-width: 800px; margin-bottom: 40px; font-weight: 300; }
 
-        h1 { font-size: clamp(2.2rem, 8vw, 5rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -3px; }
-        .hero-sub { font-size: 1.3rem; color: var(--dim); max-width: 850px; margin-bottom: 45px; font-weight: 300; }
-
-        .trust-bar { width: 100%; display: flex; justify-content: center; gap: 40px; padding: 30px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 0.75rem; font-weight: 800; letter-spacing: 4px; color: var(--accent); flex-wrap: wrap; text-transform: uppercase; }
+        .btn { background: #fff; color: #000; padding: 18px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; display: inline-block; border-radius: 2px; }
+        .btn:hover { background: var(--accent); color: #fff; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3); }
 
         .section { padding: 100px 10%; }
-        .label { color: var(--accent); text-transform: uppercase; letter-spacing: 5px; font-size: 0.75rem; font-weight: 800; margin-bottom: 40px; display: block; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 50px 40px; transition: all 0.4s ease; border-radius: 4px; }
-        .card:hover { border-color: var(--accent); transform: translateY(-8px); background: rgba(59, 130, 246, 0.04); }
-        .card h3 { font-size: 1.6rem; margin-bottom: 18px; color: #fff; letter-spacing: -0.5px; }
-        .card p { color: var(--dim); font-size: 1.05rem; }
+        .label { color: var(--accent); text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 800; margin-bottom: 40px; display: block; }
 
-        .btn { background: #fff; color: #000; padding: 20px 45px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; }
-        .btn:hover { background: var(--accent); color: #fff; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3); }
-        .btn-alt { background: transparent; border: 1px solid var(--text); color: var(--text); margin-left: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 45px 35px; transition: 0.3s; border-radius: 4px; }
+        .card:hover { border-color: var(--accent); transform: translateY(-6px); background: rgba(59, 130, 246, 0.05); }
+        .card h3 { font-size: 1.4rem; margin-bottom: 15px; }
+        .card p { color: var(--dim); }
 
-        .insight-card { background: linear-gradient(90deg, rgba(59, 130, 246, 0.05), transparent); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 50px; margin-top: 30px; text-decoration: none; display: block; transition: 0.3s; }
-        .insight-card:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.08); }
-        .insight-tag { font-size: 0.7rem; background: var(--accent); color: #fff; padding: 6px 16px; border-radius: 2px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
-
-        .pricing-note { margin-top: 25px; font-size: 0.8rem; color: var(--accent); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-
-        footer { padding: 80px 10%; border-top: 1px solid var(--border); text-align: center; color: rgba(255,255,255,0.2); font-size: 0.75rem; letter-spacing: 2px; }
+        footer { padding: 60px 10%; border-top: 1px solid var(--border); text-align: center; color: rgba(255,255,255,0.3); font-size: 0.8rem; letter-spacing: 1px; }
     </style>
 </head>
+
 <body>
 
-    <section class="hero">
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Vishal Akshintala" onerror="this.src='https://ui-avatars.com/api/?name=Vishal+Akshintala&background=111&color=3b82f6'">
-        </div>
-        <h1>Protecting the <br>Deep-Tech Frontier.</h1>
-        <p class="hero-sub">Strategic Risk Architect & Advocate. I define the legal parameters for <b>AI Governance, Data Privacy, and Space Jurisprudence</b> before they become liabilities.</p>
-        <div>
-            <a href="mailto:vishalak.adv@gmail.com" class="btn">Initiate Briefing</a>
-            <a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" class="btn btn-alt">LinkedIn</a>
-        </div>
-    </section>
+<section class="hero">
+    <h1>AI Governance & Regulatory Risk Advisor</h1>
+    <p class="hero-sub">
+        I help high-growth AI and SaaS companies navigate the EU AI Act, GDPR, and cross-border compliance — 
+        before regulatory scrutiny, enterprise due diligence, or expansion friction arises.
+    </p>
+    <a href="mailto:vishalak.adv@gmail.com" class="btn">Schedule Consultation</a>
+</section>
 
-    <div class="trust-bar">
-        <span>AIGP | AI Governance</span>
-        <span>CIPP/E | GDPR</span>
-        <span>ISO 42001 Lead</span>
-        <span>NALSAR Law</span>
+<section class="section">
+    <span class="label">Core Advisory Areas</span>
+    <div class="grid">
+        <div class="card">
+            <h3>EU AI Act Readiness</h3>
+            <p>High-risk AI classification, compliance mapping, and structured documentation support for enterprise and regulator-facing environments.</p>
+        </div>
+        <div class="card">
+            <h3>AI Governance & ISO 42001</h3>
+            <p>Design and implementation of AI Management Systems (AIMS), internal controls, and accountability architecture.</p>
+        </div>
+        <div class="card">
+            <h3>Global Privacy & Data Strategy</h3>
+            <p>GDPR, DPDPA, and cross-border data governance frameworks aligned with product architecture and scaling goals.</p>
+        </div>
     </div>
+</section>
 
-    <section class="section">
-        <span class="label">Practice Pillars</span>
-        <div class="grid">
-            <div class="card">
-                <h3>AI Governance & ISO 42001</h3>
-                <p>Legal audits for model development and algorithmic accountability. I provide the regulatory architecture for AIMS to ensure investment readiness.</p>
-            </div>
-            <div class="card">
-                <h3>Global Privacy & Sovereignty</h3>
-                <p>Navigating DPDPA, GDPR, and cross-border mandates. I architect the legal blueprints for Privacy-by-Design and technical data-flow logic.</p>
-            </div>
-            <div class="card">
-                <h3>Frontier & Space Jurisprudence</h3>
-                <p>Specialized advisory on orbital liability and the "Lunar Jurisdictional Trap." I define the legal parameters for high-risk NewSpace missions.</p>
-            </div>
+<section class="section" style="border-top:1px solid var(--border);">
+    <span class="label">Engagement Models</span>
+    <div class="grid">
+        <div class="card">
+            <h3>AI Governance Risk Audit (4–6 Weeks)</h3>
+            <p>Structured compliance review, documentation gap assessment, and practical remediation roadmap.</p>
         </div>
-
-        <div style="margin-top: 60px; padding: 60px; border: 1px solid var(--border); background: rgba(59, 130, 246, 0.02); text-align: center; border-radius: 4px;">
-            <h2 style="font-size: 2rem; margin-bottom: 20px; letter-spacing: -1px;">Architecture over Advocacy.</h2>
-            <p style="color: var(--dim); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Download the formal Service Brief for a breakdown of practice areas. For tailored project proposals and pricing, please initiate a briefing.</p>
-            <a href="Vishal_Akshintala_Service_Menu.pdf" target="_blank" class="btn">Download Service Brief (PDF)</a>
-            <div class="pricing-note">Custom Fee Structures Available Upon Request</div>
+        <div class="card">
+            <h3>Quarterly External Governance Advisor</h3>
+            <p>Ongoing AI and data risk oversight, enterprise deal support, and evolving regulatory alignment.</p>
         </div>
-    </section>
+        <div class="card">
+            <h3>Strategic Regulatory Advisory</h3>
+            <p>Targeted advisory for companies entering UK/EU markets or preparing for investor due diligence.</p>
+        </div>
+    </div>
+</section>
 
-    <section class="section" style="border-top: 1px solid var(--border);">
-        <span class="label">Global Intelligence</span>
-        <a href="https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/" target="_blank" class="insight-card">
-            <span class="insight-tag">JURIST NEW YORK | JAN 2026</span>
-            <h3 style="font-size: 1.8rem; margin-bottom: 15px;">The Lunar Jurisdictional Trap: Why AI and Nuclear Ambition are Outpacing Space Law</h3>
-            <p style="color: var(--dim); font-size: 1.1rem;">A strategic analysis of mission liability and jurisdictional conflicts in the NewSpace era.</p>
-            <span style="color: var(--accent); font-size: 0.9rem; font-weight: 800; margin-top: 25px; display: block; text-transform: uppercase; letter-spacing: 1px;">Read the Report →</span>
-        </a>
-    </section>
+<section class="section" style="border-top:1px solid var(--border); text-align:center;">
+    <span class="label">Why Work With Me</span>
+    <p style="max-width:800px; margin:0 auto; color:var(--dim); font-size:1.1rem;">
+        Advocate with dual background in Engineering and Law (NALSAR). ISO 42001 Lead Implementer.
+        Experience advising across fintech, aerospace, AI-driven SaaS, and regulated technology sectors.
+    </p>
+</section>
 
-    <footer>
-        &copy; 2026 VISHAL AKSHINTALA | STRATEGIC RISK ARCHITECT
-    </footer>
+<section class="section" style="text-align:center;">
+    <h2 style="margin-bottom:25px;">Let’s structure your AI compliance before regulators do.</h2>
+    <a href="mailto:vishalak.adv@gmail.com" class="btn">Book Consultation</a>
+</section>
+
+<footer>
+    &copy; 2026 Vishal Akshintala | AI Governance & Regulatory Risk Advisory
+</footer>
 
 </body>
 </html>
