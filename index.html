@@ -80,9 +80,10 @@
             margin: 8px;
             transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
+            cursor: pointer;
         }
 
-        .primary { background: #fff; color: #000; }
+        .primary { background: #fff; color: #000; border: none; }
         .primary:hover { 
             background: var(--accent); 
             color: #fff; 
@@ -93,7 +94,7 @@
         .secondary { border: 1px solid var(--border); color: #fff; background: var(--glass); }
         .secondary:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-        /* --- Labels & Cards --- */
+        /* --- Labels & Shared Card Styles --- */
         .label {
             font-size: 0.75rem;
             letter-spacing: 4px;
@@ -114,12 +115,67 @@
             transition: 0.4s;
         }
 
+        /* --- Core Advisory Pillars --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-item:hover {
+            border-bottom: 3px solid var(--accent);
+            transform: translateY(-5px);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .service-icon {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .service-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-item p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .service-list { list-style: none; padding: 0; }
+        .service-list li {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            padding: 10px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+        .service-list li::before {
+            content: "→";
+            margin-right: 12px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
         /* --- Infinite Auto-Scroll (Marquee) --- */
         .marquee-wrapper {
             width: 100%;
             overflow: hidden;
             position: relative;
-            /* Fade effect on edges */
             mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
@@ -132,22 +188,16 @@
             animation: scroll 40s linear infinite;
         }
 
-        .marquee-wrapper:hover .marquee-content {
-            animation-play-state: paused;
-        }
+        .marquee-wrapper:hover .marquee-content { animation-play-state: paused; }
 
-        .endorsement-card {
-            width: var(--card-width);
-            flex-shrink: 0;
-        }
-
-        .endorsement-card p { font-style: italic; color: #e2e8f0; }
+        .endorsement-card { width: var(--card-width); flex-shrink: 0; }
+        .endorsement-card p { font-style: italic; color: #e2e8f0; font-size: 1rem; }
+        
         .attribution {
             margin-top: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--accent);
-            font-weight: 600;
-            font-style: normal !important;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -167,19 +217,16 @@
         }
         .scroll-container::-webkit-scrollbar { display: none; }
 
-        .case-card {
-            min-width: 320px;
-            max-width: 320px;
-        }
-        
+        .case-card { min-width: 320px; max-width: 320px; }
         .case-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: #fff; }
-        .case-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+        .case-card p { font-size: 0.95rem; color: var(--muted); }
 
         /* --- CTA & Footer --- */
         .cta {
             text-align: center;
             border-top: 1px solid var(--border);
-            background: linear-gradient(to bottom, transparent, rgba(59,130,246,0.05));
+            background: linear-gradient(to bottom, transparent, rgba(59,130,246,0.03));
+            padding: 120px 8%;
         }
 
         footer {
@@ -197,7 +244,8 @@
         @media (max-width: 768px) {
             :root { --card-width: 300px; }
             section { padding: 80px 5%; }
-            .hero { padding-top: 40px; }
+            .hero { padding-top: 60px; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -219,9 +267,49 @@
 
 <section class="reveal" style="padding-top: 0; padding-bottom: 60px;">
     <div class="scroll-container" style="justify-content: center; flex-wrap: wrap; gap: 15px;">
-        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">Advocate</span>
-        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">ISO 42001 Lead Implementer</span>
-        <span class="secondary btn" style="font-size: 0.8rem; cursor: default;">NALSAR University of Law</span>
+        <span class="secondary btn" style="font-size: 0.75rem; cursor: default; padding: 10px 20px;">Advocate</span>
+        <span class="secondary btn" style="font-size: 0.75rem; cursor: default; padding: 10px 20px;">ISO 42001 Lead Implementer</span>
+        <span class="secondary btn" style="font-size: 0.75rem; cursor: default; padding: 10px 20px;">NALSAR University of Law</span>
+        <span class="secondary btn" style="font-size: 0.75rem; cursor: default; padding: 10px 20px;">Mechanical Engineering Background</span>
+    </div>
+</section>
+
+<section class="reveal">
+    <span class="label">Core Advisory Pillars</span>
+    <div class="services-grid">
+        
+        <div class="glass-card service-item">
+            <div class="service-icon">01</div>
+            <h3>AI Accountability & Risk</h3>
+            <p>Developing robust governance frameworks for Generative AI, focusing on bias mitigation and <strong>EU AI Act</strong> compliance.</p>
+            <ul class="service-list">
+                <li>AI Risk Classifications</li>
+                <li>ISO 42001 Implementation</li>
+                <li>Accountability Mapping</li>
+            </ul>
+        </div>
+
+        <div class="glass-card service-item">
+            <div class="service-icon">02</div>
+            <h3>Global Privacy Architecture</h3>
+            <p>End-to-end privacy engineering for multi-jurisdictional scale across <strong>GDPR, DPDPA (India),</strong> and <strong>CCPA</strong>.</p>
+            <ul class="service-list">
+                <li>Cross-border Data Flows</li>
+                <li>DPIA & Privacy by Design</li>
+                <li>Supervisory Authority Liaison</li>
+            </ul>
+        </div>
+
+        <div class="glass-card service-item">
+            <div class="service-icon">03</div>
+            <h3>Regulatory Strategy</h3>
+            <p>Moving governance from a "compliance checkbox" to an <strong>investor-grade asset</strong> for venture and enterprise growth.</p>
+            <ul class="service-list">
+                <li>M&A Regulatory Due Diligence</li>
+                <li>Governance Roadmaps</li>
+                <li>Policy Position Papers</li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -288,7 +376,7 @@
 </section>
 
 <section class="cta reveal">
-    <h2 style="margin-bottom:30px; font-size: clamp(1.5rem, 4vw, 2.5rem); letter-spacing: -1px;">
+    <h2 style="margin-bottom:30px; font-size: clamp(1.5rem, 4vw, 2.5rem); letter-spacing: -1px; font-weight: 800;">
         Build governance architecture<br>before regulators do.
     </h2>
     <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Schedule Consultation</a>
