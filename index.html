@@ -4,36 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vishal Akshintala | AI & Global Privacy Governance Advisor</title>
+<title>Vishal Akshintala | AI & Privacy Governance Advisor</title>
 
-<meta name="description" content="Strategic AI & Global Privacy Governance advisory for technology companies operating across India, UK, EU, US and global markets.">
+<meta name="description" content="Boutique advisory specializing in AI Governance, EU AI Act readiness, GDPR, DPDPA, DPIAs, ISO 42001 and cross-border privacy strategy for regulated technology companies.">
+<meta name="keywords" content="AI Governance Consultant, EU AI Act Advisor, GDPR Consultant, DPDPA Lawyer, ISO 42001 Lead Implementer, DPIA Consultant, Fractional DPO, Privacy Governance Expert">
+
+<link rel="canonical" href="https://advocate-vishalak.github.io/Vishal-Akshintala/">
+
+<meta property="og:title" content="Vishal Akshintala | AI & Privacy Governance Advisor">
+<meta property="og:description" content="Strategic AI & Privacy advisory for technology companies operating across India, UK, EU and global markets.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vishal Akshintala | AI & Privacy Governance Advisor">
+<meta name="twitter:description" content="EU AI Act readiness, GDPR, DPDPA, DPIAs and fractional DPO advisory.">
+<meta name="twitter:image" content="profile.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
---bg:#0b0f19;
---glass:rgba(255,255,255,0.05);
---accent:#3b82f6;
+--bg:#0a0a0a;
+--accent:#2563eb;
 --text:#ffffff;
---muted:#9aa4b2;
+--muted:#9ca3af;
 --border:rgba(255,255,255,0.08);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-background:radial-gradient(circle at 20% 20%,#111827 0%,#0b0f19 60%);
+background:var(--bg);
 color:var(--text);
 font-family:'Inter',sans-serif;
-line-height:1.8;
-overflow-x:hidden;
+line-height:1.7;
 }
 
 section{
-padding:130px 10%;
-position:relative;
+padding:110px 12%;
+border-top:1px solid var(--border);
 }
 
 .hero{
@@ -43,16 +53,18 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:radial-gradient(circle at 50% 20%,#111827 0%,#0a0a0a 70%);
+padding:0 12%;
 }
 
 .profile{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 overflow:hidden;
-border:3px solid var(--accent);
-box-shadow:0 0 80px rgba(59,130,246,0.5);
-margin-bottom:40px;
+border:4px solid var(--accent);
+box-shadow:0 0 50px rgba(37,99,235,0.4);
+margin-bottom:30px;
 }
 
 .profile img{
@@ -62,26 +74,34 @@ object-fit:cover;
 }
 
 h1{
-font-size:clamp(3rem,6vw,5rem);
+font-size:clamp(2.5rem,6vw,4.5rem);
 font-weight:800;
 letter-spacing:-1px;
-margin-bottom:30px;
+margin-bottom:20px;
+}
+
+.hero-tag{
+color:var(--accent);
+font-weight:600;
+margin-bottom:25px;
+font-size:0.95rem;
+letter-spacing:1px;
 }
 
 .hero-sub{
-max-width:900px;
+max-width:850px;
 color:var(--muted);
-font-size:1.3rem;
-margin-bottom:50px;
+font-size:1.2rem;
+margin-bottom:40px;
 }
 
 .btn{
-padding:16px 38px;
-border-radius:8px;
+padding:15px 32px;
 text-decoration:none;
 font-weight:600;
-margin:10px;
-transition:0.4s;
+border-radius:6px;
+transition:0.3s;
+margin:8px;
 display:inline-block;
 }
 
@@ -93,7 +113,7 @@ color:#000;
 .primary:hover{
 background:var(--accent);
 color:#fff;
-box-shadow:0 20px 60px rgba(59,130,246,0.6);
+box-shadow:0 10px 35px rgba(37,99,235,0.5);
 }
 
 .secondary{
@@ -107,185 +127,207 @@ border-color:var(--accent);
 }
 
 .label{
+color:var(--accent);
 font-size:0.75rem;
 letter-spacing:3px;
 text-transform:uppercase;
-color:var(--accent);
-margin-bottom:50px;
+margin-bottom:40px;
 display:block;
 font-weight:700;
-text-align:center;
 }
 
-.scroll-container{
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.card{
+background:rgba(255,255,255,0.02);
+border:1px solid var(--border);
+padding:45px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--accent);
+background:rgba(37,99,235,0.06);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.3rem;
+}
+
+.card p{
+color:var(--muted);
+}
+
+.credentials{
 display:flex;
-gap:40px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-padding-bottom:30px;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:30px;
+font-size:0.9rem;
+color:#cbd5e1;
 }
 
-.scroll-container::-webkit-scrollbar{
+.engagement-scroll{
+display:flex;
+overflow-x:auto;
+gap:40px;
+padding-bottom:20px;
+scroll-snap-type:x mandatory;
+}
+
+.engagement-scroll::-webkit-scrollbar{
 height:8px;
 }
 
-.scroll-container::-webkit-scrollbar-thumb{
+.engagement-scroll::-webkit-scrollbar-thumb{
 background:rgba(255,255,255,0.15);
 border-radius:10px;
 }
 
-.glass-card{
+.engagement-card{
 min-width:420px;
-background:var(--glass);
+background:rgba(255,255,255,0.03);
 border:1px solid var(--border);
-backdrop-filter:blur(15px);
-padding:60px;
-border-radius:18px;
+padding:50px;
+border-radius:10px;
 transition:0.4s;
 scroll-snap-align:start;
 }
 
-.glass-card:hover{
-transform:translateY(-10px);
+.engagement-card:hover{
+transform:translateY(-8px);
 border-color:var(--accent);
-background:rgba(59,130,246,0.1);
+background:rgba(37,99,235,0.08);
 }
 
-.glass-card h3{
+.engagement-card h3{
 margin-bottom:20px;
-font-size:1.4rem;
+font-size:1.35rem;
 }
 
-.glass-card p{
+.engagement-card p{
 color:var(--muted);
 font-size:1rem;
-}
-
-.credentials-card{
-min-width:320px;
-text-align:center;
-font-weight:600;
-font-size:1rem;
-color:#cbd5e1;
+line-height:1.7;
 }
 
 .cta{
 text-align:center;
-background:linear-gradient(to right,#111827,#0b0f19);
-padding:150px 10%;
+background:linear-gradient(to right,#111827,#0a0a0a);
 }
 
 footer{
 text-align:center;
-padding:80px 10%;
+padding:60px 10%;
 color:#6b7280;
-font-size:0.9rem;
+font-size:0.85rem;
 border-top:1px solid var(--border);
 }
-
-/* Scroll Animation */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
 </style>
 </head>
 
 <body>
 
-<section class="hero reveal">
+<section class="hero">
 <div class="profile">
-<img src="profile.jpg" alt="AI & Global Privacy Governance Advisor">
+<img src="profile.jpg" alt="Vishal Akshintala – AI and Privacy Governance Advisor">
 </div>
 
-<h1>AI & Global Privacy Governance</h1>
+<h1>AI & Privacy Governance Strategy</h1>
+
+<div class="hero-tag">
+EU AI Act | GDPR | DPDPA | ISO 42001 | Cross-Border Data Governance
+</div>
 
 <p class="hero-sub">
-Advising technology companies across India, UK, EU and US on AI accountability frameworks, GDPR & DPDPA architecture, cross-border data governance and investor-grade regulatory readiness.
+I advise AI-driven and technology companies on regulatory alignment before enterprise scrutiny, investor due diligence or supervisory review. My focus lies at the intersection of artificial intelligence governance, privacy risk architecture and cross-border regulatory strategy.
 </p>
 
 <div>
-<a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Book Strategy Consultation</a>
-<a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" class="btn secondary">LinkedIn</a>
+<a href="https://calendly.com/vishal-advocate/30min" target="_blank" rel="noopener noreferrer" class="btn primary">Schedule Strategy Call</a>
+<a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" rel="noopener noreferrer" class="btn secondary">LinkedIn</a>
 </div>
 
+<div class="credentials">
+<span>Advocate (India)</span>
+<span>ISO 42001 Lead Implementer</span>
+<span>NALSAR University of Law</span>
+<span>Mechanical Engineering Background</span>
+</div>
 </section>
 
+<section>
+<span class="label">Core Advisory Focus</span>
+<div class="grid">
 
-<section class="reveal">
-<span class="label">Credentials</span>
-
-<div class="scroll-container">
-<div class="glass-card credentials-card">Advocate (India)</div>
-<div class="glass-card credentials-card">ISO 42001 Lead Implementer</div>
-<div class="glass-card credentials-card">NALSAR University of Law</div>
-<div class="glass-card credentials-card">Mechanical Engineering Background</div>
-<div class="glass-card credentials-card">AI & Privacy Governance Specialist</div>
+<div class="card">
+<h3>AI Governance & EU AI Act Readiness</h3>
+<p>High-risk system classification, technical documentation restructuring, conformity mapping, AI policy drafting and audit preparedness aligned with ISO 42001 principles.</p>
 </div>
 
+<div class="card">
+<h3>Privacy & Data Protection Architecture</h3>
+<p>GDPR and DPDPA compliance programs, DPIAs, PIAs, consent lifecycle controls, data breach escalation matrices and cross-border transfer governance.</p>
+</div>
+
+<div class="card">
+<h3>Fractional DPO & Regulatory Strategy</h3>
+<p>Board-level risk reporting, supervisory authority readiness, vendor governance frameworks and structured compliance oversight for scaling technology companies.</p>
+</div>
+
+</div>
 </section>
 
+<section>
+<span class="label">Selected Engagements</span>
 
-<section class="reveal">
-<span class="label">Selected Case Engagements</span>
+<div class="engagement-scroll">
 
-<div class="scroll-container">
-
-<div class="glass-card">
-<h3>AI SaaS Platform – Governance Architecture</h3>
-<p>Designed AI risk classification and accountability framework aligned with EU AI Act and enterprise audit expectations.</p>
+<div class="engagement-card">
+<h3>AI SaaS Platform – EU AI Act Expansion</h3>
+<p>Delivered full EU AI Act readiness including high-risk classification mapping, technical documentation restructuring, internal AI governance policy design and enterprise audit trail preparation prior to European commercial rollout.</p>
 </div>
 
-<div class="glass-card">
-<h3>Global Fintech – Cross-Border Privacy Integration</h3>
-<p>Integrated GDPR & DPDPA compliance structure with DPIAs, breach response matrix and supervisory preparedness.</p>
+<div class="engagement-card">
+<h3>Global Fintech – GDPR & DPDPA Architecture</h3>
+<p>Built cross-border privacy governance framework integrating GDPR and India DPDPA obligations. Conducted DPIAs, implemented consent lifecycle controls and structured breach response protocols across India–EU operations.</p>
 </div>
 
-<div class="glass-card">
-<h3>Venture-Backed AI Startup – Investor Readiness</h3>
-<p>Conducted governance audit, bias mapping and regulatory roadmap before institutional funding.</p>
+<div class="engagement-card">
+<h3>Venture-Backed AI Startup – Investor Due Diligence</h3>
+<p>Conducted AI governance audit including bias risk mapping, model accountability documentation review and training data governance assessment. Prepared investor-facing regulatory roadmap prior to institutional funding.</p>
 </div>
 
-<div class="glass-card">
-<h3>Enterprise SaaS – International Data Transfer Structuring</h3>
-<p>Architected SCC-aligned transfer governance and processor oversight framework across jurisdictions.</p>
+<div class="engagement-card">
+<h3>Enterprise SaaS – Cross-Border Data Transfer Strategy</h3>
+<p>Designed EU–India–US data transfer governance program including SCC alignment, transfer impact assessments (DTIAs), processor oversight structuring and data minimization protocols for scalable global operations.</p>
+</div>
+
+<div class="engagement-card">
+<h3>Technology Scale-Up – Fractional DPO & AI Oversight</h3>
+<p>Provided ongoing governance advisory including vendor AI risk assessments, supervisory authority preparedness, policy library development and quarterly board-level privacy and AI compliance reporting.</p>
 </div>
 
 </div>
-
 </section>
 
-
-<section class="cta reveal">
-<h2 style="margin-bottom:40px;font-size:2rem;">Build governance architecture before regulators do.</h2>
-<a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary">Schedule Strategic Consultation</a>
+<section class="cta">
+<h2 style="margin-bottom:25px;">Build governance before regulators build the case.</h2>
+<a href="https://calendly.com/vishal-advocate/30min" target="_blank" rel="noopener noreferrer" class="btn primary">Book Consultation</a>
 </section>
 
 <footer>
-© 2026 Vishal Akshintala | AI & Global Privacy Governance Advisory<br>
+© 2026 Vishal Akshintala | AI & Privacy Governance Advisory<br>
 Email: vishalak.adv@gmail.com
 </footer>
-
-<script>
-const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
-for (let i = 0; i < reveals.length; i++) {
-let windowHeight = window.innerHeight;
-let elementTop = reveals[i].getBoundingClientRect().top;
-let elementVisible = 100;
-if (elementTop < windowHeight - elementVisible) {
-reveals[i].classList.add("active");
-}
-}
-});
-</script>
 
 </body>
 </html>
