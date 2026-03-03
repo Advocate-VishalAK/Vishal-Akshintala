@@ -1,103 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="pKMlwVDS9wYp-5QsCfiYI0kXu9hv7VhxFQsIZAfaYBw" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Akshintala | AI Governance & Regulatory Risk Advisor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords" content="Vishal Akshintala, AI Governance Advisor, EU AI Act Consultant, GDPR Compliance, ISO 42001, AI Risk Audit, Data Privacy Counsel">
-    <meta name="description" content="AI Governance & Regulatory Risk Advisor helping high-growth tech companies navigate EU AI Act, GDPR and cross-border compliance.">
+<title>Vishal Akshintala | AI Governance & Regulatory Risk Advisor</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<meta name="description" content="AI Governance & Regulatory Risk Advisor helping high-growth AI and SaaS companies navigate EU AI Act, GDPR, and cross-border compliance.">
+<meta name="keywords" content="Vishal Akshintala, AI Governance, EU AI Act Consultant, GDPR Advisor, ISO 42001, Data Privacy Lawyer">
 
-    <style>
-        :root { --bg: #030303; --accent: #3b82f6; --text: #ffffff; --dim: #94a3b8; --border: rgba(255, 255, 255, 0.1); }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; }
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; background: radial-gradient(circle at 70% 30%, #1e293b 0%, #030303 60%); }
-        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px; }
-        .hero-sub { font-size: 1.2rem; color: var(--dim); max-width: 800px; margin-bottom: 40px; font-weight: 300; }
+<style>
+:root {
+--bg: #050505;
+--accent: #3b82f6;
+--text: #ffffff;
+--dim: #9ca3af;
+--border: rgba(255,255,255,0.08);
+}
 
-        .btn { background: #fff; color: #000; padding: 18px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; display: inline-block; border-radius: 2px; }
-        .btn:hover { background: var(--accent); color: #fff; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3); }
+* { box-sizing: border-box; margin:0; padding:0; }
 
-        .section { padding: 100px 10%; }
-        .label { color: var(--accent); text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 800; margin-bottom: 40px; display: block; }
+body {
+background: var(--bg);
+color: var(--text);
+font-family: 'Plus Jakarta Sans', sans-serif;
+line-height:1.6;
+}
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 45px 35px; transition: 0.3s; border-radius: 4px; }
-        .card:hover { border-color: var(--accent); transform: translateY(-6px); background: rgba(59, 130, 246, 0.05); }
-        .card h3 { font-size: 1.4rem; margin-bottom: 15px; }
-        .card p { color: var(--dim); }
+.hero {
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+background: radial-gradient(circle at 70% 20%, #111827 0%, #050505 70%);
+}
 
-        footer { padding: 60px 10%; border-top: 1px solid var(--border); text-align: center; color: rgba(255,255,255,0.3); font-size: 0.8rem; letter-spacing: 1px; }
-    </style>
+.profile {
+width:160px;
+height:160px;
+border-radius:50%;
+overflow:hidden;
+border:3px solid var(--accent);
+margin-bottom:30px;
+box-shadow:0 0 40px rgba(59,130,246,0.3);
+}
+
+.profile img {
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+h1 {
+font-size:clamp(2.5rem,6vw,4.5rem);
+font-weight:800;
+margin-bottom:20px;
+letter-spacing:-2px;
+}
+
+.hero-sub {
+font-size:1.2rem;
+color:var(--dim);
+max-width:800px;
+margin-bottom:40px;
+}
+
+.btn {
+background:#fff;
+color:#000;
+padding:16px 35px;
+text-decoration:none;
+font-weight:700;
+letter-spacing:1px;
+border-radius:4px;
+transition:0.3s;
+display:inline-block;
+margin:10px;
+}
+
+.btn:hover {
+background:var(--accent);
+color:#fff;
+box-shadow:0 10px 35px rgba(59,130,246,0.4);
+}
+
+.btn-outline {
+background:transparent;
+border:1px solid var(--text);
+color:var(--text);
+}
+
+.section {
+padding:100px 10%;
+border-top:1px solid var(--border);
+}
+
+.label {
+color:var(--accent);
+font-size:0.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:40px;
+display:block;
+font-weight:700;
+}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card {
+background:rgba(255,255,255,0.02);
+border:1px solid var(--border);
+padding:40px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-6px);
+border-color:var(--accent);
+background:rgba(59,130,246,0.06);
+}
+
+.card h3 {
+margin-bottom:15px;
+font-size:1.3rem;
+}
+
+.card p {
+color:var(--dim);
+}
+
+.cta {
+text-align:center;
+padding:100px 10%;
+background:linear-gradient(to right, #0f172a, #050505);
+}
+
+footer {
+padding:60px 10%;
+text-align:center;
+color:rgba(255,255,255,0.4);
+font-size:0.8rem;
+letter-spacing:1px;
+border-top:1px solid var(--border);
+}
+</style>
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>AI Governance & Regulatory Risk Advisor</h1>
-    <p class="hero-sub">
-        I help high-growth AI and SaaS companies navigate the EU AI Act, GDPR, and cross-border compliance — 
-        before regulatory scrutiny, enterprise due diligence, or expansion friction arises.
-    </p>
-    <a href="mailto:vishalak.adv@gmail.com" class="btn">Schedule Consultation</a>
+<div class="profile">
+<img src="profile.jpg" alt="Vishal Akshintala" onerror="this.src='https://ui-avatars.com/api/?name=Vishal+Akshintala&background=111827&color=3b82f6'">
+</div>
+
+<h1>AI Governance & Regulatory Risk Advisor</h1>
+
+<p class="hero-sub">
+Helping AI-driven and SaaS companies navigate EU AI Act, GDPR and cross-border compliance —
+before enterprise scrutiny, regulator exposure, or expansion friction arises.
+</p>
+
+<div>
+<a href="mailto:vishalak.adv@gmail.com" class="btn">Book Consultation</a>
+<a href="https://www.linkedin.com/in/vishal-akshintala-a24a87244/" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+</div>
 </section>
 
 <section class="section">
-    <span class="label">Core Advisory Areas</span>
-    <div class="grid">
-        <div class="card">
-            <h3>EU AI Act Readiness</h3>
-            <p>High-risk AI classification, compliance mapping, and structured documentation support for enterprise and regulator-facing environments.</p>
-        </div>
-        <div class="card">
-            <h3>AI Governance & ISO 42001</h3>
-            <p>Design and implementation of AI Management Systems (AIMS), internal controls, and accountability architecture.</p>
-        </div>
-        <div class="card">
-            <h3>Global Privacy & Data Strategy</h3>
-            <p>GDPR, DPDPA, and cross-border data governance frameworks aligned with product architecture and scaling goals.</p>
-        </div>
-    </div>
+<span class="label">Core Advisory Areas</span>
+<div class="grid">
+<div class="card">
+<h3>EU AI Act Readiness</h3>
+<p>High-risk AI classification, documentation alignment, compliance mapping and enterprise deal support.</p>
+</div>
+<div class="card">
+<h3>AI Governance & ISO 42001</h3>
+<p>Design and implementation of AI Management Systems (AIMS) and accountability architecture.</p>
+</div>
+<div class="card">
+<h3>Global Privacy & Data Strategy</h3>
+<p>GDPR, DPDPA and cross-border governance frameworks aligned with scaling and investor readiness.</p>
+</div>
+</div>
 </section>
 
-<section class="section" style="border-top:1px solid var(--border);">
-    <span class="label">Engagement Models</span>
-    <div class="grid">
-        <div class="card">
-            <h3>AI Governance Risk Audit (4–6 Weeks)</h3>
-            <p>Structured compliance review, documentation gap assessment, and practical remediation roadmap.</p>
-        </div>
-        <div class="card">
-            <h3>Quarterly External Governance Advisor</h3>
-            <p>Ongoing AI and data risk oversight, enterprise deal support, and evolving regulatory alignment.</p>
-        </div>
-        <div class="card">
-            <h3>Strategic Regulatory Advisory</h3>
-            <p>Targeted advisory for companies entering UK/EU markets or preparing for investor due diligence.</p>
-        </div>
-    </div>
+<section class="section">
+<span class="label">Engagement Models</span>
+<div class="grid">
+<div class="card">
+<h3>AI Governance Risk Audit (4–6 Weeks)</h3>
+<p>Structured review, documentation gap analysis and actionable remediation roadmap.</p>
+</div>
+<div class="card">
+<h3>Quarterly External Governance Advisor</h3>
+<p>Ongoing AI and data risk oversight, enterprise due diligence support and regulatory monitoring.</p>
+</div>
+<div class="card">
+<h3>Strategic Market Entry Advisory</h3>
+<p>Compliance structuring for companies entering UK/EU markets or raising institutional capital.</p>
+</div>
+</div>
 </section>
 
-<section class="section" style="border-top:1px solid var(--border); text-align:center;">
-    <span class="label">Why Work With Me</span>
-    <p style="max-width:800px; margin:0 auto; color:var(--dim); font-size:1.1rem;">
-        Advocate with dual background in Engineering and Law (NALSAR). ISO 42001 Lead Implementer.
-        Experience advising across fintech, aerospace, AI-driven SaaS, and regulated technology sectors.
-    </p>
-</section>
-
-<section class="section" style="text-align:center;">
-    <h2 style="margin-bottom:25px;">Let’s structure your AI compliance before regulators do.</h2>
-    <a href="mailto:vishalak.adv@gmail.com" class="btn">Book Consultation</a>
+<section class="cta">
+<h2 style="margin-bottom:25px;">Structure your AI compliance before regulators do.</h2>
+<a href="mailto:vishalak.adv@gmail.com" class="btn">Schedule a Consultation</a>
 </section>
 
 <footer>
-    &copy; 2026 Vishal Akshintala | AI Governance & Regulatory Risk Advisory
+© 2026 Vishal Akshintala | AI Governance & Regulatory Risk Advisory
 </footer>
 
 </body>
