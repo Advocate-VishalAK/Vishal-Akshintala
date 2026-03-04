@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Vishal Akshintala | AI & Global Privacy Governance Advisor</title>
-    <meta name="description" content="Strategic AI & Global Privacy Governance advisory for technology companies operating across India, UK, EU, US and global markets.">
+    <meta name="title" content="Vishal Akshintala | AI & Global Privacy Governance Advisor">
+    <meta name="description" content="Strategic AI & Global Privacy Governance advisory for technology companies operating across India, UK, EU, and US. Specialist in ISO 42001 and DPDPA.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://advocate-vishalak.github.io/Vishal-Akshintala/">
+    <meta property="og:title" content="Vishal Akshintala | AI & Global Privacy Governance">
+    <meta property="og:description" content="Advising technology companies on AI accountability, cross-border data governance, and investor-grade regulatory readiness.">
+    <meta property="og:image" content="https://advocate-vishalak.github.io/Vishal-Akshintala/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Vishal Akshintala AI & Privacy Advisory",
+      "image": "https://advocate-vishalak.github.io/Vishal-Akshintala/profile.jpg",
+      "url": "https://advocate-vishalak.github.io/Vishal-Akshintala/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "serviceType": ["AI Governance", "Privacy Law", "GDPR Compliance", "DPDPA Implementation"],
+      "founder": "Vishal Akshintala"
+    }
+    </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -384,10 +409,11 @@
 
 <footer>
     © 2026 Vishal Akshintala | AI & Global Privacy Governance Advisory<br>
-    Email: vishalak.adv@gmail.com
+    Email: <a href="mailto:vishalak.adv@gmail.com" style="color:inherit; text-decoration:none;">vishalak.adv@gmail.com</a>
 </footer>
 
 <script>
+    // Reveal Observer
     const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -398,6 +424,12 @@
     }, { threshold: 0.1 });
 
     reveals.forEach(reveal => observer.observe(reveal));
+
+    // Instant Hero Reveal
+    window.addEventListener('DOMContentLoaded', () => {
+        const hero = document.querySelector('.hero');
+        if (hero) hero.classList.add('active');
+    });
 </script>
 
 </body>
