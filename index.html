@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Akshintala | AI Law & Privacy Governance Diagnostic</title>
+    <title>Vishal Akshintala | AI Law & Global Privacy Governance</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -16,6 +16,7 @@
             --text: #ffffff;
             --muted: #9aa4b2;
             --border: rgba(255, 255, 255, 0.08);
+            --card-width: 400px;
             --danger: #ef4444;
             --warning: #fbbf24;
             --success: #10b981;
@@ -24,221 +25,194 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             background: radial-gradient(circle at 20% 20%, #111827 0%, #0b0f19 60%);
-            color: var(--text); 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
+            color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden;
         }
 
         section { padding: 80px 8%; position: relative; }
+        .label { font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 40px; display: block; font-weight: 700; text-align: center; }
 
-        /* --- PROFILE HERO HEADER --- */
-        .hero-mini {
-            text-align: center;
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
+        /* --- HERO --- */
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .profile-container { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent); box-shadow: 0 0 50px rgba(59, 130, 246, 0.3); margin-bottom: 30px; }
+        .profile-container img { width: 100%; height: 100%; object-fit: cover; }
+        h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(to bottom, #fff 40%, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-sub { max-width: 800px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; }
 
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 2px solid var(--accent);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
+        /* --- BUTTONS --- */
+        .btn { padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; cursor: pointer; border: none; margin: 5px; }
+        .primary { background: #fff; color: #000; }
+        .primary:hover { background: var(--accent); color: #fff; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
+        .secondary { border: 1px solid var(--border); color: #fff; background: var(--glass); }
 
-        .hero-mini h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(to bottom, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .badge-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .credential-badge {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 5px 12px;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            background: var(--glass);
-            color: var(--muted);
-        }
-
-        /* --- DIAGNOSTIC UI --- */
-        .glass-card {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            backdrop-filter: blur(12px);
-            padding: 40px;
-            border-radius: 20px;
-        }
-
+        /* --- DIAGNOSTIC ENGINE --- */
+        .glass-card { background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(12px); padding: 40px; border-radius: 20px; }
         #analyzer-container { max-width: 1000px; margin: 0 auto; }
         .quiz-step { display: none; text-align: center; }
-        .quiz-step.active { display: block; animation: fadeIn 0.5s ease; }
-
-        .option-btn {
-            display: block; width: 100%; max-width: 480px; margin: 12px auto; padding: 18px;
-            background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-            color: #fff; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.3s;
-        }
+        .quiz-step.active { display: block; animation: slideUp 0.5s ease forwards; }
+        .option-btn { display: block; width: 100%; max-width: 500px; margin: 15px auto; padding: 18px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.2s; }
         .option-btn:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.1); }
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; text-align: left; }
 
-        /* --- RESULTS DASHBOARD --- */
-        .dashboard-grid {
-            display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 25px; margin-top: 30px;
-        }
-        .heatmap-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px;
-        }
-        .heatmap-cell {
-            padding: 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 700;
-            text-align: center; border: 1px solid rgba(255,255,255,0.05);
-        }
-        .risk-badge {
-            display: inline-block; padding: 6px 15px; border-radius: 6px;
-            font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 20px;
-        }
+        /* --- COVERAGE & SERVICE GRID --- */
+        .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
+        .coverage-item { text-align: center; padding: 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--glass); }
+        .coverage-item h4 { color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-list { list-style: none; margin-top: 15px; }
+        .service-list li { font-size: 0.85rem; color: #cbd5e1; padding: 8px 0; border-top: 1px solid var(--border); display: flex; align-items: center; }
+        .service-list li::before { content: "→"; margin-right: 10px; color: var(--accent); }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        @media (max-width: 900px) { 
-            .dashboard-grid { grid-template-columns: 1fr; }
-            section { padding: 40px 5%; }
-        }
+        /* --- MARQUEE & SCROLL --- */
+        .marquee-wrapper { width: 100%; overflow: hidden; position: relative; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+        .marquee-content { display: flex; gap: 30px; padding: 20px 0; width: max-content; animation: scroll 40s linear infinite; }
+        .endorsement-card { width: var(--card-width); flex-shrink: 0; font-style: italic; }
+        .scroll-container { display: flex; gap: 25px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: none; }
+        .case-card { min-width: 320px; }
+
+        /* --- ANIMATIONS --- */
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 15px)); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } section { padding: 60px 5%; } }
     </style>
 </head>
 <body>
 
-<section class="hero-mini">
-    <img src="profile.jpg" alt="Vishal Akshintala" class="profile-pic">
-    <h1>Vishal Akshintala</h1>
-    <p style="color: var(--muted); max-width: 600px; margin: 0 auto;">Global AI Law & Privacy Governance Expert. Bridging the gap between high-speed innovation and regulatory accountability.</p>
-    
-    <div class="badge-row">
-        <span class="credential-badge">Advocate</span>
-        <span class="credential-badge">ISO 42001 Lead Implementer</span>
-        <span class="credential-badge">NALSAR Alumni</span>
-        <span class="credential-badge">AI Auditor</span>
+<section class="hero reveal">
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Vishal Akshintala">
+    </div>
+    <h1>Global AI Law & Governance</h1>
+    <p class="hero-sub">
+        Expert advisory bridging the gap between high-speed AI innovation and complex regulatory compliance across <strong>India, EU, UK, and USA.</strong>
+    </p>
+    <div>
+        <a href="#analyzer-section" class="btn primary">Start Risk Audit</a>
+        <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn secondary">Book Consultation</a>
     </div>
 </section>
 
-<section id="analyzer-section" style="padding-top: 0;">
+<section id="analyzer-section" class="reveal">
+    <span class="label">Diagnostic Engine</span>
     <div id="analyzer-container" class="glass-card">
-        
         <div class="quiz-step active" id="step-0">
-            <span style="color: var(--accent); font-weight: 800; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;">Diagnostic Engine</span>
-            <h2 style="font-size: 2rem; margin: 15px 0;">Governance Stress-Test</h2>
-            <p style="color: var(--muted); margin-bottom: 35px; font-size: 0.95rem;">Select your domain to uncover specific liability gaps in your architecture.</p>
-            
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <button class="option-btn" onclick="startAudit('AI')">
-                    <strong>AI Governance Audit</strong><br>
-                    <small style="opacity: 0.6;">EU AI Act, Algorithmic Risk, & ISO 42001</small>
-                </button>
-                <button class="option-btn" onclick="startAudit('PRIVACY')">
-                    <strong>Privacy Governance Audit</strong><br>
-                    <small style="opacity: 0.6;">DPDPA (India), GDPR, & Data Flows</small>
-                </button>
-            </div>
+            <h3>Interactive Governance Stress-Test</h3>
+            <p style="color: var(--muted); margin-bottom: 30px;">Identify your domain to uncover specific liability gaps.</p>
+            <button class="option-btn" onclick="startAudit('AI')">
+                <strong>🧠 AI Governance Diagnostic</strong><br><small>EU AI Act, ISO 42001, Bias Mapping</small>
+            </button>
+            <button class="option-btn" onclick="startAudit('PRIVACY')">
+                <strong>🔐 Privacy Architecture Diagnostic</strong><br><small>DPDPA India, GDPR, Cross-Border Flows</small>
+            </button>
         </div>
 
         <div class="quiz-step" id="step-q">
-            <div id="q-progress" style="color: var(--accent); font-weight: 800; font-size: 0.75rem; margin-bottom: 20px; letter-spacing: 2px;"></div>
-            <h3 id="q-text" style="font-size: 1.4rem; margin-bottom: 40px; min-height: 80px; font-weight: 400;"></h3>
-            <button class="option-btn" onclick="processInput(true)" style="text-align: center; border-color: rgba(16, 185, 129, 0.3);">Yes / Fully Implemented</button>
-            <button class="option-btn" onclick="processInput(false)" style="text-align: center; border-color: rgba(239, 68, 68, 0.3);">No / In Progress / Unsure</button>
+            <p id="q-progress" style="color: var(--accent); font-weight: 700; font-size: 0.8rem; margin-bottom: 10px;"></p>
+            <h3 id="q-text" style="margin-bottom: 35px; min-height: 60px;"></h3>
+            <button class="option-btn" onclick="processInput(true)" style="text-align:center;">Yes / Implemented</button>
+            <button class="option-btn" onclick="processInput(false)" style="text-align:center;">No / In Progress</button>
         </div>
 
         <div class="quiz-step" id="step-res">
-            <div id="risk-tag" class="risk-badge"></div>
-            <h2 id="res-title" style="margin-bottom: 5px;"></h2>
-            <p id="res-desc" style="color: var(--muted); margin-bottom: 30px; font-size: 0.9rem;"></p>
-
+            <div id="risk-tag" style="display: inline-block; padding: 5px 12px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; margin-bottom: 15px;"></div>
+            <h2 id="res-title"></h2>
             <div class="dashboard-grid">
-                <div class="glass-card" style="padding: 20px; background: rgba(0,0,0,0.2);">
-                    <p style="font-size: 0.7rem; font-weight: 800; color: var(--accent); margin-bottom: 15px; letter-spacing: 1px;">RISK DISTRIBUTION (RADAR)</p>
-                    <canvas id="riskRadar"></canvas>
-                </div>
-
-                <div style="text-align: left;">
-                    <p style="font-size: 0.7rem; font-weight: 800; color: var(--accent); margin-bottom: 10px; letter-spacing: 1px;">LIABILITY HEATMAP</p>
-                    <div class="heatmap-grid" id="heatmap"></div>
-                    
-                    <div style="margin-top: 25px; padding: 20px; background: var(--glass); border-radius: 12px; border: 1px solid var(--border);">
-                        <p style="font-weight: 800; margin-bottom: 8px; font-size: 0.9rem;">Risk Profile Summary:</p>
-                        <ul id="profile-summary" style="font-size: 0.8rem; color: var(--muted); padding-left: 18px;"></ul>
-                    </div>
-                    
-                    <a href="https://calendly.com/vishal-advocate/30min" target="_blank" 
-                       style="display: block; margin-top: 20px; padding: 14px; background: #fff; color: #000; text-decoration: none; border-radius: 8px; font-weight: 700; text-align: center; font-size: 0.9rem;">
-                        Schedule Strategic Review
-                    </a>
+                <div class="glass-card" style="padding: 20px;"><canvas id="riskRadar"></canvas></div>
+                <div>
+                    <p id="res-desc" style="color: var(--muted); font-size: 0.9rem; margin-bottom: 20px;"></p>
+                    <div id="heatmap" style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:20px;"></div>
+                    <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary" style="width:100%; text-align:center;">Schedule Mitigation</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<section class="reveal">
+    <div class="coverage-grid">
+        <div class="coverage-item"><h4>EUROPE</h4><p>EU AI Act & GDPR</p></div>
+        <div class="coverage-item"><h4>INDIA</h4><p>DPDPA 2023</p></div>
+        <div class="coverage-item"><h4>USA</h4><p>CCPA & Frameworks</p></div>
+        <div class="coverage-item"><h4>GLOBAL</h4><p>ISO 42001</p></div>
+    </div>
+    
+    <span class="label">Core Advisory Pillars</span>
+    <div class="services-grid">
+        <div class="glass-card">
+            <h3>AI Accountability</h3>
+            <p>Generative AI governance and risk classification.</p>
+            <ul class="service-list"><li>Risk Mapping</li><li>ISO 42001</li><li>Bias Review</li></ul>
+        </div>
+        <div class="glass-card">
+            <h3>Global Privacy</h3>
+            <p>Privacy engineering for multi-jurisdictional scale.</p>
+            <ul class="service-list"><li>Cross-border Flows</li><li>DPIAs</li><li>Supervisory Liaison</li></ul>
+        </div>
+    </div>
+</section>
+
+<section class="reveal">
+    <span class="label">Client Endorsements</span>
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <div class="glass-card endorsement-card">“Structured AI governance clarity during our EU expansion significantly reduced friction.”<br><br><strong>— Founder, AI SaaS</strong></div>
+            <div class="glass-card endorsement-card">“The cross-border GDPR and DPDPA framework streamlined our compliance.”<br><br><strong>— CRO, Global Fintech</strong></div>
+            <div class="glass-card endorsement-card">“His audit provided the documentation our investors expected prior to funding.”<br><br><strong>— CEO, AI Startup</strong></div>
+            <div class="glass-card endorsement-card">“Structured AI governance clarity during our EU expansion significantly reduced friction.”<br><br><strong>— Founder, AI SaaS</strong></div>
+            <div class="glass-card endorsement-card">“The cross-border GDPR and DPDPA framework streamlined our compliance.”<br><br><strong>— CRO, Global Fintech</strong></div>
+        </div>
+    </div>
+</section>
+
+<section class="reveal">
+    <span class="label">Selected Engagements</span>
+    <div class="scroll-container">
+        <div class="glass-card case-card"><h3>AI SaaS Governance</h3><p>Designed risk frameworks aligned with the EU AI Act.</p></div>
+        <div class="glass-card case-card"><h3>Fintech Expansion</h3><p>Integrated DPDPA (India) for high-volume processors.</p></div>
+        <div class="glass-card case-card"><h3>Venture Audit</h3><p>Conducting bias mapping for Series A funding rounds.</p></div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 60px 8%; border-top: 1px solid var(--border);">
+    <p>© 2026 Vishal Akshintala | AI & Privacy Expert</p>
+    <p>Email: <a href="mailto:vishalak.adv@gmail.com" style="color:var(--accent); text-decoration:none;">vishalak.adv@gmail.com</a></p>
+</footer>
+
 <script>
+    // --- AUDIT LOGIC ---
     const aiAudit = [
-        { q: "Is your AI used in high-stakes sectors like Employment, Finance, or Healthcare?", cat: "Liability", w: 30 },
-        { q: "Does your system process biometric data or perform automated emotional recognition?", cat: "Liability", w: 25 },
-        { q: "Do you have a documented AI Risk Management Framework (ISO 42001 style)?", cat: "Governance", w: 20 },
-        { q: "Are technical logs and model performance metrics stored for regulatory audit?", cat: "Documentation", w: 15 },
-        { q: "Is there a designated 'Human-in-the-loop' protocol for high-risk outputs?", cat: "Governance", w: 20 },
-        { q: "Are training datasets audited for bias and copyright provenance?", cat: "Documentation", w: 20 },
-        { q: "Is there a public-facing notice explaining AI's role in decision-making?", cat: "Transparency", w: 15 },
-        { q: "Do you have an active AI incident monitoring and reporting system?", cat: "Transparency", w: 15 }
+        { q: "Is your AI used in high-stakes sectors (Finance, Healthcare, HR)?", cat: "Liability", w: 35 },
+        { q: "Do you have a documented AI Risk Framework (ISO 42001 style)?", cat: "Governance", w: 25 },
+        { q: "Are training datasets audited for bias and copyright provenance?", cat: "Data", w: 20 },
+        { q: "Is there an active AI incident monitoring and reporting system?", cat: "Ops", w: 20 }
     ];
-
     const privacyAudit = [
-        { q: "Do you transfer personal data across jurisdictions (India, EU, US)?", cat: "Jurisdiction", w: 30 },
-        { q: "Have you mapped data flows to meet the new India DPDPA requirements?", cat: "Legal Basis", w: 25 },
-        { q: "Is your privacy notice standalone and purpose-specific (not just a generic link)?", cat: "Ops Controls", w: 20 },
-        { q: "Do you have a Record of Processing Activities (RoPA) for all datasets?", cat: "Ops Controls", w: 15 },
-        { q: "Are Data Processing Agreements (DPAs) signed with all sub-processors?", cat: "Jurisdiction", w: 20 },
-        { q: "Do you have a tested 72-hour regulatory breach notification protocol?", cat: "Breach Readiness", w: 25 },
-        { q: "Are Data Protection Impact Assessments (DPIAs) conducted for new features?", cat: "Legal Basis", w: 20 },
-        { q: "Can you respond to a Data Subject Access Request (DSAR) within 30 days?", cat: "Breach Readiness", w: 15 }
+        { q: "Do you transfer personal data across India, EU, UK, or the US?", cat: "Flows", w: 35 },
+        { q: "Have you mapped data flows for the India DPDPA requirements?", cat: "Legal", w: 25 },
+        { q: "Do you have a tested 72-hour regulatory breach protocol?", cat: "Breach", w: 20 },
+        { q: "Is data retention automated and bound to specific purposes?", cat: "Ops", w: 20 }
     ];
 
-    let activeSet = [];
-    let qIdx = 0;
-    let scores = {};
+    let activeSet = [], qIdx = 0, scores = {};
 
     function startAudit(type) {
         activeSet = type === 'AI' ? aiAudit : privacyAudit;
         qIdx = 0; scores = {};
-        activeSet.forEach(item => scores[item.cat] = 0);
+        activeSet.forEach(i => scores[i.cat] = 0);
         document.getElementById('step-0').classList.remove('active');
         document.getElementById('step-q').classList.add('active');
         renderQ();
     }
 
     function renderQ() {
-        const q = activeSet[qIdx];
         document.getElementById('q-progress').innerText = `STEP ${qIdx + 1} / ${activeSet.length}`;
-        document.getElementById('q-text').innerText = q.q;
+        document.getElementById('q-text').innerText = activeSet[qIdx].q;
     }
 
     function processInput(isYes) {
-        if (!isYes) {
-            const q = activeSet[qIdx];
-            scores[q.cat] += q.w;
-        }
+        if (!isYes) scores[activeSet[qIdx].cat] += activeSet[qIdx].w;
         qIdx++;
         if (qIdx < activeSet.length) renderQ(); else showResults();
     }
@@ -246,53 +220,28 @@
     function showResults() {
         document.getElementById('step-q').classList.remove('active');
         document.getElementById('step-res').classList.add('active');
+        
         const cats = Object.keys(scores);
         const dataValues = cats.map(c => Math.min(scores[c] + 15, 100));
 
         new Chart(document.getElementById('riskRadar'), {
             type: 'radar',
-            data: {
-                labels: cats,
-                datasets: [{
-                    data: dataValues,
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    borderColor: '#3b82f6',
-                    pointBackgroundColor: '#fff',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                scales: { r: { suggestedMin: 0, suggestedMax: 100, ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.05)' }, pointLabels: { color: '#94a3b8', font: { size: 10 } } } },
-                plugins: { legend: { display: false } }
-            }
+            data: { labels: cats, datasets: [{ data: dataValues, backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: '#3b82f6', borderWidth: 2 }] },
+            options: { scales: { r: { suggestedMax: 100, ticks: { display: false }, pointLabels: { color: '#94a3b8' } } }, plugins: { legend: { display: false } } }
         });
 
-        const heatmap = document.getElementById('heatmap');
-        const summary = document.getElementById('profile-summary');
-        let totalRisk = 0;
-        cats.forEach(c => {
-            const risk = scores[c];
-            totalRisk += risk;
-            let color = 'var(--success)';
-            let label = 'LOW';
-            if (risk > 15) { color = 'var(--warning)'; label = 'MEDIUM'; }
-            if (risk > 30) { color = 'var(--danger)'; label = 'HIGH'; }
-            heatmap.innerHTML += `<div class="heatmap-cell" style="background:${color}15; color:${color}; border-color:${color}30;">${c}: ${label}</div>`;
-            if (risk > 15) summary.innerHTML += `<li>Gaps in <strong>${c}</strong> pose regulatory friction.</li>`;
-        });
-
+        const total = Object.values(scores).reduce((a,b) => a+b, 0);
         const tag = document.getElementById('risk-tag');
-        if (totalRisk > 50) {
+        if (total > 50) {
             tag.innerText = "CRITICAL EXPOSURE"; tag.style.background = 'var(--danger)';
             document.getElementById('res-title').innerText = "Strategic Friction Detected";
-            document.getElementById('res-desc').innerText = "Significant gaps in documentation and oversight. Failure is likely during enterprise due diligence.";
+            document.getElementById('res-desc').innerText = "Material gaps found. Failure is likely during enterprise due diligence.";
         } else {
             tag.innerText = "MODERATE RISK"; tag.style.background = 'var(--warning)';
             document.getElementById('res-title').innerText = "Governance Maturity Gap";
-            document.getElementById('res-desc').innerText = "Baseline controls present, but lacks the technical defensibility for global expansion.";
+            document.getElementById('res-desc').innerText = "Baseline controls present, but lacks the technical 'defensibility' for global expansion.";
         }
     }
-</script>
 
-</body>
-</html>
+    // --- REVEAL LOGIC ---
+    const observer = new IntersectionObserver((
