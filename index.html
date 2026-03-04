@@ -256,18 +256,30 @@
 </footer>
 
 <script>
-    // --- AUDIT ENGINE DATA & LOGIC ---
+ // --- EXPANDED AUDIT DATA SETS ---
     const aiAudit = [
-        { q: "Is your AI used in high-stakes sectors like Employment, Finance, or Healthcare?", cat: "Liability", w: 30 },
-        { q: "Do you have a documented AI Risk Management Framework (ISO 42001 style)?", cat: "Governance", w: 25 },
-        { q: "Are training datasets audited for bias and copyright provenance?", cat: "Data", w: 20 },
-        { q: "Is there an active AI incident monitoring and reporting system?", cat: "Ops", w: 25 }
+        { q: "Is your AI system deployed in high-stakes sectors (e.g., Credit Scoring, HR/Hiring, Healthcare, or Critical Infrastructure)?", cat: "Classification", w: 25 },
+        { q: "Does your architecture process biometric data for identification or emotional recognition?", cat: "Liability", w: 20 },
+        { q: "Have you established an AI Oversight Committee or a designated 'Responsible AI' officer?", cat: "Governance", w: 15 },
+        { q: "Are training datasets systematically screened for historical bias and protected attributes (gender, race, age)?", cat: "Data Integrity", w: 15 },
+        { q: "Do you maintain a Technical Log (Model Card) that documents training parameters, versioning, and drift?", cat: "Accountability", w: 15 },
+        { q: "Is there a documented 'Human-in-the-loop' protocol to override automated AI decisions?", cat: "Governance", w: 20 },
+        { q: "Do you have a process to provide 'Explanations of Individual Decision-Making' to end-users (EU AI Act Requirement)?", cat: "Transparency", w: 15 },
+        { q: "Is there an incident response plan specifically for 'Model Hallucinations' or security adversarial attacks?", cat: "Ops/Security", w: 20 },
+        { q: "Have all internal stakeholders and developers undergone 'AI Literacy' training regarding ethical use and regulatory liabilities?", cat: "Culture/Training", w: 15 }
+    ];
+    ];
     ];
     const privacyAudit = [
-        { q: "Do you transfer personal data across India, EU, UK, or USA?", cat: "Flows", w: 35 },
-        { q: "Have you mapped data flows to meet the new India DPDPA requirements?", cat: "Legal", w: 25 },
-        { q: "Do you have a tested 72-hour regulatory breach notification protocol?", cat: "Breach", w: 20 },
-        { q: "Are Data Protection Impact Assessments (DPIAs) conducted for new features?", cat: "Design", w: 20 }
+        { q: "Do you transfer personal data from origin country to any 'third countries' without a localized mirror or SCCs?", cat: "Cross-Border", w: 25 },
+        { q: "Is your Privacy Notice 'purpose-specific' and 'unambiguous' as per legal privacy standards?", cat: "Consent/Legal", w: 20 },
+        { q: "Do you maintain a live 'Record of Processing Activities' (RoPA) for all personal data touchpoints?", cat: "Operations", w: 15 },
+        { q: "Have you conducted a Data Protection Impact Assessment (DPIA) for your most recent high-risk feature?", cat: "Compliance", w: 20 },
+        { q: "Can your system automatically fulfill a Data Subject Request within 30 days?", cat: "Data Rights", w: 15 },
+        { q: "Are all sub-processors (cloud providers, analytics tools) bound by signed Data Processing Agreements (DPAs)?", cat: "Vendor Risk", w: 15 },
+        { q: "Do you have a tested 72-hour regulatory breach notification workflow for the relevant Data Protection Authority?", cat: "Breach Readiness", w: 25 },
+        { q: "Is 'Privacy by Design' documented in your software development lifecycle (SDLC)?", cat: "Engineering", w: 15 },
+        { q: "Do you conduct periodic 'Privacy Awareness' workshops for employees handling sensitive data to prevent social engineering or internal leaks?", cat: "Culture/Training", w: 15 }
     ];
 
     let activeSet = [], qIdx = 0, scores = {};
