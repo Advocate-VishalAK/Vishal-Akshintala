@@ -35,7 +35,7 @@
         .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .profile-container { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent); box-shadow: 0 0 50px rgba(59, 130, 246, 0.3); margin-bottom: 30px; }
         .profile-container img { width: 100%; height: 100%; object-fit: cover; }
-        h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(to bottom, #fff 40%, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(to bottom, #fff 40%, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-sub { max-width: 800px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; }
 
         /* --- BUTTONS --- */
@@ -45,7 +45,7 @@
         .secondary { border: 1px solid var(--border); color: #fff; background: var(--glass); }
 
         /* --- DIAGNOSTIC ENGINE --- */
-        .glass-card { background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(12px); padding: 40px; border-radius: 20px; }
+        .glass-card { background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(12px); padding: 40px; border-radius: 20px; transition: transform 0.3s ease; }
         #analyzer-container { max-width: 1000px; margin: 0 auto; }
         .quiz-step { display: none; text-align: center; }
         .quiz-step.active { display: block; animation: slideUp 0.5s ease forwards; }
@@ -63,7 +63,7 @@
         .service-list li::before { content: "→"; margin-right: 10px; color: var(--accent); font-weight: bold; }
 
         /* --- MARQUEE --- */
-        .marquee-wrapper { width: 100%; overflow: hidden; position: relative; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+        .marquee-wrapper { width: 100%; overflow: hidden; position: relative; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
         .marquee-content { display: flex; gap: 30px; padding: 20px 0; width: max-content; animation: scroll 40s linear infinite; }
         .marquee-wrapper:hover .marquee-content { animation-play-state: paused; }
         .endorsement-card { width: var(--card-width); flex-shrink: 0; }
@@ -80,7 +80,11 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 900px) { .dashboard-grid { grid-template-columns: 1fr; } section { padding: 60px 5%; } }
+        @media (max-width: 900px) { 
+            .dashboard-grid { grid-template-columns: 1fr; } 
+            section { padding: 60px 5%; }
+            .hero { padding-top: 100px; }
+        }
     </style>
 </head>
 <body>
@@ -164,7 +168,7 @@
             <p style="color:var(--muted); font-size:0.95rem; margin-bottom:20px;">Developing robust governance for Generative AI and ISO 42001 alignment.</p>
             <ul class="service-list">
                 <li>AI Risk Classifications</li>
-                <li>Bias Mitigation Audits</li>
+                <li>Risk Mitigation Audits</li>
                 <li>EU AI Act Compliance</li>
             </ul>
         </div>
@@ -211,14 +215,6 @@
                 <p>“The EU–US data transfer strategy brought clarity to our processor oversight and reduced uncertainty.”</p>
                 <p class="attribution">— General Counsel, Enterprise SaaS</p>
             </div>
-            <div class="glass-card endorsement-card">
-                <p>“Structured AI governance clarity during our EU expansion significantly reduced enterprise due diligence friction.”</p>
-                <p class="attribution">— Founder, EU AI SaaS Platform</p>
-            </div>
-            <div class="glass-card endorsement-card">
-                <p>“The cross-border GDPR and DPDPA framework streamlined our compliance posture across India and Europe.”</p>
-                <p class="attribution">— Chief Risk Officer, Global Fintech</p>
-            </div>
         </div>
     </div>
 </section>
@@ -228,19 +224,19 @@
     <div class="scroll-container">
         <div class="glass-card case-card">
             <h3>AI SaaS Governance</h3>
-            <p>Designed risk classification frameworks aligned with the EU AI Act for enterprise-scale deployment.</p>
+            <p>Designed risk classification frameworks aligned with the EU AI Act for enterprise-scale deployment</p>
         </div>
         <div class="glass-card case-card">
             <h3>Fintech Expansion</h3>
-            <p>Integrated DPDPA (India) and GDPR compliance for a high-volume payment processor.</p>
+            <p>Integrated DPDPA (India) and GDPR compliance for a high-volume payment processor</p>
         </div>
         <div class="glass-card case-card">
             <h3>Venture Audit</h3>
-            <p>Conducted bias mapping and regulatory roadmaps for a $20M+ Series A funding round.</p>
+            <p>Conducted bias mapping and regulatory roadmaps for a $20M+ Series A funding round</p>
         </div>
         <div class="glass-card case-card">
             <h3>Data Transfers</h3>
-            <p>Architected SCC-aligned governance for global SaaS infrastructure across 4 jurisdictions.</p>
+            <p>Architected SCC-aligned governance for global SaaS infrastructure across 4 jurisdictions</p>
         </div>
     </div>
 </section>
@@ -251,42 +247,42 @@
         © 2026 Vishal Akshintala | AI & Privacy Expert | NALSAR Alumni
     </p>
     <a href="mailto:vishalak.adv@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">
-        ✉️ vishalak.adv@gmail.com
+        Mail to: vishalak.adv@gmail.com
     </a>
 </footer>
 
 <script>
- // --- EXPANDED AUDIT DATA SETS ---
     const aiAudit = [
-        { q: "Is your AI system deployed in high-stakes sectors (e.g., Credit Scoring, HR/Hiring, Healthcare, or Critical Infrastructure)?", cat: "Classification", w: 25 },
+        { q: "Is your AI system deployed in high-stakes sectors (e.g., Credit Scoring, HR, Healthcare)?", cat: "Classification", w: 25 },
         { q: "Does your architecture process biometric data for identification or emotional recognition?", cat: "Liability", w: 20 },
         { q: "Have you established an AI Oversight Committee or a designated 'Responsible AI' officer?", cat: "Governance", w: 15 },
-        { q: "Are training datasets systematically screened for historical bias and protected attributes (gender, race, age)?", cat: "Data Integrity", w: 15 },
-        { q: "Do you maintain a Technical Log (Model Card) that documents training parameters, versioning, and drift?", cat: "Accountability", w: 15 },
+        { q: "Are training datasets screened for historical bias and protected attributes?", cat: "Data Integrity", w: 15 },
+        { q: "Do you maintain a Technical Log (Model Card) documenting versioning and drift?", cat: "Accountability", w: 15 },
         { q: "Is there a documented 'Human-in-the-loop' protocol to override automated AI decisions?", cat: "Governance", w: 20 },
-        { q: "Do you have a process to provide 'Explanations of Individual Decision-Making' to end-users (EU AI Act Requirement)?", cat: "Transparency", w: 15 },
-        { q: "Is there an incident response plan specifically for 'Model Hallucinations' or security adversarial attacks?", cat: "Ops/Security", w: 20 },
-        { q: "Have all internal stakeholders and developers undergone 'AI Literacy' training regarding ethical use and regulatory liabilities?", cat: "Culture/Training", w: 15 }
+        { q: "Do you have a process to provide 'Explanations of AI Decision-Making' to end-users?", cat: "Transparency", w: 15 },
+        { q: "Is there an incident response plan for 'Model Hallucinations' or adversarial attacks?", cat: "Ops/Security", w: 20 },
+        { q: "Have internal stakeholders undergone 'AI Literacy' training regarding ethical use?", cat: "Culture/Training", w: 15 }
     ];
-    ];
-    ];
+
     const privacyAudit = [
-        { q: "Do you transfer personal data from origin country to any 'third countries' without a localized mirror or SCCs?", cat: "Cross-Border", w: 25 },
-        { q: "Is your Privacy Notice 'purpose-specific' and 'unambiguous' as per legal privacy standards?", cat: "Consent/Legal", w: 20 },
-        { q: "Do you maintain a live 'Record of Processing Activities' (RoPA) for all personal data touchpoints?", cat: "Operations", w: 15 },
-        { q: "Have you conducted a Data Protection Impact Assessment (DPIA) for your most recent high-risk feature?", cat: "Compliance", w: 20 },
+        { q: "Do you transfer personal data to 'third countries' without a localized mirror or SCCs?", cat: "Cross-Border", w: 25 },
+        { q: "Is your Privacy Notice 'purpose-specific' and 'unambiguous' as per legal standards?", cat: "Consent/Legal", w: 20 },
+        { q: "Do you maintain a live 'Record of Processing Activities' (RoPA) for all personal data?", cat: "Operations", w: 15 },
+        { q: "Have you conducted a Data Protection Impact Assessment (DPIA) for high-risk features?", cat: "Compliance", w: 20 },
         { q: "Can your system automatically fulfill a Data Subject Request within 30 days?", cat: "Data Rights", w: 15 },
-        { q: "Are all sub-processors (cloud providers, analytics tools) bound by signed Data Processing Agreements (DPAs)?", cat: "Vendor Risk", w: 15 },
-        { q: "Do you have a tested 72-hour regulatory breach notification workflow for the relevant Data Protection Authority?", cat: "Breach Readiness", w: 25 },
+        { q: "Are all sub-processors bound by signed Data Processing Agreements (DPAs)?", cat: "Vendor Risk", w: 15 },
+        { q: "Do you have a tested 72-hour regulatory breach notification workflow?", cat: "Breach Readiness", w: 25 },
         { q: "Is 'Privacy by Design' documented in your software development lifecycle (SDLC)?", cat: "Engineering", w: 15 },
-        { q: "Do you conduct periodic 'Privacy Awareness' workshops for employees handling sensitive data to prevent social engineering or internal leaks?", cat: "Culture/Training", w: 15 }
+        { q: "Do you conduct 'Privacy Awareness' workshops for employees handling sensitive data?", cat: "Culture/Training", w: 15 }
     ];
 
     let activeSet = [], qIdx = 0, scores = {};
+    let chartInstance = null;
 
     function startAudit(type) {
         activeSet = type === 'AI' ? aiAudit : privacyAudit;
-        qIdx = 0; scores = {};
+        qIdx = 0; 
+        scores = {};
         activeSet.forEach(i => scores[i.cat] = 0);
         document.getElementById('step-0').classList.remove('active');
         document.getElementById('step-q').classList.add('active');
@@ -294,14 +290,18 @@
     }
 
     function renderQ() {
-        document.getElementById('q-progress').innerText = `STEP ${qIdx + 1} / ${activeSet.length}`;
+        document.getElementById('q-progress').innerText = `QUESTION ${qIdx + 1} / ${activeSet.length}`;
         document.getElementById('q-text').innerText = activeSet[qIdx].q;
     }
 
     function processInput(isYes) {
         if (!isYes) scores[activeSet[qIdx].cat] += activeSet[qIdx].w;
         qIdx++;
-        if (qIdx < activeSet.length) renderQ(); else showResults();
+        if (qIdx < activeSet.length) {
+            renderQ();
+        } else {
+            showResults();
+        }
     }
 
     function showResults() {
@@ -311,7 +311,9 @@
         const cats = Object.keys(scores);
         const dataValues = cats.map(c => Math.min(scores[c] + 15, 100));
 
-        new Chart(document.getElementById('riskRadar'), {
+        if(chartInstance) chartInstance.destroy();
+
+        chartInstance = new Chart(document.getElementById('riskRadar'), {
             type: 'radar',
             data: { 
                 labels: cats, 
@@ -324,34 +326,42 @@
                 }] 
             },
             options: { 
-                scales: { r: { suggestedMin: 0, suggestedMax: 100, ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.05)' }, pointLabels: { color: '#94a3b8', font: { size: 10 } } } }, 
+                scales: { 
+                    r: { 
+                        min: 0,
+                        max: 100,
+                        ticks: { display: false }, 
+                        grid: { color: 'rgba(255,255,255,0.05)' }, 
+                        pointLabels: { color: '#94a3b8', font: { size: 9 } } 
+                    } 
+                }, 
                 plugins: { legend: { display: false } } 
             }
         });
 
         const heatmap = document.getElementById('heatmap');
+        heatmap.innerHTML = '';
         let totalRisk = 0;
         cats.forEach(c => {
             const risk = scores[c];
             totalRisk += risk;
-            let color = risk > 25 ? 'var(--danger)' : (risk > 10 ? 'var(--warning)' : 'var(--success)');
-            let label = risk > 25 ? 'High' : (risk > 10 ? 'Mid' : 'Low');
+            let color = risk > 20 ? 'var(--danger)' : (risk > 10 ? 'var(--warning)' : 'var(--success)');
+            let label = risk > 20 ? 'High' : (risk > 10 ? 'Mid' : 'Low');
             heatmap.innerHTML += `<div style="padding:10px; border-radius:8px; background:${color}15; color:${color}; border:1px solid ${color}30; font-size:0.7rem; text-align:center; font-weight:700;">${c}: ${label}</div>`;
         });
 
         const tag = document.getElementById('risk-tag');
-        if (totalRisk > 50) {
+        if (totalRisk > 60) {
             tag.innerText = "CRITICAL EXPOSURE"; tag.style.background = 'var(--danger)';
             document.getElementById('res-title').innerText = "Strategic Friction Detected";
-            document.getElementById('res-desc').innerText = "Significant gaps in governance found. These issues often trigger regulatory inquiry or fail enterprise due diligence during funding rounds.";
+            document.getElementById('res-desc').innerText = "Significant gaps in governance found. These issues typically trigger regulatory inquiry or fail due diligence during funding rounds.";
         } else {
             tag.innerText = "MODERATE RISK"; tag.style.background = 'var(--warning)';
             document.getElementById('res-title').innerText = "Governance Maturity Gap";
-            document.getElementById('res-desc').innerText = "Baseline controls are present, but your architecture lacks the technical defensibility required for global high-risk expansion.";
+            document.getElementById('res-desc').innerText = "Baseline controls are present, but your architecture lacks the technical defensibility required for high-risk expansion.";
         }
     }
 
-    // --- INTERSECTION OBSERVER (FOR REVEAL) ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
     }, { threshold: 0.1 });
