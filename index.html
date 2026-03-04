@@ -143,7 +143,9 @@
                     <p id="res-desc" style="color: var(--muted); font-size: 0.9rem; margin-bottom: 25px;"></p>
                     <p style="font-size: 0.7rem; font-weight: 800; color: var(--accent); margin-bottom: 10px;">LIABILITY HEATMAP</p>
                     <div id="heatmap" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"></div>
+                    
                     <a href="https://calendly.com/vishal-advocate/30min" target="_blank" class="btn primary" style="width: 100%; text-align: center; margin-top: 30px;">Request Full Strategic Review</a>
+                    <button onclick="resetAudit()" class="btn secondary" style="width: 100%; margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">↺ Run Different Audit</button>
                 </div>
             </div>
         </div>
@@ -360,6 +362,13 @@
             document.getElementById('res-title').innerText = "Governance Maturity Gap";
             document.getElementById('res-desc').innerText = "Baseline controls are present, but your architecture lacks the technical defensibility required for high-risk expansion.";
         }
+    }
+
+    function resetAudit() {
+        document.getElementById('step-res').classList.remove('active');
+        document.getElementById('step-0').classList.add('active');
+        document.getElementById('heatmap').innerHTML = '';
+        document.getElementById('analyzer-section').scrollIntoView({ behavior: 'smooth' });
     }
 
     const observer = new IntersectionObserver((entries) => {
