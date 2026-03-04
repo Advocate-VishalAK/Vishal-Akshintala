@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Akshintala | AI & Privacy Governance Diagnostic</title>
+    <title>Vishal Akshintala | AI Law & Privacy Governance Diagnostic</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -22,9 +22,61 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
-        section { padding: 80px 8%; }
+        body { 
+            background: radial-gradient(circle at 20% 20%, #111827 0%, #0b0f19 60%);
+            color: var(--text); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+        }
 
+        section { padding: 80px 8%; position: relative; }
+
+        /* --- PROFILE HERO HEADER --- */
+        .hero-mini {
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .hero-mini h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(to bottom, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .credential-badge {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 12px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--glass);
+            color: var(--muted);
+        }
+
+        /* --- DIAGNOSTIC UI --- */
         .glass-card {
             background: var(--glass);
             border: 1px solid var(--border);
@@ -33,13 +85,12 @@
             border-radius: 20px;
         }
 
-        /* --- DIAGNOSTIC UI --- */
-        #analyzer-container { max-width: 1100px; margin: 0 auto; min-height: 500px; }
+        #analyzer-container { max-width: 1000px; margin: 0 auto; }
         .quiz-step { display: none; text-align: center; }
         .quiz-step.active { display: block; animation: fadeIn 0.5s ease; }
 
         .option-btn {
-            display: block; width: 100%; max-width: 500px; margin: 15px auto; padding: 20px;
+            display: block; width: 100%; max-width: 480px; margin: 12px auto; padding: 18px;
             background: rgba(255,255,255,0.05); border: 1px solid var(--border);
             color: #fff; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.3s;
         }
@@ -47,14 +98,14 @@
 
         /* --- RESULTS DASHBOARD --- */
         .dashboard-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;
+            display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 25px; margin-top: 30px;
         }
         .heatmap-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px;
         }
         .heatmap-cell {
-            padding: 15px; border-radius: 8px; font-size: 0.8rem; font-weight: 600;
-            text-align: center; border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 700;
+            text-align: center; border: 1px solid rgba(255,255,255,0.05);
         }
         .risk-badge {
             display: inline-block; padding: 6px 15px; border-radius: 6px;
@@ -63,61 +114,77 @@
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        @media (max-width: 900px) { .dashboard-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { 
+            .dashboard-grid { grid-template-columns: 1fr; }
+            section { padding: 40px 5%; }
+        }
     </style>
 </head>
 <body>
 
-<section id="analyzer-section">
+<section class="hero-mini">
+    <img src="profile.jpg" alt="Vishal Akshintala" class="profile-pic">
+    <h1>Vishal Akshintala</h1>
+    <p style="color: var(--muted); max-width: 600px; margin: 0 auto;">Global AI Law & Privacy Governance Expert. Bridging the gap between high-speed innovation and regulatory accountability.</p>
+    
+    <div class="badge-row">
+        <span class="credential-badge">Advocate</span>
+        <span class="credential-badge">ISO 42001 Lead Implementer</span>
+        <span class="credential-badge">NALSAR Alumni</span>
+        <span class="credential-badge">AI Auditor</span>
+    </div>
+</section>
+
+<section id="analyzer-section" style="padding-top: 0;">
     <div id="analyzer-container" class="glass-card">
         
         <div class="quiz-step active" id="step-0">
-            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Risk Diagnostic Engine</h2>
-            <p style="color: var(--muted); margin-bottom: 40px;">Quantify your regulatory exposure across AI and Privacy domains.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <span style="color: var(--accent); font-weight: 800; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;">Diagnostic Engine</span>
+            <h2 style="font-size: 2rem; margin: 15px 0;">Governance Stress-Test</h2>
+            <p style="color: var(--muted); margin-bottom: 35px; font-size: 0.95rem;">Select your domain to uncover specific liability gaps in your architecture.</p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                 <button class="option-btn" onclick="startAudit('AI')">
                     <strong>AI Governance Audit</strong><br>
-                    <small>EU AI Act & ISO 42001 Readiness</small>
+                    <small style="opacity: 0.6;">EU AI Act, Algorithmic Risk, & ISO 42001</small>
                 </button>
                 <button class="option-btn" onclick="startAudit('PRIVACY')">
-                    <strong>Privacy Architecture Audit</strong><br>
-                    <small>DPDPA & GDPR Compliance</small>
+                    <strong>Privacy Governance Audit</strong><br>
+                    <small style="opacity: 0.6;">DPDPA (India), GDPR, & Data Flows</small>
                 </button>
             </div>
         </div>
 
         <div class="quiz-step" id="step-q">
             <div id="q-progress" style="color: var(--accent); font-weight: 800; font-size: 0.75rem; margin-bottom: 20px; letter-spacing: 2px;"></div>
-            <h3 id="q-text" style="font-size: 1.5rem; margin-bottom: 40px; min-height: 80px;"></h3>
-            <button class="option-btn" onclick="processInput(true)" style="text-align: center; border-color: var(--success);">Yes / Fully Implemented</button>
-            <button class="option-btn" onclick="processInput(false)" style="text-align: center; border-color: var(--danger);">No / Unsure / In Progress</button>
+            <h3 id="q-text" style="font-size: 1.4rem; margin-bottom: 40px; min-height: 80px; font-weight: 400;"></h3>
+            <button class="option-btn" onclick="processInput(true)" style="text-align: center; border-color: rgba(16, 185, 129, 0.3);">Yes / Fully Implemented</button>
+            <button class="option-btn" onclick="processInput(false)" style="text-align: center; border-color: rgba(239, 68, 68, 0.3);">No / In Progress / Unsure</button>
         </div>
 
         <div class="quiz-step" id="step-res">
             <div id="risk-tag" class="risk-badge"></div>
             <h2 id="res-title" style="margin-bottom: 5px;"></h2>
-            <p id="res-desc" style="color: var(--muted); margin-bottom: 30px;"></p>
+            <p id="res-desc" style="color: var(--muted); margin-bottom: 30px; font-size: 0.9rem;"></p>
 
             <div class="dashboard-grid">
-                <div class="glass-card" style="padding: 20px;">
-                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--accent); margin-bottom: 15px;">RISK DISTRIBUTION (RADAR)</p>
+                <div class="glass-card" style="padding: 20px; background: rgba(0,0,0,0.2);">
+                    <p style="font-size: 0.7rem; font-weight: 800; color: var(--accent); margin-bottom: 15px; letter-spacing: 1px;">RISK DISTRIBUTION (RADAR)</p>
                     <canvas id="riskRadar"></canvas>
                 </div>
 
-                <div class="glass-card" style="padding: 20px;">
-                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--accent); margin-bottom: 15px;">LIABILITY HEATMAP</p>
-                    <div class="heatmap-grid" id="heatmap">
-                        </div>
+                <div style="text-align: left;">
+                    <p style="font-size: 0.7rem; font-weight: 800; color: var(--accent); margin-bottom: 10px; letter-spacing: 1px;">LIABILITY HEATMAP</p>
+                    <div class="heatmap-grid" id="heatmap"></div>
                     
-                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
-                        <p style="font-weight: 800; margin-bottom: 10px;">Risk Profile Summary:</p>
-                        <ul id="profile-summary" style="text-align: left; font-size: 0.85rem; color: var(--muted); padding-left: 20px;">
-                            </ul>
+                    <div style="margin-top: 25px; padding: 20px; background: var(--glass); border-radius: 12px; border: 1px solid var(--border);">
+                        <p style="font-weight: 800; margin-bottom: 8px; font-size: 0.9rem;">Risk Profile Summary:</p>
+                        <ul id="profile-summary" style="font-size: 0.8rem; color: var(--muted); padding-left: 18px;"></ul>
                     </div>
                     
                     <a href="https://calendly.com/vishal-advocate/30min" target="_blank" 
-                       style="display: block; margin-top: 25px; padding: 15px; background: #fff; color: #000; text-decoration: none; border-radius: 8px; font-weight: 700;">
-                        Schedule Strategic Mitigation
+                       style="display: block; margin-top: 20px; padding: 14px; background: #fff; color: #000; text-decoration: none; border-radius: 8px; font-weight: 700; text-align: center; font-size: 0.9rem;">
+                        Schedule Strategic Review
                     </a>
                 </div>
             </div>
@@ -126,11 +193,10 @@
 </section>
 
 <script>
-    // --- AUDIT DATA ---
     const aiAudit = [
-        { q: "Is your AI system used in high-stakes sectors (Employment, Finance, Healthcare, Education)?", cat: "Liability", w: 30 },
+        { q: "Is your AI used in high-stakes sectors like Employment, Finance, or Healthcare?", cat: "Liability", w: 30 },
         { q: "Does your system process biometric data or perform automated emotional recognition?", cat: "Liability", w: 25 },
-        { q: "Do you have a formally documented AI Risk Management Framework (ISO 42001 style)?", cat: "Governance", w: 20 },
+        { q: "Do you have a documented AI Risk Management Framework (ISO 42001 style)?", cat: "Governance", w: 20 },
         { q: "Are technical logs and model performance metrics stored for regulatory audit?", cat: "Documentation", w: 15 },
         { q: "Is there a designated 'Human-in-the-loop' protocol for high-risk outputs?", cat: "Governance", w: 20 },
         { q: "Are training datasets audited for bias and copyright provenance?", cat: "Documentation", w: 20 },
@@ -151,14 +217,12 @@
 
     let activeSet = [];
     let qIdx = 0;
-    let scores = {}; // Store weights by category
+    let scores = {};
 
     function startAudit(type) {
         activeSet = type === 'AI' ? aiAudit : privacyAudit;
-        qIdx = 0;
-        scores = {};
+        qIdx = 0; scores = {};
         activeSet.forEach(item => scores[item.cat] = 0);
-        
         document.getElementById('step-0').classList.remove('active');
         document.getElementById('step-q').classList.add('active');
         renderQ();
@@ -166,12 +230,11 @@
 
     function renderQ() {
         const q = activeSet[qIdx];
-        document.getElementById('q-progress').innerText = `DIAGNOSTIC POINT ${qIdx + 1} / ${activeSet.length}`;
+        document.getElementById('q-progress').innerText = `STEP ${qIdx + 1} / ${activeSet.length}`;
         document.getElementById('q-text').innerText = q.q;
     }
 
     function processInput(isYes) {
-        // If "No", increase the risk score for that category
         if (!isYes) {
             const q = activeSet[qIdx];
             scores[q.cat] += q.w;
@@ -183,56 +246,50 @@
     function showResults() {
         document.getElementById('step-q').classList.remove('active');
         document.getElementById('step-res').classList.add('active');
-
         const cats = Object.keys(scores);
-        const dataValues = cats.map(c => Math.min(scores[c] + 15, 100)); // normalized risk
+        const dataValues = cats.map(c => Math.min(scores[c] + 15, 100));
 
-        // 1. RADAR CHART
         new Chart(document.getElementById('riskRadar'), {
             type: 'radar',
             data: {
                 labels: cats,
                 datasets: [{
-                    label: 'Risk Score',
                     data: dataValues,
                     backgroundColor: 'rgba(59, 130, 246, 0.2)',
                     borderColor: '#3b82f6',
-                    pointBackgroundColor: '#fff'
+                    pointBackgroundColor: '#fff',
+                    borderWidth: 2
                 }]
             },
             options: {
-                scales: { r: { suggestedMin: 0, suggestedMax: 100, ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.05)' }, angleLines: { color: 'rgba(255,255,255,0.05)' } } },
+                scales: { r: { suggestedMin: 0, suggestedMax: 100, ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.05)' }, pointLabels: { color: '#94a3b8', font: { size: 10 } } } },
                 plugins: { legend: { display: false } }
             }
         });
 
-        // 2. HEATMAP & TAGS
         const heatmap = document.getElementById('heatmap');
         const summary = document.getElementById('profile-summary');
         let totalRisk = 0;
-
         cats.forEach(c => {
             const risk = scores[c];
             totalRisk += risk;
             let color = 'var(--success)';
             let label = 'LOW';
-            if (risk > 15) { color = 'var(--warning)'; label = 'MID'; }
+            if (risk > 15) { color = 'var(--warning)'; label = 'MEDIUM'; }
             if (risk > 30) { color = 'var(--danger)'; label = 'HIGH'; }
-
-            heatmap.innerHTML += `<div class="heatmap-cell" style="background:${color}22; color:${color}; border-color:${color}44;">${c}: ${label}</div>`;
-            summary.innerHTML += `<li>Gaps identified in <strong>${c}</strong> require immediate documentation.</li>`;
+            heatmap.innerHTML += `<div class="heatmap-cell" style="background:${color}15; color:${color}; border-color:${color}30;">${c}: ${label}</div>`;
+            if (risk > 15) summary.innerHTML += `<li>Gaps in <strong>${c}</strong> pose regulatory friction.</li>`;
         });
 
-        // 3. FINAL PROFILE TAG
         const tag = document.getElementById('risk-tag');
         if (totalRisk > 50) {
             tag.innerText = "CRITICAL EXPOSURE"; tag.style.background = 'var(--danger)';
-            document.getElementById('res-title').innerText = "Material Regulatory Friction";
-            document.getElementById('res-desc').innerText = "Strategic gaps detected. Compliance failure is likely during enterprise due diligence.";
+            document.getElementById('res-title').innerText = "Strategic Friction Detected";
+            document.getElementById('res-desc').innerText = "Significant gaps in documentation and oversight. Failure is likely during enterprise due diligence.";
         } else {
             tag.innerText = "MODERATE RISK"; tag.style.background = 'var(--warning)';
             document.getElementById('res-title').innerText = "Governance Maturity Gap";
-            document.getElementById('res-desc').innerText = "Baseline controls present, but lacks the technical 'defensibility' required for global scale.";
+            document.getElementById('res-desc').innerText = "Baseline controls present, but lacks the technical defensibility for global expansion.";
         }
     }
 </script>
