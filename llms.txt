@@ -1,0 +1,23 @@
+# Vishal Akshintala
+
+> Technology lawyer specializing in AI governance, data privacy, cybersecurity law, and space law advisory, across India, the EU, UK, US, and APAC. NALSAR University of Law alumnus and ISO/IEC 42001 Lead Implementer, affiliated with Radhical Global Attorneys (Hyderabad, India).
+
+Vishal Akshintala advises organizations on AI risk classification under the EU AI Act, data fiduciary obligations under India's Digital Personal Data Protection Act (DPDPA) 2023, cybersecurity incident-response obligations under CERT-In directions, and jurisdictional questions in space law including orbital data infrastructure and satellite AI systems under the 1967 Outer Space Treaty. He also delivers one-on-one and cohort AI governance training programs for legal and compliance teams.
+
+## Key pages
+
+- [Home](https://advocate-vishalak.github.io/Vishal-Akshintala/index.html): overview of practice areas, brand identity, and an interactive governance risk scanner
+- [Case Studies](https://advocate-vishalak.github.io/Vishal-Akshintala/case-studies.html): detailed engagement narratives across AI governance, data privacy, cybersecurity law, and space law
+- [FAQ](https://advocate-vishalak.github.io/Vishal-Akshintala/faq.html): frequently asked questions organized by practice area, each answer referencing the specific statute, article, or standard clause it rests on
+
+## External profiles
+
+- [LinkedIn](https://www.linkedin.com/in/vishal-akshintala-aiprivacy/)
+- [Radhical Global Attorneys](https://radhicalglobalattorneys.com/) (affiliated law firm)
+- Published writing: ["The Lunar Jurisdictional Trap: Why AI and Nuclear Ambition Are Outpacing Space Law"](https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/) (Jurist, January 2026)
+- Published writing: ["Orbital Data Centers and the Legal Vacuum Threatening AI Governance"](https://www.jurist.org/commentary/2026/03/orbital-data-centers-and-the-legal-vacuum-threatening-ai-governance/) (Jurist, March 2026)
+
+## Contact
+
+Email: vishalak.adv@gmail.com
+Consultation booking: https://calendly.com/vishal-advocate/30min
