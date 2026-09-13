@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://vishalakshintala.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script type="application/ld+json">
@@ -65,7 +66,7 @@
 
   .brand { position: fixed; top: 28px; left: 32px; z-index: 40; font-family: 'Space Grotesk'; font-size: 0.95rem; font-weight: 400; }
 
-  .chapter { min-height: 100vh; position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 0 8vw; border-bottom: 1px solid var(--line); }
+  .chapter { min-height: 100vh; position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 60px 8vw 0; border-bottom: 1px solid var(--line); }
   .chapter-inner { max-width: 900px; }
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -155,7 +156,17 @@
 <body>
 
 <div id="field"></div>
-<div class="brand">Vishal Akshintala</div>
+<nav style="position:fixed; top:0; left:0; right:0; z-index:41; background:rgba(5,6,8,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
+  <div style="max-width:1080px; margin:0 auto; padding:0 8vw; height:60px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-family:'Space Grotesk'; font-size:0.95rem;">Vishal Akshintala</div>
+    <div style="display:flex; gap:26px; font-size:0.88rem;">
+      <a href="index.html" style="color:var(--signal);">Home</a>
+      <a href="case-studies.html" style="color:var(--muted);">Case Studies</a>
+      <a href="faq.html" style="color:var(--muted);">FAQ</a>
+      <a href="mailto:vishalak.adv@gmail.com" style="color:var(--muted);">Contact</a>
+    </div>
+  </div>
+</nav>
 <div class="rail" id="rail"></div>
 
 <section class="chapter" id="hero">
@@ -287,13 +298,36 @@
 </section>
 
 <section class="chapter" id="engagements">
-  <div class="chapter-inner quote-shell reveal">
+  <div class="chapter-inner reveal">
     <div class="kicker">Selected engagements</div>
+    <div class="trio">
+      <div class="trio-item"><span>AI SaaS governance</span><span>Risk classification frameworks aligned with the EU AI Act for enterprise-scale deployment</span></div>
+      <div class="trio-item"><span>Fintech expansion</span><span>Integrated DPDPA (India) and GDPR compliance for a high-volume payment processor</span></div>
+      <div class="trio-item"><span>Venture audit</span><span>Bias mapping and regulatory roadmaps ahead of a $20M+ Series A funding round</span></div>
+      <div class="trio-item"><span>Data transfers</span><span>SCC-aligned governance architecture for global SaaS infrastructure across four jurisdictions</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="endorsements">
+  <div class="chapter-inner quote-shell reveal">
+    <div class="kicker">Client endorsements</div>
     <div class="quote-text" id="quoteText"></div>
     <div class="quote-src" id="quoteSrc"></div>
     <div class="quote-nav">
       <button id="qPrev">&#8592;</button>
       <button id="qNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="writing">
+  <div class="chapter-inner reveal">
+    <div class="kicker">Published</div>
+    <div class="statement">Writing on Jurist.</div>
+    <div class="trio">
+      <div class="trio-item"><span>The Lunar Jurisdictional Trap</span><span>Why AI and nuclear ambition are outpacing space law &mdash; <a href="https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/">read on Jurist &#8594;</a></span></div>
+      <div class="trio-item"><span>Orbital Data Centers and the Legal Vacuum</span><span>The governance gap threatening AI infrastructure in orbit &mdash; <a href="https://www.jurist.org/commentary/2026/03/orbital-data-centers-and-the-legal-vacuum-threatening-ai-governance/">read on Jurist &#8594;</a></span></div>
     </div>
   </div>
 </section>
@@ -341,9 +375,19 @@
   </ol>
 </div>
 
-<footer>
-  <span>© 2026 Vishal Akshintala</span>
-  <span>AI Governance · Data Privacy · Cybersecurity Law · Space Law</span>
+<footer style="flex-direction:column; align-items:flex-start; gap:14px;">
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <a href="case-studies.html">Case Studies</a>
+    <a href="faq.html">All FAQs</a>
+    <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+    <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/">LinkedIn</a>
+    <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
+    <a href="#writing">Writing on Jurist</a>
+  </div>
+  <div style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>© 2026 Vishal Akshintala</span>
+    <span>AI Governance · Data Privacy · Cybersecurity Law · Space Law</span>
+  </div>
 </footer>
 
 <script>
@@ -492,8 +536,10 @@
   }
 
   const quotes = [
-    { text: "[Add a real, attributable quote — even a first name and role carries far more weight than an anonymous title.]", src: "— Name, Role, Company or category" },
-    { text: "[Replace with a second named quote once you have client sign-off to publish.]", src: "— Name, Role, Company or category" }
+    { text: "Structured AI governance clarity during our EU expansion significantly reduced enterprise due diligence friction.", src: "— Founder, EU AI SaaS Platform" },
+    { text: "The cross-border GDPR and DPDPA framework streamlined our compliance posture across India and Europe.", src: "— Chief Risk Officer, Global Fintech" },
+    { text: "The AI governance audit provided the structured documentation our investors expected prior to funding.", src: "— CEO, Venture-Backed AI Startup" },
+    { text: "The EU–US data transfer strategy brought clarity to our processor oversight and reduced uncertainty.", src: "— General Counsel, Enterprise SaaS" }
   ];
   let qi = 0;
   const qText = document.getElementById('quoteText');

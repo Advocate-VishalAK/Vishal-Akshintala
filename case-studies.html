@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | Vishal Akshintala — AI Governance, Data Privacy & Space Law</title>
+<meta name="description" content="Real engagement stories from AI governance, data privacy, cybersecurity, and space law advisory work — the actual judgment calls, not a generic services list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://vishalakshintala.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<style>
+  :root { --bg: #050608; --fg: #EDEDF0; --muted: #86898F; --line: #1C1F26; --signal: #4CD9C0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; }
+  h1, h2 { font-family: 'Space Grotesk', sans-serif; }
+  a { color: var(--signal); text-decoration: none; }
+
+  nav { position: sticky; top: 0; z-index: 40; background: rgba(5,6,8,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .navwrap { max-width: 900px; margin: 0 auto; padding: 0 8vw; height: 60px; display: flex; justify-content: space-between; align-items: center; }
+  nav .brand { font-family: 'Space Grotesk'; font-size: 0.95rem; color: var(--fg); }
+  nav .links { display: flex; gap: 26px; font-size: 0.88rem; }
+  nav .links a { color: var(--muted); }
+  nav .links a.current, nav .links a:hover { color: var(--signal); }
+
+  .wrap { max-width: 820px; margin: 0 auto; padding: 70px 8vw 100px; }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 14px; }
+  h1 b { font-weight: 700; }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 62ch; margin-bottom: 64px; }
+
+  .case { border-top: 1px solid var(--line); padding: 46px 0; }
+  .case:last-child { border-bottom: 1px solid var(--line); }
+  .case-tag { color: var(--signal); font-size: 0.8rem; font-weight: 500; margin-bottom: 14px; }
+  .case h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 18px; max-width: 30ch; }
+  .case p { color: var(--muted); font-size: 0.97rem; line-height: 1.7; margin-bottom: 14px; max-width: 68ch; }
+  .case p b { color: var(--fg); font-weight: 500; }
+  .case-note { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-top: 18px; border-left: 2px solid var(--line); padding-left: 14px; }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 8vw; color: var(--muted); font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navwrap">
+    <div class="brand">Vishal Akshintala</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="case-studies.html" class="current">Case Studies</a>
+      <a href="faq.html">FAQ</a>
+      <a href="mailto:vishalak.adv@gmail.com">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Not what happened.<br><b>What it actually took.</b></h1>
+  <p class="lede">Details changed or composited to protect confidentiality — but the judgment calls, the dead ends, and what actually moved each situation forward are real.</p>
+
+  <div class="case">
+    <div class="case-tag">AI Governance — Series A diligence</div>
+    <h2>The pitch deck said "AI-compliant." The data room didn't.</h2>
+    <p>A venture-backed AI startup came in three weeks before their Series A closed. Their pitch deck had a line about being "EU AI Act compliant" — nobody had actually classified which risk tier their hiring-screening product fell into. That's a materially different problem than "add a compliance slide."</p>
+    <p>The system touched employment decisions, which meant Article 6 high-risk classification was likely, not optional. Three days were spent tracing the model's actual decision logic against the Act's Annex III categories before we could say anything with confidence. It turned out to sit right on the boundary — defensible either way, but only if the reasoning was documented before an investor's counsel asked the question first.</p>
+    <p><b>What actually mattered:</b> not the classification itself, but having the paper trail ready before due diligence started rather than reacting to it. The round closed on schedule. The compliance slide got rewritten to say something true.</p>
+    <div class="case-note">The lesson that generalizes: a compliance claim in a pitch deck is a liability until someone has actually traced it to the clause it rests on.</div>
+  </div>
+  <div class="case">
+    <div class="case-tag">EU AI Act — full classification and conformity project</div>
+    <h2>Six months before the deadline, nobody had actually read Annex III.</h2>
+    <p>A recruitment-technology company selling into the EU had a resume-screening product live with several enterprise clients, and roughly six months before the relevant EU AI Act high-risk provisions came into force, their general counsel asked a simple question: are we actually high-risk, or not? Nobody internally could answer it with confidence, because nobody had gone through Annex III line by line against what the product actually did, versus what the marketing described.</p>
+    <p>The honest answer, once the work was done, was yes &mdash; unambiguously. Annex III explicitly lists AI systems used for recruitment, including CV-sorting and candidate-ranking tools, as high-risk. That classification triggers a specific stack of obligations under the Act: a risk management system under Article 9, technical documentation under Article 11, human oversight design under Article 14, and post-market monitoring under Article 72. None of these existed yet in any documented form &mdash; the product had been built well from an engineering standpoint, but the governance paper trail was close to zero.</p>
+    <p>The work took three parts. First, mapping the actual model pipeline &mdash; what data trained it, what features it weighted, where a human recruiter could and couldn't override a ranking &mdash; against what Article 14's human oversight requirement actually demands, which is more specific than "a human looks at it sometimes." Second, building the technical documentation file from scratch, because retrofitting documentation after the fact is far harder than building it as you go, and this was already behind. Third, and hardest: convincing the product team that "explainability" wasn't a UX nice-to-have but a binding obligation under Article 13, which meant a scoping conversation with engineering about what could realistically be exposed to a candidate who requested an explanation of their score.</p>
+    <p><b>What actually mattered:</b> the conformity assessment itself was almost the easy part once the underlying documentation existed. The hard part was translating "Article 14 human oversight" into a specific, testable interface requirement that engineering could actually build against, rather than a compliance abstraction sitting in a policy document nobody reads.</p>
+    <div class="case-note">The lesson that generalizes: EU AI Act obligations read like legal text until someone forces the translation into product requirements. That translation step is where most classification projects actually stall.</div>
+  </div>
+
+
+  <div class="case">
+    <div class="case-tag">Data Privacy — cross-border payments</div>
+    <h2>Compliant in India. Exposed in Frankfurt.</h2>
+    <p>A payments processor had built a genuinely careful DPDPA compliance program — data fiduciary registration, consent flows, the works. What they hadn't accounted for was that a chunk of their processing had quietly started routing through a European sub-processor as they scaled, and nobody had checked whether their contracts covered that.</p>
+    <p>The DPDPA's cross-border transfer rules are more permissive than GDPR's — which meant the India-side program didn't automatically protect the EU-side exposure. It took going through actual data flow diagrams, not the privacy policy, to find where the gap was: one sub-processor agreement that had never been updated to include GDPR-standard SCCs.</p>
+    <p><b>What actually mattered:</b> the fix was one contract amendment, but finding it required looking at what the infrastructure actually did rather than what the policy said it did.</p>
+    <div class="case-note">The lesson that generalizes: privacy programs drift from actual data flows faster than anyone updates the paperwork. The gap is rarely where you'd guess.</div>
+  </div>
+  <div class="case">
+    <div class="case-tag">DPDPA 2023 — consent architecture and breach-readiness overhaul</div>
+    <h2>Consent that looked granular. Wasn't, underneath.</h2>
+    <p>A consumer health-and-wellness app with several million Indian users had a consent screen that looked, on its face, like good practice &mdash; separate toggles for marketing, analytics, and third-party sharing. The problem surfaced during a DPDPA Section 8 obligations review: those toggles were cosmetic. Underneath, a single consent flag in the database gated all processing, meaning a user who declined marketing consent was, in practice, still having their data processed for purposes they'd explicitly opted out of.</p>
+    <p>This is a specific, common failure mode: consent architecture designed by a product team without a data-flow map showing what each toggle actually controls downstream. Section 8's data fiduciary obligations require that processing actually be limited to the specified, consented purpose &mdash; a cosmetically granular consent screen sitting on top of an ungranular backend doesn't satisfy that, it just creates a false paper trail that makes the problem worse if a regulator or a user ever audits it.</p>
+    <p>Fixing it wasn't a policy rewrite; it required engineering to tag data flows by purpose at the point of collection, not just at the point of display. That took longer than the legal analysis did. Alongside it, the breach-notification workflow was tested for the first time &mdash; not reviewed on paper, actually tested, with a tabletop exercise simulating a leaked database. It revealed that the person named as the point of contact for a Data Protection Board notification had left the company eight months earlier, and nobody had updated the plan.</p>
+    <p><b>What actually mattered:</b> the gap wasn't the legal framework being unclear &mdash; DPDPA's obligations here are fairly specific. The gap was that compliance had been designed as a UI layer rather than as something wired into the actual data architecture underneath it, which is where an audit, or a breach, would actually look.</p>
+    <div class="case-note">The lesson that generalizes: a consent screen is not a consent architecture. The former is what a user sees; the latter is whether the backend actually behaves accordingly. Regulators and plaintiffs' counsel look at the latter.</div>
+  </div>
+
+
+  <div class="case">
+    <div class="case-tag">Cybersecurity Law — incident response</div>
+    <h2>Six hours. That's not a lot of time to be right.</h2>
+    <p>CERT-In's six-hour reporting window is unforgiving by design. A mid-sized fintech had an incident at 11pm on a Friday — the kind of timing that tests whether an incident response plan is real or just a document. It was mostly real. The gap was that the plan named who should be notified but not who had the authority to actually make the call under pressure with incomplete information.</p>
+    <p>Two hours were spent on the phone that night, not drafting anything, just helping the team distinguish between what had to be reported now under the six-hour rule versus what could be supplemented in the follow-up filing. Getting that distinction right was the difference between a clean, defensible filing and a panicked overcorrection that admits more than the facts support.</p>
+    <div class="case-note">The lesson that generalizes: an incident response plan is only as good as whether someone can actually execute it at 11pm on a Friday, not whether it reads well in a compliance binder.</div>
+  </div>
+
+  <div class="case">
+    <div class="case-tag">Space Law — orbital data infrastructure</div>
+    <h2>Nobody had asked whose law applies up there.</h2>
+    <p>A team building orbital data-center infrastructure had every terrestrial compliance box checked — data residency, encryption standards, the usual. What they hadn't considered was the layered liability question sitting above all of it: under the Outer Space Treaty, the launching state carries international responsibility for the satellite's activities, regardless of where the company is incorporated.</p>
+    <p>That meant a decision made by an onboard AI system for data routing could implicate state responsibility, operator liability, and AI governance obligations simultaneously — three different legal frameworks that don't share a common vocabulary. Most of the early work wasn't drafting anything; it was building a shared map of which questions belonged to which framework, because the team's engineers and their existing counsel were talking past each other.</p>
+    <div class="case-note">The lesson that generalizes: in genuinely novel intersections like this, the first job isn't answering the legal question — it's figuring out which of three overlapping legal systems is even being asked.</div>
+  </div>
+
+</div>
+
+<footer style="flex-direction:column; align-items:flex-start; gap:14px;">
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <a href="index.html">Home</a>
+    <a href="faq.html">All FAQs</a>
+    <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+    <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/">LinkedIn</a>
+    <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
+    <a href="https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/">Writing on Jurist</a>
+  </div>
+  <span>© 2026 Vishal Akshintala</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs | Vishal Akshintala — AI Governance, Data Privacy & Space Law</title>
+<meta name="description" content="Frequently asked questions on AI governance, data privacy (DPDPA, GDPR, EU AI Act), cybersecurity law, AI governance training, and space law — answered by Vishal Akshintala.">
+<meta name="keywords" content="Vishal Akshintala, AI governance FAQ, DPDPA FAQ, EU AI Act FAQ, AI governance training, data privacy lawyer India, space law FAQ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://vishalakshintala.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What counts as a 'high-risk' AI system under the EU AI Act?", "acceptedAnswer": { "@type": "Answer", "text": "The EU AI Act (Regulation (EU) 2024/1689), Article 6, classifies an AI system as high-risk based on its intended purpose and the sector it operates in — including employment, credit scoring, biometric identification, education, and critical infrastructure. Classification determines which obligations (risk management, technical documentation, human oversight) apply." } },
+    { "@type": "Question", "name": "Does the EU AI Act apply to a company based in India?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if the AI system's output is used within the EU market, regardless of where the provider is established. This extraterritorial scope is a common gap for Indian AI companies expanding into European markets." } },
+    { "@type": "Question", "name": "What is ISO/IEC 42001 and is it mandatory?", "acceptedAnswer": { "@type": "Answer", "text": "ISO/IEC 42001:2023 is the international standard for AI management systems. It is not legally mandatory in most jurisdictions, but certification is increasingly requested during enterprise due diligence and investor diligence as evidence of structured AI governance." } },
+    { "@type": "Question", "name": "What is a Data Fiduciary under India's DPDPA 2023?", "acceptedAnswer": { "@type": "Answer", "text": "Under the Digital Personal Data Protection Act, 2023, a Data Fiduciary is any entity that determines the purpose and means of processing personal data — broadly equivalent to a 'data controller' under GDPR. Section 8 sets out general obligations including data accuracy, security safeguards, and breach notification." } },
+    { "@type": "Question", "name": "How quickly must a data breach be reported under DPDPA?", "acceptedAnswer": { "@type": "Answer", "text": "The DPDPA requires notification to the Data Protection Board of India and affected Data Principals, though exact timelines are set out in the Act's rules; in practice, breach-readiness programs are built around a 72-hour internal escalation window to match global norms like GDPR." } },
+    { "@type": "Question", "name": "Can personal data be transferred outside India under DPDPA?", "acceptedAnswer": { "@type": "Answer", "text": "The DPDPA permits cross-border transfer except to countries specifically restricted by the Central Government. This is a narrower, more permissive model than GDPR's adequacy-and-SCC framework, but companies operating across both regimes still need SCC-aligned contracts for their EU-facing flows." } },
+    { "@type": "Question", "name": "What triggers CERT-In breach reporting obligations in India?", "acceptedAnswer": { "@type": "Answer", "text": "CERT-In's 2022 directions require reporting of specified categories of cybersecurity incidents within six hours of becoming aware of them — a materially shorter window than most global standards, which is why breach-response workflows for India-facing entities are built around it specifically." } },
+    { "@type": "Question", "name": "What does an AI governance audit actually produce?", "acceptedAnswer": { "@type": "Answer", "text": "A completed audit produces a documented risk classification per AI system, a gap analysis against applicable frameworks (EU AI Act, ISO/IEC 42001, DPDPA), and a prioritized remediation roadmap — the kind of artifact regulators or investor due diligence teams expect to see, not a general compliance statement." } },
+    { "@type": "Question", "name": "Who is responsible in law for an AI decision made by a satellite system?", "acceptedAnswer": { "@type": "Answer", "text": "Under Article VI of the 1967 Outer Space Treaty, states bear international responsibility for national space activities, including those of private operators. This creates a layered liability question when an onboard AI system makes an autonomous decision — state responsibility, operator liability, and AI-specific governance obligations can all apply simultaneously." } },
+    { "@type": "Question", "name": "What is an AI governance training program for legal teams?", "acceptedAnswer": { "@type": "Answer", "text": "It is a structured program — delivered one-on-one or to a cohort — that builds practical fluency in AI regulation (EU AI Act, ISO/IEC 42001, DPDPA) so an in-house legal team can classify AI systems, review AI vendor contracts, and advise the business without needing to escalate every question externally." } },
+    { "@type": "Question", "name": "How is space law relevant to a company running AI on satellites?", "acceptedAnswer": { "@type": "Answer", "text": "Orbital data infrastructure and satellite AI systems sit at the intersection of space law (state responsibility, licensing, jurisdiction) and AI governance (risk classification, liability). Very few advisors cover both areas, which is often the actual gap for companies operating in this space." } },
+    { "@type": "Question", "name": "What's the difference between a privacy policy and privacy-by-design?", "acceptedAnswer": { "@type": "Answer", "text": "A privacy policy is a disclosure document. Privacy-by-design is an engineering practice — building consent architecture, data minimization, and access controls into the product itself from the start, so the disclosed policy actually reflects how the system behaves rather than describing an aspiration." } }
+  ]
+}
+</script>
+
+<style>
+  :root { --bg: #050608; --fg: #EDEDF0; --muted: #86898F; --line: #1C1F26; --signal: #4CD9C0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; }
+  h1, h2 { font-family: 'Space Grotesk', sans-serif; }
+  a { color: var(--signal); text-decoration: none; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 90px 8vw 100px; }
+  .back { display: inline-block; margin-bottom: 40px; color: var(--muted); font-size: 0.9rem; }
+  .back:hover { color: var(--signal); }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 14px; }
+  h1 b { font-weight: 700; }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 60ch; margin-bottom: 60px; }
+  .topic { margin-bottom: 56px; }
+  .topic-kicker { color: var(--signal); font-size: 0.82rem; font-weight: 500; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .faq-item { border-bottom: 1px solid var(--line); padding: 22px 0; }
+  .faq-item h3 { font-size: 1.05rem; font-weight: 500; font-family: 'Inter'; margin-bottom: 10px; }
+  .faq-item p { color: var(--muted); font-size: 0.93rem; max-width: 66ch; }
+  .faq-item cite { color: var(--muted); font-style: normal; font-size: 0.82rem; }
+  footer { border-top: 1px solid var(--line); padding: 30px 8vw; color: var(--muted); font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<nav style="position:sticky; top:0; z-index:40; background:rgba(5,6,8,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
+  <div style="max-width:900px; margin:0 auto; padding:0 8vw; height:60px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-family:'Space Grotesk'; font-size:0.95rem;">Vishal Akshintala</div>
+    <div style="display:flex; gap:26px; font-size:0.88rem;">
+      <a href="index.html" style="color:var(--muted);">Home</a>
+      <a href="case-studies.html" style="color:var(--muted);">Case Studies</a>
+      <a href="faq.html" style="color:var(--signal);">FAQ</a>
+      <a href="mailto:vishalak.adv@gmail.com" style="color:var(--muted);">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Questions clients<br><b>actually ask.</b></h1>
+  <p class="lede">Organized by practice area. Written to be specific, not to be a generic compliance FAQ — every answer references the actual clause or article it rests on.</p>
+
+  <div class="topic">
+    <div class="topic-kicker">AI Governance</div>
+    <div class="faq-item">
+      <h3>What counts as a "high-risk" AI system under the EU AI Act?</h3>
+      <p>Article 6 of Regulation (EU) 2024/1689 classifies an AI system as high-risk based on its intended purpose and sector — employment, credit scoring, biometric identification, education, and critical infrastructure among them. Classification determines which obligations apply: risk management, technical documentation, human oversight.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the EU AI Act apply to a company based in India?</h3>
+      <p>Yes, if the system's output is used within the EU market, regardless of where the provider is established. This extraterritorial scope is a common gap for Indian AI companies expanding into Europe.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is ISO/IEC 42001, and is it mandatory?</h3>
+      <p>It's the international standard for AI management systems. Not legally mandatory in most jurisdictions, but increasingly requested during enterprise and investor due diligence as evidence of structured AI governance.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does an AI governance audit actually produce?</h3>
+      <p>A documented risk classification per AI system, a gap analysis against applicable frameworks, and a prioritized remediation roadmap — an artifact regulators or diligence teams expect to see, not a general compliance statement.</p>
+    </div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-kicker">Data Privacy</div>
+    <div class="faq-item">
+      <h3>What is a Data Fiduciary under India's DPDPA 2023?</h3>
+      <p>Any entity that determines the purpose and means of processing personal data — broadly equivalent to a "data controller" under GDPR. Section 8 sets out general obligations: data accuracy, security safeguards, breach notification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How quickly must a data breach be reported under DPDPA?</h3>
+      <p>Notification to the Data Protection Board of India and affected Data Principals is required on timelines set out in the Act's rules; breach-readiness programs are typically built around a 72-hour internal escalation window to match global norms like GDPR.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can personal data be transferred outside India under DPDPA?</h3>
+      <p>Permitted except to specifically restricted countries — a narrower, more permissive model than GDPR's adequacy-and-SCC framework. Entities operating across both regimes still need SCC-aligned contracts for EU-facing flows.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What's the difference between a privacy policy and privacy-by-design?</h3>
+      <p>A privacy policy is a disclosure document. Privacy-by-design is an engineering practice — building consent architecture and data minimization into the product from the start, so the policy actually reflects how the system behaves.</p>
+    </div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-kicker">Cybersecurity Law</div>
+    <div class="faq-item">
+      <h3>What triggers CERT-In breach reporting obligations in India?</h3>
+      <p>CERT-In's 2022 directions require reporting of specified cybersecurity incidents within six hours of becoming aware of them — a materially shorter window than most global standards, which is why India-facing breach-response workflows are built around it specifically.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What's involved in a legal audit of an AI pipeline?</h3>
+      <p>Reviewing vendor contracts for liability allocation, checking data provenance and consent chains feeding the model, and confirming incident-response coverage extends to AI-specific failure modes like hallucination or adversarial manipulation — not just conventional breaches.</p>
+    </div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-kicker">Space Law</div>
+    <div class="faq-item">
+      <h3>Who is responsible in law for an AI decision made by a satellite system?</h3>
+      <p>Article VI of the 1967 Outer Space Treaty holds states internationally responsible for national space activities, including private operators. This creates layered liability when an onboard AI makes an autonomous decision — state responsibility, operator liability, and AI-governance obligations can all apply at once.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is space law relevant to a company running AI on satellites?</h3>
+      <p>Orbital data infrastructure sits at the intersection of space law (state responsibility, licensing, jurisdiction) and AI governance (risk classification, liability). Very few advisors cover both — that overlap is often the actual gap.</p>
+    </div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-kicker">AI Governance Training</div>
+    <div class="faq-item">
+      <h3>What is an AI governance training program for legal teams?</h3>
+      <p>A structured program — one-on-one or cohort — that builds practical fluency in AI regulation (EU AI Act, ISO/IEC 42001, DPDPA) so an in-house legal team can classify AI systems and review AI vendor contracts without escalating every question externally.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is this different from a generic AI-for-lawyers course?</h3>
+      <p>Generic courses teach tool usage — prompting, drafting assistance. This training builds regulatory fluency: reading an AI Act risk tier, spotting a liability gap in a vendor contract, knowing when a system needs a DPIA. The skill being taught is legal judgment applied to AI systems, not software operation.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer style="flex-direction:column; align-items:flex-start; gap:14px;">
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+    <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/">LinkedIn</a>
+    <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
+  </div>
+  <span>© 2026 Vishal Akshintala</span>
+</footer>
+
+</body>
+</html>
