@@ -1,14 +1,16 @@
 # Vishal Akshintala
 
-> Technology lawyer specializing in AI governance, data privacy, cybersecurity law, and space law advisory, across India, the EU, UK, US, and APAC. NALSAR University of Law alumnus and ISO/IEC 42001 Lead Implementer, affiliated with Radhical Global Attorneys (Hyderabad, India).
+> Registered Advocate practicing litigation and corporate advisory in AI governance, data privacy, cybersecurity law, and space law, across India, the EU, UK, US, and APAC. Court representation across Telangana and pan-India on referral. NALSAR University of Law alumnus, ISO/IEC 42001 Lead Implementer, CIPP/E and AIGP (IAPP), affiliated with Radhical Global Attorneys (Hyderabad, India).
 
-Vishal Akshintala advises organizations on AI risk classification under the EU AI Act, data fiduciary obligations under India's Digital Personal Data Protection Act (DPDPA) 2023, cybersecurity incident-response obligations under CERT-In directions, and jurisdictional questions in space law including orbital data infrastructure and satellite AI systems under the 1967 Outer Space Treaty. He also delivers one-on-one and cohort AI governance training programs for legal and compliance teams.
+Vishal Akshintala represents clients in litigation before Telangana courts and regulatory forums — including cybercrime matters (both complainants and accused), data protection grievances, and commercial/TDSAT disputes — and separately advises organizations on AI risk classification under the EU AI Act, data fiduciary obligations under India's Digital Personal Data Protection Act (DPDPA) 2023, cybersecurity incident-response obligations under CERT-In directions, and jurisdictional questions in space law including orbital data infrastructure and satellite AI systems under the 1967 Outer Space Treaty. He also delivers one-on-one and cohort AI governance training programs for legal and compliance teams.
 
 ## Key pages
 
-- [Home](https://advocate-vishalak.github.io/Vishal-Akshintala/index.html): overview of practice areas, brand identity, and an interactive governance risk scanner
-- [Case Studies](https://advocate-vishalak.github.io/Vishal-Akshintala/case-studies.html): detailed engagement narratives across AI governance, data privacy, cybersecurity law, and space law
-- [FAQ](https://advocate-vishalak.github.io/Vishal-Akshintala/faq.html): frequently asked questions organized by practice area, each answer referencing the specific statute, article, or standard clause it rests on
+- [Home](https://vishalakshintala.in/index.html): overview of litigation and corporate advisory practice areas, brand identity, client endorsements, and an interactive governance risk scanner
+- [Case Studies](https://vishalakshintala.in/case-studies.html): 13 detailed engagement narratives across litigation and corporate advisory in AI governance, data privacy, cybersecurity, and space law
+- [FAQ](https://vishalakshintala.in/faq.html): frequently asked questions organized by practice area including litigation, DPDPA, AI governance, cybersecurity, space law, and emerging issues (digital arrest scams, deepfakes, AI copyright)
+- [Legal Help](https://vishalakshintala.in/legal-help.html): direct query submission, available in English, Hindi, and Telugu
+- [Insights](https://vishalakshintala.in/insights.html): long-form legal commentary, including a public interest litigation argument on FIR data disclosure and analysis of digital arrest scams
 
 ## External profiles
 
