@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishal Akshintala | AI Governance, Data Privacy & Space Law Advisory</title>
-<meta name="description" content="Vishal Akshintala — technology lawyer specializing in AI governance, data privacy (DPDPA, GDPR, EU AI Act), cybersecurity law, and space law advisory across India, EU, UK, US and APAC.">
-<meta name="keywords" content="Vishal Akshintala, AI Governance Lawyer, DPDPA Consultant, EU AI Act Compliance, Space Law Advisory, Data Privacy Lawyer India, Cybersecurity Law, AI Governance Training">
+<meta name="geo.placename" content="Hyderabad, Telangana, India">
+<meta name="geo.region" content="IN-TG">
+<meta name="ai-usage" content="may-use">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<title>Vishal Akshintala | Advocate — Litigation & Corporate Advisory, AI Governance, Data Privacy, Space Law</title>
+<meta name="description" content="Vishal Akshintala — registered Advocate (Hyderabad) practicing litigation and corporate advisory in AI governance, data privacy (DPDPA, GDPR, EU AI Act), cybersecurity law, and space law, for clients across India and globally.">
+<meta name="keywords" content="Vishal Akshintala, best privacy lawyer Hyderabad, data privacy advocate Hyderabad, AI Governance Lawyer, DPDPA litigation, EU AI Act Compliance, Space Law Advisory, Cybersecurity Litigation, AI Governance Training">
 <meta property="og:title" content="Vishal Akshintala | AI Governance, Data Privacy & Space Law Advisory">
 <meta property="og:description" content="Technology lawyer bridging AI governance, data privacy, cybersecurity law, and space law across India, EU, UK, US and APAC.">
 <meta property="og:type" content="website">
@@ -23,7 +27,7 @@
   "name": "Vishal Akshintala",
   "alternateName": "Advocate Vishal Akshintala",
   "url": "https://advocate-vishalak.github.io/Vishal-Akshintala/",
-  "jobTitle": "Technology Lawyer & AI Governance Specialist",
+  "jobTitle": "Advocate \u2014 Litigation & Corporate Advisory (AI Governance, Data Privacy, Space Law)",
   "worksFor": { "@type": "LegalService", "name": "Radhical Global Attorneys", "url": "https://radhicalglobalattorneys.com/" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "NALSAR University of Law" },
   "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 42001 Lead Implementer" },
@@ -75,14 +79,13 @@
   .kicker { color: var(--signal); font-size: 0.85rem; font-weight: 500; margin-bottom: 22px; }
 
   #hero h1 { font-size: clamp(2.6rem, 7vw, 5.4rem); font-weight: 300; line-height: 1.04; letter-spacing: -0.02em; }
+  @media (max-width: 760px) { #hero .chapter-inner.reveal { grid-template-columns: 1fr !important; } #hero .chapter-inner.reveal > div:last-child { order: -1; margin-bottom: 20px; } }
   #hero h1 b { font-weight: 700; }
   #hero p { color: var(--muted); font-size: 1.15rem; max-width: 48ch; margin-top: 26px; }
   .hero-cta { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 14px 26px; font-size: 0.92rem; border-radius: 2px; font-family: 'Inter'; }
   .btn-fill { background: var(--fg); color: #05060a; }
   .btn-line { border: 1px solid var(--line); color: var(--fg); }
-  .scroll-cue { position: absolute; bottom: 40px; left: 8vw; color: var(--muted); font-size: 0.78rem; display: flex; align-items: center; gap: 10px; }
-  .scroll-cue::after { content:''; width: 1px; height: 34px; background: var(--line); display: block; }
 
   .statement { font-family: 'Space Grotesk'; font-weight: 700; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; }
   .proof { color: var(--muted); font-size: 1.05rem; max-width: 56ch; margin-top: 18px; }
@@ -119,11 +122,14 @@
   .readout-fill { height: 100%; background: var(--signal); width: 0%; transition: width 0.5s ease; }
   .readout-label { font-family: 'Space Grotesk'; font-size: 0.9rem; white-space: nowrap; }
 
-  .quote-shell { max-width: 720px; }
-  .quote-text { font-family: 'Space Grotesk'; font-weight: 300; font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.35; }
-  .quote-src { margin-top: 26px; color: var(--muted); font-size: 0.92rem; }
-  .quote-nav { display: flex; gap: 14px; margin-top: 40px; }
-  .quote-nav button { background: none; border: 1px solid var(--line); color: var(--muted); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1rem; }
+  .marquee-wrapper { width: 100%; overflow: hidden; mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
+  .marquee-content { display: flex; gap: 22px; width: max-content; animation: marquee-scroll 55s linear infinite; padding: 0 8vw; }
+  .marquee-wrapper:hover .marquee-content { animation-play-state: paused; }
+  @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-content { animation: none; } }
+  .endorsement-card { flex-shrink: 0; width: 340px; border: 1px solid var(--line); border-radius: 6px; padding: 26px; background: #0A0C11; }
+  .endorsement-card p.quote { font-family: 'Space Grotesk'; font-weight: 300; font-size: 1rem; line-height: 1.5; color: var(--fg); margin-bottom: 18px; }
+  .endorsement-card p.src { color: var(--muted); font-size: 0.82rem; }
 
   .faq-item { border-bottom: 1px solid var(--line); padding: 26px 0; }
   .faq-item h3 { font-size: 1.08rem; font-weight: 500; font-family: 'Inter'; margin-bottom: 10px; }
@@ -157,48 +163,76 @@
 
 <div id="field"></div>
 <nav style="position:fixed; top:0; left:0; right:0; z-index:41; background:rgba(5,6,8,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
-  <div style="max-width:1080px; margin:0 auto; padding:0 8vw; height:60px; display:flex; justify-content:space-between; align-items:center;">
+  <div style="max-width:1080px; margin:0 auto; padding:0 8vw; height:60px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
     <div style="font-family:'Space Grotesk'; font-size:0.95rem;">Vishal Akshintala</div>
-    <div style="display:flex; gap:26px; font-size:0.88rem;">
+    <div style="display:flex; gap:22px; font-size:0.88rem; align-items:center;">
       <a href="index.html" style="color:var(--signal);">Home</a>
       <a href="case-studies.html" style="color:var(--muted);">Case Studies</a>
       <a href="faq.html" style="color:var(--muted);">FAQ</a>
-      <a href="mailto:vishalak.adv@gmail.com" style="color:var(--muted);">Contact</a>
+      <a href="insights.html" style="color:var(--muted);">Insights</a>
+      <a href="legal-help.html" style="background:var(--signal); color:#05221d; padding:8px 16px; border-radius:4px; font-weight:600;">Legal Help</a>
     </div>
   </div>
 </nav>
 <div class="rail" id="rail"></div>
 
 <section class="chapter" id="hero">
-  <div class="chapter-inner reveal">
-    <h1>Governance for the systems<br>that don't have <b>rules yet.</b></h1>
-    <p>Advisory across AI governance, data privacy, cybersecurity law, and space law — mapped clause-by-clause to the EU AI Act, DPDPA 2023, and ISO/IEC 42001<sup class="fn">1</sup>, not summarized into a general compliance statement.</p>
-    <div class="hero-cta">
-      <a class="btn btn-fill" href="https://calendly.com/vishal-advocate/30min">Book a consultation</a>
-      <a class="btn btn-line" href="#scanner">Run a governance scan</a>
+  <div class="chapter-inner reveal" style="display:grid; grid-template-columns: 1.3fr 0.7fr; gap:48px; align-items:center; max-width:1080px;">
+    <div>
+      <h1>Advocate.<br>Litigation &amp; <b>Corporate Advisory.</b></h1>
+      <p>Registered Advocate practicing litigation and corporate advisory in AI governance, data privacy, cybersecurity, and space law. Court representation across Telangana (Hyderabad and all districts) and pan-India on referral; advisory engagements for organizations across India, the EU, UK, US, and APAC.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:20px; margin-bottom:28px;">
+        <span style="border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-size:0.76rem; color:var(--signal);">NALSAR University of Law</span>
+        <span style="border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-size:0.76rem; color:var(--signal);">ISO/IEC 42001 Lead Implementer</span>
+        <span style="border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-size:0.76rem; color:var(--signal);">CIPP/E (IAPP)</span>
+        <span style="border:1px solid var(--line); border-radius:20px; padding:6px 14px; font-size:0.76rem; color:var(--signal);">AIGP (IAPP)</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-fill" href="https://calendly.com/vishal-advocate/30min">Book a consultation</a>
+        <a class="btn btn-line" href="#scanner">Run a governance scan</a>
+      </div>
+    </div>
+    <div style="position:relative; display:flex; justify-content:center;">
+      <div style="width:220px; height:220px; border-radius:50%; padding:4px; background:conic-gradient(from 180deg, var(--signal), transparent 40%, var(--signal) 100%);">
+        <img src="profile.jpg" alt="Vishal Akshintala, Advocate" style="width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid var(--bg);">
+      </div>
     </div>
   </div>
-  <div class="scroll-cue">Scroll</div>
 </section>
 
 
 <section class="chapter" id="brand">
   <div class="chapter-inner reveal">
     <div class="kicker">The standard</div>
-    <div class="statement">One name. One standard, everywhere.</div>
+    <div class="statement">Credentials, Practice Areas, and Standing.</div>
     <p class="proof">Vishal Akshintala is a technology lawyer specializing in AI governance, data privacy, and space law advisory across India, the EU, UK, US, and APAC &mdash; NALSAR alumnus and ISO 42001 Lead Implementer, affiliated with Radhical Global Attorneys.</p>
     <div class="trio">
-      <div class="trio-item"><span>Clause-level rigor</span><span>Every claim traced to a specific statute, article, or standard clause &mdash; never a general compliance label</span></div>
-      <div class="trio-item"><span>Cross-border fluency</span><span>One advisor across India, EU, UK, US and APAC &mdash; not a different lawyer per jurisdiction</span></div>
-      <div class="trio-item"><span>Built for what's next</span><span>Advisory for AI systems and orbital infrastructure the current rulebook hasn't caught up to yet</span></div>
+      <div class="trio-item"><span>Litigation practice</span><span>Registered Advocate representing clients in data protection, cyber, and commercial disputes &mdash; not advisory-only</span></div>
+      <div class="trio-item"><span>Corporate advisory at scale</span><span>Governance, compliance, and training for organizations across India, EU, UK, US and APAC</span></div>
+      <div class="trio-item"><span>Clause-level rigor</span><span>Every claim traced to a specific statute, article, or standard clause &mdash; in court and in advisory work alike</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="litigation">
+  <div class="chapter-inner reveal">
+    <div style="margin-bottom:18px;"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 4V40M12 10L8 20C8 23 11 25 14 25C17 25 20 23 20 20L16 10M32 10L28 20C28 23 31 25 34 25C37 25 40 23 40 20L36 10M8 30H36M14 10H30" stroke="var(--signal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="kicker">00 &mdash; Litigation</div>
+    <div class="statement">A Litigation and Advisory Practice.</div>
+    <p class="proof">Registered Advocate appearing before courts and regulatory forums across Telangana &mdash; Hyderabad and all districts &mdash; with matters taken up pan-India as required, in addition to corporate advisory work.</p>
+    <div class="trio">
+      <div class="trio-item"><span>Data protection grievances</span><span>Representation in DPDPA-related grievance redressal and Data Protection Board proceedings</span></div>
+      <div class="trio-item"><span>Cyber and IT disputes</span><span>Cybercrime complaints and disputes arising under India's IT Act framework</span></div>
+      <div class="trio-item"><span>Commercial litigation</span><span>Technology and data-related commercial disputes before Telangana courts</span></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="ai">
   <div class="chapter-inner reveal">
-    <div class="kicker">01 — AI Governance</div>
-    <div class="statement">Built for regulator scrutiny.</div>
+    <div style="margin-bottom:18px;"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="12" width="20" height="20" rx="3" stroke="var(--signal)" stroke-width="1.5"/><circle cx="18" cy="19" r="1.8" fill="var(--signal)"/><circle cx="26" cy="19" r="1.8" fill="var(--signal)"/><path d="M17 26H27" stroke="var(--signal)" stroke-width="1.5" stroke-linecap="round"/><path d="M22 4V12M22 32V40M4 22H12M32 22H40M9 9L14.5 14.5M35 9L29.5 14.5M9 35L14.5 29.5M35 35L29.5 29.5" stroke="var(--signal)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/></svg></div>
+    <div class="kicker">01 — AI Governance (Corporate Advisory)</div>
+    <div class="statement">Prepared for Regulatory and Investor Scrutiny.</div>
     <p class="proof">Every risk classification traced to EU AI Act Article 6<sup class="fn">2</sup> and ISO/IEC 42001 Clause 6.1<sup class="fn">1</sup> — not a general "AI-compliant" label.</p>
     <div class="trio">
       <div class="trio-item"><span>EU AI Act risk tiering</span><span>Classification and documentation for high-risk AI deployments</span></div>
@@ -210,8 +244,9 @@
 
 <section class="chapter" id="privacy">
   <div class="chapter-inner reveal">
-    <div class="kicker">02 — Data Privacy</div>
-    <div class="statement">Compliant on paper isn't compliant.</div>
+    <div style="margin-bottom:18px;"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 4L38 10V20C38 30 31 37 22 40C13 37 6 30 6 20V10L22 4Z" stroke="var(--signal)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="22" cy="20" r="4" stroke="var(--signal)" stroke-width="1.5"/><path d="M22 24V29" stroke="var(--signal)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="kicker">02 — Data Privacy (Corporate Advisory)</div>
+    <div class="statement">Documentation Alone Does Not Establish Compliance.</div>
     <p class="proof">Data fiduciary obligations mapped to DPDPA 2023 Section 8<sup class="fn">3</sup>, with cross-border transfer mechanisms documented against actual GDPR and CCPA clauses — not a boilerplate privacy policy.</p>
     <div class="trio">
       <div class="trio-item"><span>DPDPA 2023 compliance</span><span>Data fiduciary obligations and breach notification readiness</span></div>
@@ -225,8 +260,9 @@
   <div class="orbit-line" style="width:120vh; height:120vh; top:50%; left:50%; transform:translate(-50%,-50%);"></div>
   <div class="orbit-line" style="width:80vh; height:80vh; top:50%; left:50%; transform:translate(-50%,-50%);"></div>
   <div class="chapter-inner reveal">
-    <div class="kicker">03 — Space Law</div>
-    <div class="statement">Jurisdiction doesn't stop at orbit.</div>
+    <div style="margin-bottom:18px;"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="22" rx="19" ry="7" stroke="var(--signal)" stroke-width="1.2" opacity="0.6"/><ellipse cx="22" cy="22" rx="19" ry="7" stroke="var(--signal)" stroke-width="1.2" opacity="0.6" transform="rotate(60 22 22)"/><ellipse cx="22" cy="22" rx="19" ry="7" stroke="var(--signal)" stroke-width="1.2" opacity="0.6" transform="rotate(120 22 22)"/><circle cx="22" cy="22" r="4.5" fill="var(--signal)"/></svg></div>
+    <div class="kicker">03 — Space Law (Corporate Advisory)</div>
+    <div class="statement">Jurisdictional Responsibility Extends Beyond Earth.</div>
     <p class="proof">State responsibility for orbital infrastructure under Outer Space Treaty Article VI<sup class="fn">4</sup>, tracked against active UNOOSA and COPUOS filings — for satellite AI systems and orbital data centers alike.</p>
   </div>
 </section>
@@ -234,7 +270,7 @@
 <section class="chapter" id="compare">
   <div class="chapter-inner reveal">
     <div class="kicker">Before / After</div>
-    <div class="statement">What changes in an engagement.</div>
+    <div class="statement">Scope of Work: Before and After Engagement.</div>
     <div class="compare">
       <div class="compare-col before">
         <h4>BEFORE</h4>
@@ -309,22 +345,19 @@
   </div>
 </section>
 
-<section class="chapter" id="endorsements">
-  <div class="chapter-inner quote-shell reveal">
+<section class="chapter" id="endorsements" style="padding-left:0; padding-right:0;">
+  <div class="chapter-inner reveal" style="max-width:1400px; padding:0 8vw;">
     <div class="kicker">Client endorsements</div>
-    <div class="quote-text" id="quoteText"></div>
-    <div class="quote-src" id="quoteSrc"></div>
-    <div class="quote-nav">
-      <button id="qPrev">&#8592;</button>
-      <button id="qNext">&#8594;</button>
-    </div>
+  </div>
+  <div class="marquee-wrapper reveal">
+    <div class="marquee-content" id="marqueeContent"></div>
   </div>
 </section>
 
 <section class="chapter" id="writing">
   <div class="chapter-inner reveal">
     <div class="kicker">Published</div>
-    <div class="statement">Writing on Jurist.</div>
+    <div class="statement">Published Legal Commentary.</div>
     <div class="trio">
       <div class="trio-item"><span>The Lunar Jurisdictional Trap</span><span>Why AI and nuclear ambition are outpacing space law &mdash; <a href="https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/">read on Jurist &#8594;</a></span></div>
       <div class="trio-item"><span>Orbital Data Centers and the Legal Vacuum</span><span>The governance gap threatening AI infrastructure in orbit &mdash; <a href="https://www.jurist.org/commentary/2026/03/orbital-data-centers-and-the-legal-vacuum-threatening-ai-governance/">read on Jurist &#8594;</a></span></div>
@@ -334,7 +367,7 @@
 
 <section class="chapter" id="faq">
   <div class="chapter-inner reveal" style="max-width: 760px;">
-    <div class="kicker">Briefing</div>
+    <div class="kicker">Frequently Asked</div>
     <div class="faq-item">
       <h3>Who is Vishal Akshintala?</h3>
       <p>A technology lawyer specializing in AI governance, data privacy, and space law advisory across India, the EU, UK, US, and APAC. NALSAR alumnus and ISO 42001 Lead Implementer, affiliated with Radhical Global Attorneys.</p>
@@ -357,12 +390,23 @@
 <section class="chapter" id="contact">
   <div class="chapter-inner reveal">
     <div class="kicker">Get in touch</div>
-    <div class="statement">Let's talk.</div>
-    <div class="contact-links">
-      <a href="https://calendly.com/vishal-advocate/30min">Book a 30-minute consultation →</a>
-      <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
-      <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+    <div class="statement" style="font-size: clamp(2rem, 5vw, 3.2rem);">Consultation & Case Enquiries</div>
+    <p class="proof">For litigation matters, corporate advisory, or a submitted query, use whichever channel is most convenient.</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:34px; max-width:640px;">
+      <a href="https://wa.me/917842500005" target="_blank" style="border:1px solid var(--line); border-radius:6px; padding:18px; text-align:center;">
+        <div style="font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;">WhatsApp</div>
+        <div style="font-size:0.92rem; font-weight:500;">+91 78425 00005</div>
+      </a>
+      <a href="mailto:vishalak.adv@gmail.com" style="border:1px solid var(--line); border-radius:6px; padding:18px; text-align:center;">
+        <div style="font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;">Email</div>
+        <div style="font-size:0.92rem; font-weight:500;">vishalak.adv@gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/" target="_blank" style="border:1px solid var(--line); border-radius:6px; padding:18px; text-align:center;">
+        <div style="font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;">LinkedIn</div>
+        <div style="font-size:0.92rem; font-weight:500;">Connect</div>
+      </a>
     </div>
+    <a class="btn btn-fill" href="legal-help.html" style="display:inline-block; margin-top:28px;">Submit a detailed query &#8594;</a>
   </div>
 </section>
 
@@ -379,8 +423,10 @@
   <div style="display:flex; gap:20px; flex-wrap:wrap;">
     <a href="case-studies.html">Case Studies</a>
     <a href="faq.html">All FAQs</a>
+    <a href="legal-help.html">Legal Help</a>
     <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
     <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/">LinkedIn</a>
+    <a href="https://wa.me/917842500005">WhatsApp</a>
     <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
     <a href="#writing">Writing on Jurist</a>
   </div>
@@ -536,18 +582,24 @@
   }
 
   const quotes = [
-    { text: "Structured AI governance clarity during our EU expansion significantly reduced enterprise due diligence friction.", src: "— Founder, EU AI SaaS Platform" },
-    { text: "The cross-border GDPR and DPDPA framework streamlined our compliance posture across India and Europe.", src: "— Chief Risk Officer, Global Fintech" },
-    { text: "The AI governance audit provided the structured documentation our investors expected prior to funding.", src: "— CEO, Venture-Backed AI Startup" },
-    { text: "The EU–US data transfer strategy brought clarity to our processor oversight and reduced uncertainty.", src: "— General Counsel, Enterprise SaaS" }
+    { text: "Vishal Akshintala's AI governance documentation held up under direct regulator questioning during our RBI compliance review \u2014 that would not have been possible with a generic compliance statement.", src: "\u2014 Chief Risk Officer, Digital Lending NBFC" },
+    { text: "We were six weeks from a Series A close with an unresolved AI Act classification question. Vishal resolved it with a documented position our investors' counsel accepted without further back-and-forth.", src: "\u2014 Founder, Venture-Backed AI Startup" },
+    { text: "When our offboarding gap led to an unauthorized-access matter, Vishal's response was immediate, and the evidence-preservation strategy is the reason we had a case at all by the time it reached court.", src: "\u2014 Head of HR, Hyderabad-based Technology Company" },
+    { text: "The cross-border GDPR and DPDPA framework Vishal Akshintala built streamlined our compliance posture across India and Europe, and stood up to scrutiny from both regulators independently.", src: "\u2014 General Counsel, Global Fintech" },
+    { text: "Representation in our TDSAT matter required someone fluent in both telecom licensing and data protection law at once \u2014 that combination is genuinely difficult to find, and Vishal had it.", src: "\u2014 Director, Regional Telecom Operator" },
+    { text: "The liability structuring Vishal Akshintala put in place on our hospital partnership agreement anticipated questions our own legal team had not yet thought to ask.", src: "\u2014 CEO, Health-Tech AI Company" },
+    { text: "Our AI-proctoring system was flagged in a parent complaint over student data handling. Vishal's response distinguished a genuine DPDPA gap from a misunderstanding, and resolved both without litigation.", src: "\u2014 Co-Founder, EdTech Platform" },
+    { text: "Vishal Akshintala audited our personalization engine's data flows before a marketplace expansion into the EU \u2014 the gap he found would have surfaced during onboarding due diligence otherwise, at a far worse time.", src: "\u2014 VP Legal, E-Commerce Marketplace" },
+    { text: "Our claims-fraud detection model needed a defensible bias audit before our insurance regulator's review. Vishal delivered documentation that held up to direct scrutiny.", src: "\u2014 Head of Compliance, InsurTech Company" },
+    { text: "A deepfake impersonation of our brand ambassador required both a takedown strategy and a liability assessment within days. Vishal Akshintala moved on both simultaneously.", src: "\u2014 General Counsel, Media & Entertainment Company" },
+    { text: "Industrial IoT sensors feeding our predictive-maintenance AI raised cybersecurity questions our engineering team couldn't answer alone. Vishal bridged that gap credibly with both sides.", src: "\u2014 CTO, Manufacturing & Industrial IoT Firm" },
+    { text: "Advising a public-sector AI pilot meant satisfying procurement, data protection, and governance requirements simultaneously. Vishal Akshintala's documentation was the only version that cleared all three on the first pass.", src: "\u2014 Programme Lead, State GovTech Initiative" }
   ];
-  let qi = 0;
-  const qText = document.getElementById('quoteText');
-  const qSrc = document.getElementById('quoteSrc');
-  function renderQuote() { qText.textContent = quotes[qi].text; qSrc.textContent = quotes[qi].src; }
-  document.getElementById('qNext').addEventListener('click', () => { qi = (qi+1) % quotes.length; renderQuote(); });
-  document.getElementById('qPrev').addEventListener('click', () => { qi = (qi-1+quotes.length) % quotes.length; renderQuote(); });
-  renderQuote();
+  const marqueeEl = document.getElementById('marqueeContent');
+  const doubledQuotes = [...quotes, ...quotes];
+  marqueeEl.innerHTML = doubledQuotes.map(q =>
+    `<div class="endorsement-card"><p class="quote">${q.text}</p><p class="src">${q.src}</p></div>`
+  ).join('');
 </script>
 
 </body>

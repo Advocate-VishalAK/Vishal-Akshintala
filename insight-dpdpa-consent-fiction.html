@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.placename" content="Hyderabad, Telangana, India">
+<meta name="ai-usage" content="may-use">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<title>DPDPA's Consent Fiction: Why Granular Toggles Aren't Granular Consent | Vishal Akshintala, Advocate</title>
+<meta name="description" content="A consent screen with separate toggles is not the same as a backend that actually honors them — and DPDPA's Section 8 obligations turn on the latter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="insight-styles.css">
+<script data-goatcounter="https://vishalakshintala.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"DPDPA's Consent Fiction: Why Granular Toggles Aren't Granular Consent","author":{"@type":"Person","name":"Vishal Akshintala"},"datePublished":"2026-09-22"}
+</script>
+</head>
+<body>
+<div id="readProgress"></div>
+<div id="field"></div>
+<nav>
+  <div class="navwrap">
+    <div class="brand">Vishal Akshintala</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="faq.html">FAQ</a>
+      <a href="insights.html" class="current">Insights</a>
+      <a href="legal-help.html" class="cta-link">Legal Help</a>
+    </div>
+  </div>
+</nav>
+<div class="wrap">
+  <a class="back" href="insights.html">&#8592; All Insights</a>
+  <article class="reveal">
+    <div class="art-tag">Data Privacy</div>
+    <h1 class="art-title">DPDPA's Consent Fiction: Why Granular Toggles Aren't Granular Consent</h1>
+    <div class="art-meta">Vishal Akshintala</div>
+    <p>Most consent interfaces built in the last two years look genuinely careful: separate toggles for marketing, analytics, and third-party sharing, each with its own explanation. This is real progress over the single blanket "I agree" checkbox it replaced. But a consent interface's design tells you nothing about whether the systems underneath it actually differentiate processing by purpose &mdash; and that gap is where DPDPA compliance programs most commonly fail in practice, not in the visible layer regulators and users actually see first.</p>
+    <p>The pattern is consistent: a product team designs a genuinely granular front-end, and a backend built earlier &mdash; often years earlier, before DPDPA existed &mdash; gates all processing behind a single internal flag. A user who declines marketing consent is, in practice, still having their data processed for that exact purpose, because no engineering work was ever done to make the granular toggles actually control granular data flows downstream.</p><p class="pull">A consent screen is what a user sees. A consent architecture is whether the backend actually behaves accordingly. Section 8 obligations attach to the latter, and an audit will look at the latter.</p><p>This matters because Section 8's data fiduciary obligations require processing to actually be limited to the specified, consented purpose &mdash; not merely disclosed as limited. A cosmetically granular consent screen sitting on top of an ungranular backend does not satisfy that requirement; it creates a false paper trail that makes the eventual finding worse, because it shows the company represented a capability it did not have.</p>
+    <p>The fix is not a policy rewrite. It requires data flows to be tagged by purpose at the point of collection, with that tagging actually enforced at every downstream system that touches the data &mdash; marketing automation, analytics pipelines, third-party integrations. This is meaningfully harder and slower than updating a consent screen, which is exactly why so many companies stop at the visible layer and assume the work is done.</p>
+  </article>
+</div>
+<footer>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+  </div>
+  <span>&copy; 2026 Vishal Akshintala</span>
+</footer>
+<script src="insight-script.js"></script>
+</body>
+</html>

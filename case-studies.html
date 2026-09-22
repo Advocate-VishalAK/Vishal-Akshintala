@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.placename" content="Hyderabad, Telangana, India">
+<meta name="geo.region" content="IN-TG">
+<meta name="ai-usage" content="may-use">
+<meta name="robots" content="index, follow, max-snippet:-1">
 <title>Case Studies | Vishal Akshintala — AI Governance, Data Privacy & Space Law</title>
 <meta name="description" content="Real engagement stories from AI governance, data privacy, cybersecurity, and space law advisory work — the actual judgment calls, not a generic services list.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,9 +42,17 @@
   .case-note { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-top: 18px; border-left: 2px solid var(--line); padding-left: 14px; }
 
   footer { border-top: 1px solid var(--line); padding: 30px 8vw; color: var(--muted); font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  #field { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.4; }
+  .mote { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: var(--muted); opacity: 0.3; }
+  @keyframes drift { from { transform: translateY(0);} to { transform: translateY(-40px);} }
+  nav, .wrap, footer { position: relative; z-index: 2; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(.2,.7,.2,1), transform 0.8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
+<div id="field"></div>
 
 <nav>
   <div class="navwrap">
@@ -49,16 +61,17 @@
       <a href="index.html">Home</a>
       <a href="case-studies.html" class="current">Case Studies</a>
       <a href="faq.html">FAQ</a>
-      <a href="mailto:vishalak.adv@gmail.com">Contact</a>
+      <a href="insights.html">Insights</a>
+      <a href="legal-help.html" style="background:var(--signal); color:#05221d; padding:7px 14px; border-radius:4px; font-weight:600;">Legal Help</a>
     </div>
   </div>
 </nav>
 
 <div class="wrap">
-  <h1>Not what happened.<br><b>What it actually took.</b></h1>
-  <p class="lede">Details changed or composited to protect confidentiality — but the judgment calls, the dead ends, and what actually moved each situation forward are real.</p>
+  <h1>Case Studies —<br><b>Litigation & Corporate Advisory.</b></h1>
+  <p class="lede">Representative matters across litigation and corporate advisory practice. Details have been changed or composited to preserve client confidentiality, consistent with professional obligations.</p>
 
-  <div class="case">
+  <div class="case reveal">
     <div class="case-tag">AI Governance — Series A diligence</div>
     <h2>The pitch deck said "AI-compliant." The data room didn't.</h2>
     <p>A venture-backed AI startup came in three weeks before their Series A closed. Their pitch deck had a line about being "EU AI Act compliant" — nobody had actually classified which risk tier their hiring-screening product fell into. That's a materially different problem than "add a compliance slide."</p>
@@ -66,7 +79,7 @@
     <p><b>What actually mattered:</b> not the classification itself, but having the paper trail ready before due diligence started rather than reacting to it. The round closed on schedule. The compliance slide got rewritten to say something true.</p>
     <div class="case-note">The lesson that generalizes: a compliance claim in a pitch deck is a liability until someone has actually traced it to the clause it rests on.</div>
   </div>
-  <div class="case">
+  <div class="case reveal">
     <div class="case-tag">EU AI Act — full classification and conformity project</div>
     <h2>Six months before the deadline, nobody had actually read Annex III.</h2>
     <p>A recruitment-technology company selling into the EU had a resume-screening product live with several enterprise clients, and roughly six months before the relevant EU AI Act high-risk provisions came into force, their general counsel asked a simple question: are we actually high-risk, or not? Nobody internally could answer it with confidence, because nobody had gone through Annex III line by line against what the product actually did, versus what the marketing described.</p>
@@ -77,7 +90,7 @@
   </div>
 
 
-  <div class="case">
+  <div class="case reveal">
     <div class="case-tag">Data Privacy — cross-border payments</div>
     <h2>Compliant in India. Exposed in Frankfurt.</h2>
     <p>A payments processor had built a genuinely careful DPDPA compliance program — data fiduciary registration, consent flows, the works. What they hadn't accounted for was that a chunk of their processing had quietly started routing through a European sub-processor as they scaled, and nobody had checked whether their contracts covered that.</p>
@@ -85,7 +98,7 @@
     <p><b>What actually mattered:</b> the fix was one contract amendment, but finding it required looking at what the infrastructure actually did rather than what the policy said it did.</p>
     <div class="case-note">The lesson that generalizes: privacy programs drift from actual data flows faster than anyone updates the paperwork. The gap is rarely where you'd guess.</div>
   </div>
-  <div class="case">
+  <div class="case reveal">
     <div class="case-tag">DPDPA 2023 — consent architecture and breach-readiness overhaul</div>
     <h2>Consent that looked granular. Wasn't, underneath.</h2>
     <p>A consumer health-and-wellness app with several million Indian users had a consent screen that looked, on its face, like good practice &mdash; separate toggles for marketing, analytics, and third-party sharing. The problem surfaced during a DPDPA Section 8 obligations review: those toggles were cosmetic. Underneath, a single consent flag in the database gated all processing, meaning a user who declined marketing consent was, in practice, still having their data processed for purposes they'd explicitly opted out of.</p>
@@ -94,9 +107,31 @@
     <p><b>What actually mattered:</b> the gap wasn't the legal framework being unclear &mdash; DPDPA's obligations here are fairly specific. The gap was that compliance had been designed as a UI layer rather than as something wired into the actual data architecture underneath it, which is where an audit, or a breach, would actually look.</p>
     <div class="case-note">The lesson that generalizes: a consent screen is not a consent architecture. The former is what a user sees; the latter is whether the backend actually behaves accordingly. Regulators and plaintiffs' counsel look at the latter.</div>
   </div>
+  
+  <div class="case reveal">
+    <div class="case-tag">Litigation — cybercrime, accused / criminal defense</div>
+    <h2>A shared laptop, a complaint filed, and no time to be wrong.</h2>
+    <p>A young IT professional in Hyderabad found himself named in a cybercrime complaint after a colleague's account was accessed without authorization from an IP address traced to his office network. He had, in fact, shared a workstation temporarily with three other employees during a system migration two weeks earlier &mdash; a fact that existed only in an internal ticketing log nobody had thought to preserve before the complaint escalated.</p>
+    <p>The first days after a Section 66 IT Act complaint is filed matter disproportionately. The immediate work was not arguing innocence in the abstract, but securing the ticketing system logs, the building's access-card records, and the workstation's login history before routine data retention policies quietly deleted them — evidence that existed only for a finite window and would have been gone within the month.</p>
+    <p>The matter proceeded to an anticipatory bail application while the factual record was still being assembled, since the accused's cooperation with the investigation needed to happen without custodial risk hanging over every interaction with investigators. The device forensics, once obtained, corroborated the shared-workstation account and materially changed how the investigating officer approached the matter.</p>
+    <p><b>What actually mattered:</b> being accused in a cybercrime matter is a race against evidence retention as much as it is a legal argument. The single highest-value early decision was which records to preserve immediately, before anyone else in the chain had reason to.</p>
+    <div class="case-note">The lesson that generalizes: an accusation under the IT Act is not resolved by explaining what happened after the fact. It is resolved, or not, by what evidence still exists by the time anyone asks for it &mdash; which is why early legal involvement changes outcomes more than most people expect.</div>
+  </div>
+  <div class="case reveal">
+    <div class="case-tag">Litigation — cybercrime, victim / financial fraud recovery</div>
+    <h2>The bank said the transaction was authorized. The logs said otherwise.</h2>
+    <p>A small business owner in Warangal lost a significant sum through a UPI-based fraud where the fraudster impersonated a payment gateway support agent. The bank's initial response treated the transaction as customer-authorized, since it had been completed using a legitimate one-time password &mdash; despite the OTP having been obtained through active deception, not a security failure of the bank's systems.</p>
+    <p>The distinction between "authorized" and "obtained through fraud" is where most victims lose ground procedurally, not on the merits. The work here involved filing promptly on the National Cyber Crime Reporting Portal to trigger the account-freeze mechanism before funds moved further downstream, then building a formal representation to the bank's grievance redressal officer that reframed the transaction correctly under RBI's customer liability circular for third-party fraud, rather than accepting the bank's initial "authorized transaction" characterization.</p>
+    <p>Parallel to the banking-side representation, a criminal complaint was pursued to create an official investigative record — not only for potential recovery, but because a documented FIR materially strengthens a civil recovery claim if the banking-channel remedy stalls.</p>
+    <p><b>What actually mattered:</b> speed on the freeze request, and correctly characterizing the transaction under the applicable RBI framework rather than letting the bank's default "authorized" classification stand unchallenged.</p>
+    <div class="case-note">The lesson that generalizes: in UPI and digital payment fraud, the legal question is rarely whether fraud occurred — it's whether the transaction gets correctly classified before the standard liability framework closes the door on recovery.</div>
+  </div>
 
 
-  <div class="case">
+
+
+
+  <div class="case reveal">
     <div class="case-tag">Cybersecurity Law — incident response</div>
     <h2>Six hours. That's not a lot of time to be right.</h2>
     <p>CERT-In's six-hour reporting window is unforgiving by design. A mid-sized fintech had an incident at 11pm on a Friday — the kind of timing that tests whether an incident response plan is real or just a document. It was mostly real. The gap was that the plan named who should be notified but not who had the authority to actually make the call under pressure with incomplete information.</p>
@@ -104,12 +139,57 @@
     <div class="case-note">The lesson that generalizes: an incident response plan is only as good as whether someone can actually execute it at 11pm on a Friday, not whether it reads well in a compliance binder.</div>
   </div>
 
-  <div class="case">
+  <div class="case reveal">
     <div class="case-tag">Space Law — orbital data infrastructure</div>
     <h2>Nobody had asked whose law applies up there.</h2>
     <p>A team building orbital data-center infrastructure had every terrestrial compliance box checked — data residency, encryption standards, the usual. What they hadn't considered was the layered liability question sitting above all of it: under the Outer Space Treaty, the launching state carries international responsibility for the satellite's activities, regardless of where the company is incorporated.</p>
     <p>That meant a decision made by an onboard AI system for data routing could implicate state responsibility, operator liability, and AI governance obligations simultaneously — three different legal frameworks that don't share a common vocabulary. Most of the early work wasn't drafting anything; it was building a shared map of which questions belonged to which framework, because the team's engineers and their existing counsel were talking past each other.</p>
     <div class="case-note">The lesson that generalizes: in genuinely novel intersections like this, the first job isn't answering the legal question — it's figuring out which of three overlapping legal systems is even being asked.</div>
+  </div>
+
+  <div class="case reveal">
+    <div class="case-tag">Litigation — hacking &amp; unauthorized access, IT Act Section 66</div>
+    <h2>A GCC engineer, a compromised repository, and a six-figure trade secret claim.</h2>
+    <p>Hyderabad's IT corridor hosts dozens of global capability centers, and disputes involving departing engineers and source-code repositories are becoming a recurring pattern rather than an exception. A mid-sized product company discovered that a former employee's credentials had been used to access a private repository nine days after his exit interview &mdash; access that should have been revoked immediately but wasn't, due to an offboarding gap between HR and IT.</p>
+    <p>The matter combined a Section 66 unauthorized-access complaint with a civil claim for breach of confidentiality obligations under the employment contract. The technical work was establishing, through access logs and git commit metadata, that the credentials were used post-termination rather than during a legitimately overlapping notice period &mdash; a distinction the company's own offboarding failure had made genuinely ambiguous on the surface.</p>
+    <p><b>What actually mattered:</b> the offboarding gap was the company's own operational failure, and acknowledging that candidly in the pleadings, rather than overreaching on the unauthorized-access claim, kept the matter credible before the court and strengthened the confidentiality claim that actually had the stronger factual footing.</p>
+    <div class="case-note">The lesson that generalizes: as GCC and product-engineering hiring in Hyderabad accelerates, offboarding-related access disputes are becoming one of the most common recurring cybercrime-adjacent matters in the city &mdash; and they are usually won or lost on log retention, not on argument.</div>
+  </div>
+
+  <div class="case reveal">
+    <div class="case-tag">Litigation — TDSAT, telecom &amp; data dispute</div>
+    <h2>A billing dispute that was really a data-sharing dispute.</h2>
+    <p>A regional ISP referred a matter involving a dispute with a telecom licensor over subscriber data-sharing obligations under license conditions &mdash; on its face a commercial billing disagreement, but substantively a question of how far a licensee's data-handling obligations extend under both the license agreement and DPDPA once subscriber data changes hands between commercial entities.</p>
+    <p>Matters before the Telecom Disputes Settlement and Appellate Tribunal (TDSAT) require a specific procedural posture distinct from ordinary civil litigation, and the substantive overlap between telecom licensing conditions and data protection obligations is not yet well-mapped in practice &mdash; which meant briefing the matter required building the connective argument between two regulatory frameworks that don't reference each other directly.</p>
+    <p><b>What actually mattered:</b> recognizing early that a "billing dispute" was actually a data-governance dispute in disguise changed the entire briefing strategy, and avoided arguing the weaker commercial point while the stronger regulatory one sat unaddressed.</p>
+    <div class="case-note">The lesson that generalizes: telecom and data disputes increasingly overlap as data-sharing becomes embedded in ordinary commercial telecom arrangements. Very few practitioners are fluent in both TDSAT procedure and data protection substance at once.</div>
+  </div>
+
+  <div class="case reveal">
+    <div class="case-tag">Corporate Advisory — AI governance, fintech / digital lending</div>
+    <h2>An algorithmic credit-scoring model, and an RBI audit six weeks out.</h2>
+    <p>A digital lending NBFC using a machine-learning credit-scoring model was notified of an upcoming RBI compliance review, six weeks before the review date. Their model had never been formally documented against the Reserve Bank's Digital Lending Guidelines or assessed for algorithmic bias in a way that would satisfy a regulator asking pointed questions about disparate outcomes across applicant demographics.</p>
+    <p>The compressed timeline meant prioritization: documenting the model's decision logic and feature weights first, since that's what a reviewer asks for immediately, followed by a bias audit across the protected-characteristic-adjacent variables the model used as proxies (pin code, employment category) even though it didn't use protected characteristics directly &mdash; a distinction regulators are increasingly unwilling to accept at face value.</p>
+    <p><b>What actually mattered:</b> the model itself didn't need to change on this timeline. What needed to exist was a defensible paper trail showing the company understood its own model's behavior, which is what actually satisfies a regulator under time pressure.</p>
+    <div class="case-note">The lesson that generalizes: digital lending and fintech companies using algorithmic underwriting face RBI scrutiny on a timeline that has little patience for undocumented models. This is not a future risk &mdash; it is an active one for any NBFC running ML-based credit decisions today.</div>
+  </div>
+
+  <div class="case reveal">
+    <div class="case-tag">Corporate Advisory — AI governance, healthtech / diagnostics</div>
+    <h2>An AI diagnostic tool, a hospital partnership, and a liability question nobody had asked.</h2>
+    <p>A health-tech company building an AI-assisted radiology screening tool was finalizing a partnership with a hospital chain for pilot deployment. The commercial terms were agreed; what hadn't been addressed was where liability sits when the AI tool's output influences a diagnosis that turns out to be wrong &mdash; a question that sits at the unresolved intersection of medical negligence law and product liability for AI systems.</p>
+    <p>The work involved structuring the partnership agreement to allocate this risk explicitly rather than leaving it to be litigated after an adverse outcome: defining the AI tool's role as decision-support rather than decision-making, documenting the required human-radiologist sign-off step as a contractual and not merely operational requirement, and ensuring the company's liability insurance actually covered AI-assisted diagnostic tools, which several standard policies do not.</p>
+    <p><b>What actually mattered:</b> the legal work here was almost entirely preventive contract architecture, done before deployment, because the alternative &mdash; litigating an undefined liability allocation after a misdiagnosis &mdash; is a far worse position for every party involved, including the hospital.</p>
+    <div class="case-note">The lesson that generalizes: healthtech AI deployment is accelerating faster than liability frameworks are being negotiated. Companies moving to pilot stage in the next few months need this addressed before launch, not after an incident forces the question.</div>
+  </div>
+
+  <div class="case reveal">
+    <div class="case-tag">Corporate Advisory — space law, satellite &amp; orbital infrastructure</div>
+    <h2>A small-satellite manufacturer, an export question, and a launch date that couldn't move.</h2>
+    <p>Hyderabad's aerospace and satellite manufacturing base has grown quickly, and a small-satellite component manufacturer preparing for a foreign launch partnership needed to resolve an export-control and licensing question its existing corporate counsel, capable in general commercial matters, had not encountered before: which of its component technologies triggered dual-use export licensing requirements before they could legally leave the country for integration with a foreign launch vehicle.</p>
+    <p>The work required mapping the specific components against India's SCOMET (Special Chemicals, Organisms, Materials, Equipment and Technologies) export control list, since a launch delay to resolve a licensing question discovered late is far more costly than resolving it early &mdash; and coordinating the licensing application timeline against a launch window that could not realistically move.</p>
+    <p><b>What actually mattered:</b> catching the export-control question during contract negotiation with the foreign launch partner, rather than at the point of shipment, kept the licensing process from becoming the constraint on an already fixed launch date.</p>
+    <div class="case-note">The lesson that generalizes: as Hyderabad's space-tech sector scales toward more international partnerships, export control and cross-border technology transfer questions are becoming a standard, not exceptional, part of commercial deal structuring &mdash; and they need space-law and export-control fluency together, which most general commercial counsel doesn't carry.</div>
   </div>
 
 </div>
@@ -118,13 +198,31 @@
   <div style="display:flex; gap:20px; flex-wrap:wrap;">
     <a href="index.html">Home</a>
     <a href="faq.html">All FAQs</a>
+    <a href="legal-help.html">Legal Help</a>
     <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
     <a href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/">LinkedIn</a>
+    <a href="https://wa.me/917842500005">WhatsApp</a>
     <a href="mailto:vishalak.adv@gmail.com">vishalak.adv@gmail.com</a>
     <a href="https://www.jurist.org/commentary/2026/01/the-lunar-jurisdictional-trap-why-ai-and-nuclear-ambition-are-outpacing-space-law/">Writing on Jurist</a>
   </div>
   <span>© 2026 Vishal Akshintala</span>
 </footer>
 
+<script>
+  const field = document.getElementById('field');
+  for (let i = 0; i < 50; i++) {
+    const m = document.createElement('div');
+    m.className = 'mote';
+    m.style.left = Math.random() * 100 + 'vw';
+    m.style.top = Math.random() * 100 + 'vh';
+    m.style.animation = `drift ${20 + Math.random()*30}s linear infinite`;
+    m.style.animationDelay = (Math.random()*20) + 's';
+    field.appendChild(m);
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>

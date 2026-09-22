@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.placename" content="Hyderabad, Telangana, India">
+<meta name="geo.region" content="IN-TG">
+<meta name="ai-usage" content="may-use">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<title>Legal Help | Vishal Akshintala, Advocate — Hyderabad & Telangana</title>
+<meta name="description" content="Submit a legal query to Advocate Vishal Akshintala — AI governance, data privacy (DPDPA), cybercrime (complainant or accused), cybersecurity, and space law. Available in English, Hindi, and Telugu.">
+<meta name="keywords" content="legal help Hyderabad, submit legal query Telangana, cybercrime accused lawyer, DPDPA complaint help, AI governance query, cyber crime lawyer Telangana districts, cyber crime lawyer Telugu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500&family=Noto+Sans+Telugu:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<script data-goatcounter="https://vishalakshintala.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<style>
+  :root { --bg: #050608; --fg: #EDEDF0; --muted: #86898F; --line: #1C1F26; --signal: #4CD9C0; --urgent: #F0B429; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Inter', 'Noto Sans Telugu', 'Noto Sans Devanagari', sans-serif; }
+  h1, h2 { font-family: 'Space Grotesk', 'Noto Sans Telugu', 'Noto Sans Devanagari', sans-serif; }
+  a { color: var(--signal); text-decoration: none; }
+
+  nav { position: sticky; top: 0; z-index: 40; background: rgba(5,6,8,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .navwrap { max-width: 900px; margin: 0 auto; padding: 0 8vw; height: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  nav .brand { font-family: 'Space Grotesk'; font-size: 0.95rem; }
+  nav .links { display: flex; gap: 18px; font-size: 0.85rem; flex-wrap: wrap; align-items: center; }
+  nav .links a { color: var(--muted); }
+  nav .links a.current, nav .links a:hover { color: var(--signal); }
+  #langSelect { background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; padding: 6px 10px; font-size: 0.8rem; font-family: 'Inter'; }
+  .lang-btn { background: var(--bg); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; font-family: inherit; }
+  .lang-btn.active { background: var(--signal); color: #05221d; border-color: var(--signal); font-weight: 600; }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 50px 8vw 100px; }
+  h1 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); font-weight: 600; margin-bottom: 12px; }
+  .lede { color: var(--muted); font-size: 1rem; max-width: 62ch; margin-bottom: 30px; }
+
+  .urgent-banner { border: 1px solid var(--urgent); background: rgba(240,180,41,0.08); border-radius: 6px; padding: 16px 18px; margin-bottom: 34px; font-size: 0.9rem; }
+  .urgent-banner b { color: var(--urgent); }
+  .urgent-banner a { color: var(--urgent); text-decoration: underline; }
+
+  .contact-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 48px; }
+  @media (max-width: 640px) { .contact-tiles { grid-template-columns: 1fr; } }
+  .tile { border: 1px solid var(--line); border-radius: 6px; padding: 18px; text-align: center; }
+  .tile .tlabel { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .tile .tval { font-size: 0.95rem; font-weight: 500; }
+  .tile:hover { border-color: var(--signal); }
+
+  .form-section { border: 1px solid var(--line); border-radius: 8px; padding: 32px; margin-bottom: 50px; }
+  .form-section h2 { font-size: 1.2rem; font-weight: 500; margin-bottom: 22px; }
+  label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; margin-top: 16px; }
+  label:first-of-type { margin-top: 0; }
+  input, select, textarea {
+    width: 100%; padding: 12px 14px; background: var(--bg); border: 1px solid var(--line); color: var(--fg);
+    border-radius: 4px; font-family: inherit; font-size: 0.92rem;
+  }
+  textarea { min-height: 110px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--signal); }
+  .urgency-check { display: flex; align-items: center; gap: 10px; margin-top: 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 4px; }
+  .urgency-check input { width: auto; }
+  .submit-row { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 13px 24px; font-size: 0.9rem; border-radius: 4px; cursor: pointer; border: none; font-family: 'Inter'; }
+  .btn-fill { background: #25D366; color: #05221d; font-weight: 600; }
+  .btn-line { border: 1px solid var(--line); color: var(--fg); background: transparent; }
+  .note { font-size: 0.78rem; color: var(--muted); margin-top: 14px; }
+
+  .resources { margin-bottom: 40px; }
+  .resources h2 { font-size: 1.15rem; font-weight: 500; margin-bottom: 20px; }
+  .res-item { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .res-item h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 6px; }
+  .res-item p { color: var(--muted); font-size: 0.88rem; }
+
+  .disclaimer { font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 8vw; color: var(--muted); font-size: 0.82rem; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+  footer .flinks { display: flex; gap: 20px; flex-wrap: wrap; }
+  #field { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.4; }
+  .mote { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: var(--muted); opacity: 0.3; }
+  @keyframes drift { from { transform: translateY(0);} to { transform: translateY(-40px);} }
+  nav, .wrap, footer { position: relative; z-index: 2; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(.2,.7,.2,1), transform 0.8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+<div id="field"></div>
+
+<nav>
+  <div class="navwrap">
+    <div class="brand">Vishal Akshintala</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="faq.html">FAQ</a>
+      <a href="insights.html">Insights</a>
+      <a href="legal-help.html" class="current" style="background:var(--signal); color:#05221d; padding:7px 14px; border-radius:4px; font-weight:600;">Legal Help</a>
+      <div id="langSelect" style="display:flex; gap:6px;">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en', this)">EN</button>
+        <button class="lang-btn" data-lang="hi" onclick="setLang('hi', this)">हिं</button>
+        <button class="lang-btn" data-lang="te" onclick="setLang('te', this)">తె</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1 data-i18n="h1">Legal Help</h1>
+  <p class="lede" data-i18n="lede">Submit your query directly — AI governance, data privacy, cybercrime (whether you are the complainant or the accused), cybersecurity incidents, or space law. Litigation representation across Telangana and pan-India; advisory worldwide.</p>
+
+  <div class="urgent-banner reveal">
+    <span data-i18n="urgentText"><b>If this is time-sensitive</b> — an ongoing fraud, a matter involving custody or arrest, or an active police process — the fastest way to reach me is directly by WhatsApp or call, rather than the form below.</span>
+    &nbsp;<a href="https://wa.me/917842500005" data-i18n="urgentLink">WhatsApp now &#8594;</a>
+  </div>
+
+  <div class="contact-tiles">
+    <a class="tile" href="https://wa.me/917842500005" target="_blank">
+      <div class="tlabel" data-i18n="tileWhatsapp">WhatsApp</div>
+      <div class="tval">+91 78425 00005</div>
+    </a>
+    <a class="tile" href="mailto:vishalak.adv@gmail.com">
+      <div class="tlabel" data-i18n="tileEmail">Email</div>
+      <div class="tval">vishalak.adv@gmail.com</div>
+    </a>
+    <a class="tile" href="https://www.linkedin.com/in/vishal-akshintala-aiprivacy/" target="_blank">
+      <div class="tlabel">LinkedIn</div>
+      <div class="tval" data-i18n="tileLinkedin">Connect / Message</div>
+    </a>
+  </div>
+
+  <div class="form-section reveal">
+    <h2 data-i18n="formHeading">Submit your query</h2>
+    <form id="queryForm">
+      <label data-i18n="labelName">Full Name *</label>
+      <input type="text" id="fname" required>
+
+      <label data-i18n="labelContact">Phone or Email *</label>
+      <input type="text" id="fcontact" required>
+
+      <label data-i18n="labelCategory">Nature of Query *</label>
+      <select id="fcategory" required>
+        <option value="">—</option>
+        <option>Cybercrime — I am the complainant / victim</option>
+        <option>Cybercrime — I am accused / under investigation</option>
+        <option>Data Privacy / DPDPA Grievance</option>
+        <option>AI Governance Advisory (Corporate)</option>
+        <option>Cybersecurity Incident (Corporate)</option>
+        <option>Space Law Advisory</option>
+        <option>AI Governance Training Enquiry</option>
+        <option>Other</option>
+      </select>
+
+      <label data-i18n="labelLocation">City / District (or Country, if outside India) *</label>
+      <input type="text" id="flocation" required placeholder="e.g. Warangal, Telangana">
+
+      <label data-i18n="labelDesc">Briefly describe your query *</label>
+      <textarea id="fdesc" required data-i18n-placeholder="descPlaceholder" placeholder="What happened, and what you need help with. No need to share sensitive details here — this just helps prepare for the conversation."></textarea>
+
+      <label data-i18n="labelPrefLang">Preferred language for response</label>
+      <select id="fpreflang">
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Telugu</option>
+        <option>Other (please mention in query)</option>
+      </select>
+
+      <div class="urgency-check">
+        <input type="checkbox" id="furgent">
+        <label for="furgent" style="margin:0; color:var(--fg);" data-i18n="labelUrgent">This is time-sensitive and requires immediate attention</label>
+      </div>
+
+      <div class="submit-row">
+        <button type="button" class="btn btn-fill" onclick="sendWhatsApp()" data-i18n="btnWhatsapp">Send via WhatsApp</button>
+        <button type="button" class="btn btn-line" onclick="sendEmail()" data-i18n="btnEmail">Send via Email</button>
+      </div>
+      <p class="note" data-i18n="formNote">Your query is sent directly and confidentially. Submitting a query does not by itself create an advocate-client relationship — that is established only upon confirmed engagement.</p>
+    </form>
+  </div>
+
+  <div class="resources reveal">
+    <h2 data-i18n="resourcesHeading">Useful resources — while you wait to connect</h2>
+    <div class="res-item">
+      <h3 data-i18n="res1h">National Cyber Crime Reporting Portal</h3>
+      <p data-i18n="res1p">File a complaint directly at cybercrime.gov.in, or call the national helpline <strong>1930</strong> — particularly urgent for financial fraud, where speed affects whether funds can be frozen.</p>
+    </div>
+    <div class="res-item">
+      <h3 data-i18n="res2h">CERT-In Incident Reporting</h3>
+      <p data-i18n="res2p">Organizations required to report cybersecurity incidents within the six-hour window under CERT-In's 2022 directions can do so at cert-in.org.in.</p>
+    </div>
+    <div class="res-item">
+      <h3 data-i18n="res3h">If you have been accused in a cybercrime matter</h3>
+      <p data-i18n="res3p">Do not respond to police or platform notices without legal review first. Preserve your own device and account records rather than deleting anything, even if you believe it is irrelevant — this is often misread later as evidence tampering.</p>
+    </div>
+  </div>
+
+  <div class="disclaimer" data-i18n="disclaimer">
+    As per the rules of the Bar Council of India, advocates are not permitted to advertise or solicit work. This page provides general information at the request of visitors seeking it and does not constitute legal advice or solicitation. No advocate-client relationship is formed by submitting a query; it is formed only upon express confirmation of engagement. Queries may be submitted in English, Hindi, or Telugu.
+  </div>
+</div>
+
+<footer>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://radhicalglobalattorneys.com/">Radhical Global Attorneys</a>
+  </div>
+  <span>© 2026 Vishal Akshintala</span>
+</footer>
+
+<script>
+  const translations = {
+    hi: {
+      h1: "कानूनी सहायता",
+      lede: "अपनी क्वेरी सीधे सबमिट करें — AI गवर्नेंस, डेटा प्राइवेसी, साइबर क्राइम (चाहे आप शिकायतकर्ता हों या आरोपी), साइबर सुरक्षा घटनाएँ, या स्पेस लॉ। तेलंगाना और पूरे भारत में मुकदमेबाज़ी प्रतिनिधित्व; विश्व स्तर पर परामर्श।",
+      urgentText: "<b>अगर यह मामला तत्काल है</b> — चल रही धोखाधड़ी, हिरासत या गिरफ़्तारी से जुड़ा मामला, या सक्रिय पुलिस प्रक्रिया — तो सबसे तेज़ तरीका है सीधे WhatsApp या कॉल करना, नीचे दिए फ़ॉर्म के बजाय।",
+      urgentLink: "अभी WhatsApp करें →",
+      tileWhatsapp: "व्हाट्सऐप",
+      tileEmail: "ईमेल",
+      tileLinkedin: "जुड़ें / संदेश भेजें",
+      formHeading: "अपनी क्वेरी सबमिट करें",
+      labelName: "पूरा नाम *",
+      labelContact: "फ़ोन या ईमेल *",
+      labelCategory: "क्वेरी की प्रकृति *",
+      labelLocation: "शहर / ज़िला (या देश, अगर भारत से बाहर हैं) *",
+      labelDesc: "संक्षेप में अपनी क्वेरी बताएं *",
+      descPlaceholder: "क्या हुआ, और आपको किस मदद की ज़रूरत है। यहाँ संवेदनशील जानकारी देने की ज़रूरत नहीं — यह सिर्फ़ बातचीत की तैयारी में मदद करता है।",
+      labelPrefLang: "जवाब के लिए पसंदीदा भाषा",
+      labelUrgent: "यह मामला तत्काल है और इसे तुरंत ध्यान देने की आवश्यकता है",
+      btnWhatsapp: "WhatsApp से भेजें",
+      btnEmail: "ईमेल से भेजें",
+      formNote: "आपकी क्वेरी सीधे और गोपनीय रूप से भेजी जाती है। क्वेरी सबमिट करने से अधिवक्ता-क्लाइंट संबंध स्वतः स्थापित नहीं होता — यह केवल पुष्टि किए गए जुड़ाव पर ही बनता है।",
+      resourcesHeading: "उपयोगी संसाधन — जुड़ने का इंतज़ार करते समय",
+      res1h: "राष्ट्रीय साइबर क्राइम रिपोर्टिंग पोर्टल",
+      res1p: "cybercrime.gov.in पर सीधे शिकायत दर्ज करें, या राष्ट्रीय हेल्पलाइन 1930 पर कॉल करें — विशेष रूप से वित्तीय धोखाधड़ी के मामलों में तेज़ी ज़रूरी है।",
+      res2h: "CERT-In घटना रिपोर्टिंग",
+      res2p: "जिन संगठनों को CERT-In के 2022 निर्देशों के तहत छह घंटे की समय-सीमा में साइबर सुरक्षा घटनाओं की रिपोर्ट करनी है, वे cert-in.org.in पर कर सकते हैं।",
+      res3h: "अगर आप किसी साइबर क्राइम मामले में आरोपी हैं",
+      res3p: "कानूनी समीक्षा के बिना पुलिस या प्लेटफ़ॉर्म के नोटिस का जवाब न दें। अपने डिवाइस और अकाउंट रिकॉर्ड को सुरक्षित रखें, कुछ भी डिलीट न करें, भले ही वह असंबंधित लगे — इसे अक्सर सबूत मिटाने के रूप में देखा जाता है।",
+      disclaimer: "भारतीय बार काउंसिल के नियमों के अनुसार, अधिवक्ताओं को विज्ञापन या कार्य की मांग करने की अनुमति नहीं है। यह पेज आगंतुकों के अनुरोध पर सामान्य जानकारी प्रदान करता है और यह कानूनी सलाह या विज्ञापन नहीं है। क्वेरी सबमिट करने से अधिवक्ता-क्लाइंट संबंध स्थापित नहीं होता। क्वेरी अंग्रेज़ी, हिंदी या तेलुगु में सबमिट की जा सकती है।"
+    },
+    te: {
+      h1: "న్యాయ సహాయం",
+      lede: "మీ ప్రశ్నను నేరుగా సమర్పించండి — AI గవర్నెన్స్, డేటా ప్రైవసీ, సైబర్ క్రైమ్ (మీరు ఫిర్యాదుదారుడైనా లేదా నిందితుడైనా), సైబర్ సెక్యూరిటీ ఘటనలు, లేదా స్పేస్ లా. తెలంగాణ మరియు యావత్ భారతదేశం అంతటా వ్యాజ్య ప్రాతినిధ్యం; ప్రపంచవ్యాప్తంగా సలహా సేవలు.",
+      urgentText: "<b>ఇది తక్షణం చూడవలసిన విషయమైతే</b> — కొనసాగుతున్న మోసం, కస్టడీ లేదా అరెస్టుకు సంబంధించిన విషయం, లేదా క్రియాశీల పోలీసు ప్రక్రియ — దిగువ ఫారం కంటే నేరుగా WhatsApp లేదా కాల్ ద్వారా సంప్రదించడం వేగవంతమైన మార్గం.",
+      urgentLink: "ఇప్పుడే WhatsApp చేయండి →",
+      tileWhatsapp: "వాట్సాప్",
+      tileEmail: "ఇమెయిల్",
+      tileLinkedin: "కనెక్ట్ / మెసేజ్",
+      formHeading: "మీ ప్రశ్నను సమర్పించండి",
+      labelName: "పూర్తి పేరు *",
+      labelContact: "ఫోన్ లేదా ఇమెయిల్ *",
+      labelCategory: "ప్రశ్న స్వభావం *",
+      labelLocation: "నగరం / జిల్లా (లేదా దేశం, భారతదేశం బయట ఉంటే) *",
+      labelDesc: "మీ ప్రశ్నను క్లుప్తంగా వివరించండి *",
+      descPlaceholder: "ఏమి జరిగింది, మీకు ఎలాంటి సహాయం కావాలి. ఇక్కడ సున్నితమైన వివరాలు ఇవ్వాల్సిన అవసరం లేదు — ఇది సంభాషణకు సిద్ధం కావడానికి మాత్రమే సహాయపడుతుంది.",
+      labelPrefLang: "ప్రతిస్పందన కోసం ఇష్టపడే భాష",
+      labelUrgent: "ఇది తక్షణ శ్రద్ధ అవసరమైన విషయం",
+      btnWhatsapp: "WhatsApp ద్వారా పంపండి",
+      btnEmail: "ఇమెయిల్ ద్వారా పంపండి",
+      formNote: "మీ ప్రశ్న నేరుగా, గోప్యంగా పంపబడుతుంది. ప్రశ్న సమర్పించడం వల్ల న్యాయవాది-క్లయింట్ సంబంధం స్వయంచాలకంగా ఏర్పడదు — అది నిర్ధారించిన ఎంగేజ్‌మెంట్‌పై మాత్రమే ఏర్పడుతుంది.",
+      resourcesHeading: "ఉపయోగకరమైన వనరులు — కనెక్ట్ అయ్యేలోపు",
+      res1h: "జాతీయ సైబర్ క్రైమ్ రిపోర్టింగ్ పోర్టల్",
+      res1p: "cybercrime.gov.in లో నేరుగా ఫిర్యాదు నమోదు చేయండి, లేదా జాతీయ హెల్ప్‌లైన్ 1930కి కాల్ చేయండి — ఆర్థిక మోసం విషయాల్లో వేగం చాలా ముఖ్యం.",
+      res2h: "CERT-In ఘటన రిపోర్టింగ్",
+      res2p: "CERT-In 2022 ఆదేశాల ప్రకారం ఆరు గంటల వ్యవధిలో సైబర్ సెక్యూరిటీ ఘటనలను నివేదించాల్సిన సంస్థలు cert-in.org.in లో చేయవచ్చు.",
+      res3h: "సైబర్ క్రైమ్ కేసులో మీరు నిందితులైతే",
+      res3p: "న్యాయ సమీక్ష లేకుండా పోలీసు లేదా ప్లాట్‌ఫారమ్ నోటీసులకు స్పందించవద్దు. మీ డివైజ్ మరియు ఖాతా రికార్డులను భద్రపరచండి, అసంబంధితమని అనిపించినా దేన్నీ తొలగించవద్దు — దీన్ని తరచుగా సాక్ష్యాలను తారుమారు చేయడంగా భావిస్తారు.",
+      disclaimer: "భారత బార్ కౌన్సిల్ నిబంధనల ప్రకారం, న్యాయవాదులు ప్రకటనలు లేదా పని కోసం అభ్యర్థన చేయడానికి అనుమతి లేదు. ఈ పేజీ సందర్శకుల అభ్యర్థన మేరకు సాధారణ సమాచారాన్ని అందిస్తుంది మరియు ఇది న్యాయ సలహా లేదా ప్రకటన కాదు. ప్రశ్న సమర్పించడం వల్ల న్యాయవాది-క్లయింట్ సంబంధం ఏర్పడదు. ప్రశ్నలను ఇంగ్లీష్, హిందీ లేదా తెలుగులో సమర్పించవచ్చు."
+    }
+  };
+
+  const originals = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { originals[el.getAttribute('data-i18n')] = el.innerHTML; });
+  const originalPlaceholders = {};
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { originalPlaceholders[el.getAttribute('data-i18n-placeholder')] = el.getAttribute('placeholder'); });
+
+  function setLang(lang, btnEl) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (lang === 'en') { el.innerHTML = originals[key]; }
+      else if (translations[lang] && translations[lang][key]) { el.innerHTML = translations[lang][key]; }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (lang === 'en') { el.setAttribute('placeholder', originalPlaceholders[key]); }
+      else if (translations[lang] && translations[lang][key]) { el.setAttribute('placeholder', translations[lang][key]); }
+    });
+    document.documentElement.lang = lang;
+  }
+
+  function collectFields() {
+    const name = document.getElementById('fname').value.trim();
+    const contact = document.getElementById('fcontact').value.trim();
+    const category = document.getElementById('fcategory').value;
+    const location = document.getElementById('flocation').value.trim();
+    const desc = document.getElementById('fdesc').value.trim();
+    const preflang = document.getElementById('fpreflang').value;
+    const urgent = document.getElementById('furgent').checked;
+    if (!name || !contact || !category || !location || !desc) {
+      alert('Please fill in all required fields.');
+      return null;
+    }
+    return { name, contact, category, location, desc, preflang, urgent };
+  }
+
+  function sendWhatsApp() {
+    const f = collectFields();
+    if (!f) return;
+    const urgentTag = f.urgent ? 'URGENT — ' : '';
+    const text = `${urgentTag}Legal Help Query%0A%0AName: ${encodeURIComponent(f.name)}%0AContact: ${encodeURIComponent(f.contact)}%0ACategory: ${encodeURIComponent(f.category)}%0ALocation: ${encodeURIComponent(f.location)}%0APreferred language: ${encodeURIComponent(f.preflang)}%0A%0AQuery:%0A${encodeURIComponent(f.desc)}`;
+    window.open(`https://wa.me/917842500005?text=${text}`, '_blank');
+  }
+
+  function sendEmail() {
+    const f = collectFields();
+    if (!f) return;
+    const urgentTag = f.urgent ? 'URGENT — ' : '';
+    const subject = encodeURIComponent(`${urgentTag}Legal Help Query — ${f.category}`);
+    const body = encodeURIComponent(`Name: ${f.name}\nContact: ${f.contact}\nCategory: ${f.category}\nLocation: ${f.location}\nPreferred language: ${f.preflang}\n\nQuery:\n${f.desc}`);
+    window.location.href = `mailto:vishalak.adv@gmail.com?subject=${subject}&body=${body}`;
+  }
+</script>
+
+<script>
+  const field = document.getElementById('field');
+  for (let i = 0; i < 50; i++) {
+    const m = document.createElement('div');
+    m.className = 'mote';
+    m.style.left = Math.random() * 100 + 'vw';
+    m.style.top = Math.random() * 100 + 'vh';
+    m.style.animation = `drift ${20 + Math.random()*30}s linear infinite`;
+    m.style.animationDelay = (Math.random()*20) + 's';
+    field.appendChild(m);
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
