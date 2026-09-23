@@ -24,11 +24,18 @@
   a { color: var(--signal); text-decoration: none; }
 
   nav { position: sticky; top: 0; z-index: 40; background: rgba(5,6,8,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  nav .navwrap { max-width: 900px; margin: 0 auto; padding: 0 8vw; height: 60px; display: flex; justify-content: space-between; align-items: center; }
+  nav .navwrap { max-width: 900px; margin: 0 auto; padding: 0 8vw; min-height: 60px; padding-top: 10px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
   nav .brand { font-family: 'Space Grotesk'; font-size: 0.95rem; color: var(--fg); }
   nav .links { display: flex; gap: 26px; font-size: 0.88rem; }
   nav .links a { color: var(--muted); }
   nav .links a.current, nav .links a:hover { color: var(--signal); }
+  @media (max-width: 640px) {
+    nav .links { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; justify-content: flex-start; }
+    nav .links::-webkit-scrollbar { display: none; }
+    nav .links a { flex-shrink: 0; }
+    nav .navwrap { flex-wrap: nowrap; }
+  }
+
 
   .wrap { max-width: 820px; margin: 0 auto; padding: 70px 8vw 100px; }
   h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 14px; }
@@ -193,6 +200,15 @@
     <p><b>What actually mattered:</b> catching the export-control question during contract negotiation with the foreign launch partner, rather than at the point of shipment, kept the licensing process from becoming the constraint on an already fixed launch date.</p>
     <div class="case-note">The lesson that generalizes: as Hyderabad's space-tech sector scales toward more international partnerships, export control and cross-border technology transfer questions are becoming a standard, not exceptional, part of commercial deal structuring &mdash; and they need space-law and export-control fluency together, which most general commercial counsel doesn't carry.</div>
   </div>
+  <div class="case">
+    <div class="case-tag">Litigation — space sector, commercial dispute</div>
+    <h2>A payload integration delay, and a contract that never priced the risk.</h2>
+    <p>A satellite component manufacturer's payload missed an integration window after a launch provider's schedule shifted twice, and the resulting cost overrun triggered a dispute over which party bore the delay risk. The supply agreement had a force majeure clause but no specific provision allocating cost for a schedule slip caused by the launch provider's own manifest changes &mdash; a gap that is common in space-sector contracts drafted by counsel unfamiliar with how frequently manifests actually shift in this industry.</p>
+    <p>The matter required building a technical timeline from integration logs and correspondence to establish that the delay originated with the launch provider's manifest reshuffling rather than any defect in the manufacturer's payload &mdash; a factual record that mattered more than the contract's general force majeure language, since that clause was genuinely ambiguous on point.</p>
+    <p><b>What actually mattered:</b> resolving this was less about novel legal argument and more about a factual record most space-sector contracts never anticipate needing, because most are drafted without a specific eye toward how launch manifests actually behave in practice.</p>
+    <div class="case-note">The lesson that generalizes: space-sector commercial contracts are still often drafted using general commercial templates that don't price in the operational realities specific to launch scheduling. That gap is a recurring, foreseeable source of disputes, not a rare edge case.</div>
+  </div>
+
 
 </div>
 
