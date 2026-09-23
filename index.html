@@ -70,6 +70,15 @@
 
   .brand { position: fixed; top: 28px; left: 32px; z-index: 40; font-family: 'Space Grotesk'; font-size: 0.95rem; font-weight: 400; }
 
+  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 41; background: rgba(5,6,8,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-navwrap { max-width: 1080px; margin: 0 auto; padding: 0 8vw; height: 60px; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+  .site-brand { font-family: 'Space Grotesk'; font-size: 0.95rem; flex-shrink: 0; }
+  .site-navlinks { display: flex; gap: 22px; font-size: 0.88rem; align-items: center; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; scrollbar-width: none; }
+  .site-navlinks::-webkit-scrollbar { display: none; }
+  .site-navlinks a { color: var(--muted); flex-shrink: 0; }
+  .site-navlinks a.nav-current { color: var(--signal); }
+  .site-navlinks a.nav-cta { background: var(--signal); color: #05221d; padding: 8px 16px; border-radius: 4px; font-weight: 600; }
+  @media (max-width: 640px) { .site-navwrap { padding: 0 5vw; gap: 10px; } .site-navlinks { gap: 16px; font-size: 0.82rem; } }
   .chapter { min-height: 100vh; position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 60px 8vw 0; border-bottom: 1px solid var(--line); }
   .chapter-inner { max-width: 900px; }
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
@@ -162,15 +171,15 @@
 <body>
 
 <div id="field"></div>
-<nav style="position:fixed; top:0; left:0; right:0; z-index:41; background:rgba(5,6,8,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);">
-  <div style="max-width:1080px; margin:0 auto; padding:0 8vw; height:60px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-    <div style="font-family:'Space Grotesk'; font-size:0.95rem;">Vishal Akshintala</div>
-    <div style="display:flex; gap:22px; font-size:0.88rem; align-items:center;">
-      <a href="index.html" style="color:var(--signal);">Home</a>
-      <a href="case-studies.html" style="color:var(--muted);">Case Studies</a>
-      <a href="faq.html" style="color:var(--muted);">FAQ</a>
-      <a href="insights.html" style="color:var(--muted);">Insights</a>
-      <a href="legal-help.html" style="background:var(--signal); color:#05221d; padding:8px 16px; border-radius:4px; font-weight:600;">Legal Help</a>
+<nav class="site-nav">
+  <div class="site-navwrap">
+    <div class="site-brand">Vishal Akshintala</div>
+    <div class="site-navlinks">
+      <a href="index.html" class="nav-current">Home</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="faq.html">FAQ</a>
+      <a href="insights.html">Insights</a>
+      <a href="legal-help.html" class="nav-cta">Legal Help</a>
     </div>
   </div>
 </nav>
