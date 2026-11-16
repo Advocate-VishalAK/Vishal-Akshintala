@@ -72,6 +72,10 @@
   .btn { display: inline-block; padding: 13px 24px; font-size: 0.9rem; border-radius: 4px; cursor: pointer; border: none; font-family: 'Inter'; }
   .btn-fill { background: #25D366; color: #05221d; font-weight: 600; }
   .btn-line { border: 1px solid var(--line); color: var(--fg); background: transparent; }
+  .consent-check { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 4px; }
+  .consent-check input { width: auto; margin-top: 4px; flex: none; }
+  .consent-check label { margin: 0; color: var(--fg); font-size: 0.82rem; line-height: 1.55; }
+  .consent-check.missing { border-color: var(--signal); }
   .note { font-size: 0.78rem; color: var(--muted); margin-top: 14px; }
 
   .resources { margin-bottom: 40px; }
@@ -197,6 +201,11 @@
         <label for="furgent" style="margin:0; color:var(--fg);" data-i18n="labelUrgent">This is time-sensitive and requires immediate attention</label>
       </div>
 
+      <div class="consent-check" id="consentBox">
+        <input type="checkbox" id="fconsent" required>
+        <label for="fconsent" data-i18n="labelConsent">I consent to Vishal Akshintala using the details above only to respond to my query and to check whether he can assist. They will reach him through WhatsApp or email (whichever I choose), be kept only as long as needed for this purpose, and not be passed on to anyone else without my agreement. I can withdraw this consent at any time by writing to vishalak.adv@gmail.com. *</label>
+      </div>
+
       <div class="submit-row">
         <button type="button" class="btn btn-fill" onclick="sendWhatsApp()" data-i18n="btnWhatsapp">Send via WhatsApp</button>
         <button type="button" class="btn btn-line" onclick="sendEmail()" data-i18n="btnEmail">Send via Email</button>
@@ -257,6 +266,8 @@
       labelUrgent: "यह मामला तत्काल है और इसे तुरंत ध्यान देने की आवश्यकता है",
       btnWhatsapp: "WhatsApp से भेजें",
       btnEmail: "ईमेल से भेजें",
+      labelConsent: "मैं सहमति देता/देती हूँ कि विशाल अक्षिंतला ऊपर दिए गए विवरणों का उपयोग केवल मेरी क्वेरी का जवाब देने और यह जाँचने के लिए करें कि वे मेरी सहायता कर सकते हैं या नहीं। ये विवरण WhatsApp या ईमेल (जो मैं चुनूँ) के ज़रिए उन तक पहुँचेंगे, केवल इसी उद्देश्य के लिए आवश्यक समय तक रखे जाएँगे, और मेरी सहमति के बिना किसी और को नहीं दिए जाएँगे। मैं vishalak.adv@gmail.com पर लिखकर कभी भी यह सहमति वापस ले सकता/सकती हूँ। *",
+      consentNeeded: "कृपया आगे बढ़ने से पहले सहमति वाले बॉक्स पर टिक करें।",
       formNote: "आपकी क्वेरी सीधे और गोपनीय रूप से भेजी जाती है। क्वेरी सबमिट करने से अधिवक्ता-क्लाइंट संबंध स्वतः स्थापित नहीं होता — यह केवल पुष्टि किए गए जुड़ाव पर ही बनता है।",
       resourcesHeading: "उपयोगी संसाधन — जुड़ने का इंतज़ार करते समय",
       res1h: "राष्ट्रीय साइबर क्राइम रिपोर्टिंग पोर्टल",
@@ -286,6 +297,8 @@
       labelUrgent: "ఇది తక్షణ శ్రద్ధ అవసరమైన విషయం",
       btnWhatsapp: "WhatsApp ద్వారా పంపండి",
       btnEmail: "ఇమెయిల్ ద్వారా పంపండి",
+      labelConsent: "పైన ఇచ్చిన వివరాలను విశాల్ అక్షింతల నా ప్రశ్నకు స్పందించడానికి మరియు నాకు సహాయం చేయగలరో లేదో తెలుసుకోవడానికి మాత్రమే ఉపయోగించడానికి నేను సమ్మతిస్తున్నాను. ఈ వివరాలు WhatsApp లేదా ఇమెయిల్ (నేను ఎంచుకున్నది) ద్వారా వారికి చేరతాయి, ఈ ప్రయోజనానికి అవసరమైనంత కాలం మాత్రమే ఉంచబడతాయి, నా అంగీకారం లేకుండా ఇతరులకు ఇవ్వబడవు. vishalak.adv@gmail.com కు రాయడం ద్వారా నేను ఎప్పుడైనా ఈ సమ్మతిని ఉపసంహరించుకోవచ్చు. *",
+      consentNeeded: "దయచేసి కొనసాగే ముందు సమ్మతి పెట్టెను టిక్ చేయండి.",
       formNote: "మీ ప్రశ్న నేరుగా, గోప్యంగా పంపబడుతుంది. ప్రశ్న సమర్పించడం వల్ల న్యాయవాది-క్లయింట్ సంబంధం స్వయంచాలకంగా ఏర్పడదు — అది నిర్ధారించిన ఎంగేజ్‌మెంట్‌పై మాత్రమే ఏర్పడుతుంది.",
       resourcesHeading: "ఉపయోగకరమైన వనరులు — కనెక్ట్ అయ్యేలోపు",
       res1h: "జాతీయ సైబర్ క్రైమ్ రిపోర్టింగ్ పోర్టల్",
@@ -329,6 +342,10 @@
     if (want && sel) { for (const o of sel.options) { if (o.text === want) { sel.value = o.value; break; } } }
   })();
 
+  document.getElementById('fconsent').addEventListener('change', (e) => {
+    if (e.target.checked) document.getElementById('consentBox').classList.remove('missing');
+  });
+
   function collectFields() {
     const name = document.getElementById('fname').value.trim();
     const contact = document.getElementById('fcontact').value.trim();
@@ -341,14 +358,25 @@
       alert('Please fill in all required fields.');
       return null;
     }
-    return { name, contact, category, location, desc, preflang, urgent };
+    const box = document.getElementById('consentBox');
+    if (!document.getElementById('fconsent').checked) {
+      const lang = document.documentElement.lang;
+      alert((translations[lang] && translations[lang].consentNeeded) || 'Please tick the consent box before sending your query.');
+      box.classList.add('missing');
+      document.getElementById('fconsent').focus();
+      return null;
+    }
+    box.classList.remove('missing');
+    // A record of the consent travels with the query itself, with the date and the wording's version.
+    const consent = `Consent given on ${new Date().toISOString().slice(0, 10)} (form wording of 2026-11-16) to use these details to respond to this query.`;
+    return { name, contact, category, location, desc, preflang, urgent, consent };
   }
 
   function sendWhatsApp() {
     const f = collectFields();
     if (!f) return;
     const urgentTag = f.urgent ? 'URGENT — ' : '';
-    const text = `${urgentTag}Legal Help Query%0A%0AName: ${encodeURIComponent(f.name)}%0AContact: ${encodeURIComponent(f.contact)}%0ACategory: ${encodeURIComponent(f.category)}%0ALocation: ${encodeURIComponent(f.location)}%0APreferred language: ${encodeURIComponent(f.preflang)}%0A%0AQuery:%0A${encodeURIComponent(f.desc)}`;
+    const text = `${urgentTag}Legal Help Query%0A%0AName: ${encodeURIComponent(f.name)}%0AContact: ${encodeURIComponent(f.contact)}%0ACategory: ${encodeURIComponent(f.category)}%0ALocation: ${encodeURIComponent(f.location)}%0APreferred language: ${encodeURIComponent(f.preflang)}%0A%0AQuery:%0A${encodeURIComponent(f.desc)}%0A%0A${encodeURIComponent(f.consent)}`;
     window.open(`https://wa.me/917842500005?text=${text}`, '_blank');
   }
 
@@ -357,7 +385,7 @@
     if (!f) return;
     const urgentTag = f.urgent ? 'URGENT — ' : '';
     const subject = encodeURIComponent(`${urgentTag}Legal Help Query — ${f.category}`);
-    const body = encodeURIComponent(`Name: ${f.name}\nContact: ${f.contact}\nCategory: ${f.category}\nLocation: ${f.location}\nPreferred language: ${f.preflang}\n\nQuery:\n${f.desc}`);
+    const body = encodeURIComponent(`Name: ${f.name}\nContact: ${f.contact}\nCategory: ${f.category}\nLocation: ${f.location}\nPreferred language: ${f.preflang}\n\nQuery:\n${f.desc}\n\n${f.consent}`);
     window.location.href = `mailto:vishalak.adv@gmail.com?subject=${subject}&body=${body}`;
   }
 </script>
