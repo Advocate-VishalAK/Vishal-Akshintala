@@ -168,6 +168,7 @@
         <option>Bank account frozen in a cyber investigation</option>
         <option>Police notice to appear (cyber case)</option>
         <option>Data Privacy / DPDPA Grievance</option>
+        <option>DPDP / Privacy Compliance (Corporate)</option>
         <option>AI Governance Advisory (Corporate)</option>
         <option>Cybersecurity Incident (Corporate)</option>
         <option>Space Law Advisory</option>
@@ -315,6 +316,16 @@
     });
     document.documentElement.lang = lang;
   }
+
+  // Service pages link here with ?topic=…; preselect the matching category.
+  (function () {
+    const topics = { freeze: 'Bank account frozen in a cyber investigation', bail: 'Bail in a cybercrime case',
+                     notice: 'Police notice to appear (cyber case)', dpdp: 'DPDP / Privacy Compliance (Corporate)',
+                     ai: 'AI Governance Advisory (Corporate)' };
+    const want = topics[new URLSearchParams(location.search).get('topic')];
+    const sel = document.getElementById('fcategory');
+    if (want && sel) { for (const o of sel.options) { if (o.text === want) { sel.value = o.value; break; } } }
+  })();
 
   function collectFields() {
     const name = document.getElementById('fname').value.trim();

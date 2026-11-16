@@ -202,3 +202,18 @@ footer a { color: var(--muted); }
   body::after { width: 640px; top: -260px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ---------- service pages (bank-account-frozen, cyber-bail-police-notice, dpdp-compliance, ai-governance) ---------- */
+.svc h2 { font-size: clamp(1.25rem, 2.6vw, 1.55rem) !important; margin: 38px 0 12px !important; color: var(--fg); }
+.svc .svc-lead { font-family: var(--serif); font-size: clamp(1.12rem, 2.4vw, 1.3rem) !important; color: var(--fg) !important; line-height: 1.55 !important; }
+.svc ol.svc-steps { margin: 0; padding-left: 1.3em; max-width: 68ch; color: #C9CAD0; font-size: 1.04rem; line-height: 1.7; }
+.svc ol.svc-steps li { margin-bottom: 12px; padding-left: 6px; }
+.svc ol.svc-steps li::marker { font-family: var(--serif); font-weight: 600; }
+.svc-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin: 40px 0 8px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--signal-soft); }
+.svc-cta span { color: #C9CAD0; font-size: .95rem; flex: 1 1 240px; }
+.svc ul.svc-sources { margin: 0; padding-left: 1.2em; color: var(--muted); font-size: .95rem; line-height: 1.7; max-width: 68ch; }
+.svc ul.svc-sources a { color: #C9CAD0; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.svc ul.svc-sources a:hover { color: var(--fg); text-decoration-color: var(--signal); }
+.svc p.svc-small { margin-top: 34px; font-size: .82rem !important; color: var(--muted) !important; }
+.trio-item a.more { display: inline-block; margin-top: 8px; color: var(--signal); font-weight: 600; font-size: .9rem; text-decoration: none; }
+.trio-item a.more:hover { text-decoration: underline; }
