@@ -11,6 +11,10 @@ Vishal Akshintala represents clients in litigation before Telangana courts and r
 - [FAQ](https://vishalakshintala.in/faq.html): frequently asked questions organized by practice area including litigation, DPDPA, AI governance, cybersecurity, space law, and emerging issues (digital arrest scams, deepfakes, AI copyright)
 - [Legal Help](https://vishalakshintala.in/legal-help.html): direct query submission, available in English, Hindi, and Telugu
 - [Insights](https://vishalakshintala.in/insights.html): long-form legal commentary, including a public interest litigation argument on FIR data disclosure and analysis of digital arrest scams
+- [Bank account frozen in a cybercrime investigation](https://vishalakshintala.in/bank-account-frozen.html): what a freeze is, what the law says about seizure and release, first steps, and how to send a query
+- [Bail and police notices in cyber cases](https://vishalakshintala.in/cyber-bail-police-notice.html): notice to appear, rights on arrest, bail and anticipatory bail under the BNSS, in plain words
+- [DPDP Act compliance for companies](https://vishalakshintala.in/dpdp-compliance.html): the dates in the DPDP Rules, 2025, what they ask for, and how the compliance work is done
+- [AI governance for companies](https://vishalakshintala.in/ai-governance.html): EU AI Act dates and risk tiers, ISO/IEC 42001, NIST AI RMF, impact assessments and audits
 
 ## Articles
 
