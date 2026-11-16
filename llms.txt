@@ -7,6 +7,7 @@ Vishal Akshintala represents clients in litigation before Telangana courts and r
 ## Key pages
 
 - [Home](https://vishalakshintala.in/index.html): overview of litigation and corporate advisory practice areas, brand identity, client endorsements, and an interactive governance risk scanner
+- [Practice Areas](https://vishalakshintala.in/practice-areas.html): litigation (cyber law, bank account freezes, bail and police notices, data protection grievances, technology disputes) and advisory (DPDP compliance, AI governance, privacy programmes, breach response, training), with guides
 - [Case Studies](https://vishalakshintala.in/case-studies.html): 13 detailed engagement narratives across litigation and corporate advisory in AI governance, data privacy, cybersecurity, and space law
 - [FAQ](https://vishalakshintala.in/faq.html): frequently asked questions organized by practice area including litigation, DPDPA, AI governance, cybersecurity, space law, and emerging issues (digital arrest scams, deepfakes, AI copyright)
 - [Legal Help](https://vishalakshintala.in/legal-help.html): direct query submission, available in English, Hindi, and Telugu
