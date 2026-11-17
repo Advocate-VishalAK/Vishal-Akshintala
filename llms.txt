@@ -19,6 +19,7 @@ Vishal Akshintala represents clients in litigation before Telangana courts and r
 
 ## Articles
 
+- [EU AI Act timeline after the AI Omnibus](https://vishalakshintala.in/insight-ai-act-timeline-after-omnibus.html): The EU AI Act's dates moved this summer. If your compliance plan still uses the old ones, here is the new timeline.
 - [Consent Manager registration: the Board's 17 documents](https://vishalakshintala.in/insight-consent-manager-17-documents.html): Want to register as a Consent Manager under India's DPDP Rules? The Data Protection Board has published the list: 17 mandatory documents to have ready…
 - [GM $220m multistate settlement — driving data sold on to insurers](https://vishalakshintala.in/insight-gm-driver-data-settlement.html): How often you drove, when, how hard you braked, whether you sped. 36 US attorneys general say General Motors sold that on.
 - [EDPB anonymisation — three tests](https://vishalakshintala.in/insight-edpb-anonymisation-three-tests.html): Deleting the names column does not make a dataset anonymous. The European Data Protection Board has set out three tests that it should pass.
